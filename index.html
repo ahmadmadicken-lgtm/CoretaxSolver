@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaxAI Indonesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<aside id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo-icon">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#2563eb"/>
+        <!-- Dokumen -->
+        <rect x="9" y="6" width="14" height="18" rx="2" fill="white" opacity="0.95"/>
+        <path d="M23 6v4h4" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+        <path d="M19 6l4 0 4 4v14a2 2 0 01-2 2H11a2 2 0 01-2-2V8a2 2 0 012-2h8z" fill="none" stroke="white" stroke-width="1.4" opacity="0.5"/>
+        <!-- Garis teks -->
+        <rect x="12" y="13" width="8" height="1.5" rx="0.75" fill="#2563eb" opacity="0.7"/>
+        <rect x="12" y="16" width="6" height="1.5" rx="0.75" fill="#2563eb" opacity="0.7"/>
+        <rect x="12" y="19" width="7" height="1.5" rx="0.75" fill="#2563eb" opacity="0.7"/>
+        <!-- Tanda centang / AI accent -->
+        <circle cx="27" cy="27" r="7" fill="#0f2557"/>
+        <path d="M23.5 27l2.5 2.5 4-4" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name">TaxAI</span>
+      <span class="logo-sub">Indonesia</span>
+    </div>
+    <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
+  </div>
+
+  <div class="search-wrap">
+    <input type="search" id="search-input" placeholder="Cari playbook…" autocomplete="off" />
+    <button id="search-clear" class="search-clear">✕</button>
+  </div>
+
+  <div class="pb-meta"><span id="pb-count">0</span> playbook</div>
+  <nav id="pb-list"></nav>
+</aside>
+
+<main id="main-panel">
+  <div id="state-empty" class="state-screen">
+    <div class="state-icon">📋</div>
+    <h2>Pilih Playbook</h2>
+    <p>Pilih topik dari daftar di sebelah kiri atau gunakan pencarian.<br/>Gunakan ↑↓ untuk navigasi, Enter untuk memilih.</p>
+  </div>
+
+  <div id="state-loading" class="state-screen" style="display:none">
+    <div class="state-icon">⏳</div>
+    <p>Memuat playbook…</p>
+  </div>
+
+  <div id="state-error" class="state-screen" style="display:none">
+    <div class="state-icon">⚠️</div>
+    <h2>Gagal memuat</h2>
+    <p id="error-msg"></p>
+  </div>
+
+  <article id="pb-content" style="display:none">
+    <header class="pb-header">
+      <div class="pb-badge-row">
+        <span class="pb-id-badge" id="pb-id"></span>
+        <span class="pb-type-badge" id="pb-type"></span>
+        <span class="pb-difficulty" id="pb-difficulty"></span>
+      </div>
+      <div class="pb-header-actions">
+        <h1 id="pb-title"></h1>
+        <div class="header-btns">
+          <button class="btn-icon" id="btn-reset" title="Reset progress">↺ Reset</button>
+          <button class="btn-icon" id="btn-print" title="Cetak playbook (Ctrl+P)">🖨 Cetak</button>
+        </div>
+      </div>
+      <div class="pb-module-row">
+        <span class="label-module">Modul:</span><span id="pb-module"></span>
+        <span class="dot">·</span>
+        <span class="label-module">Estimasi:</span><span id="pb-time"></span>
+      </div>
+
+      <!-- Generate Balasan Klien -->
+      <div class="ai-reply-wrap">
+        <div class="ai-reply-header">
+          <div class="ai-reply-title">
+            <span>💬</span>
+            Generate Balasan untuk Klien
+          </div>
+          <button class="btn-generate" id="btn-generate">
+            ✨ Generate Sekarang
+          </button>
+        </div>
+        <div class="ai-reply-body" id="ai-reply-body"></div>
+      </div>
+    </header>
+
+    <section class="pb-section">
+      <h2 class="section-title"><span class="section-num">01</span>Tujuan</h2>
+      <p id="pb-objective" class="objective-text"></p>
+    </section>
+
+    <section class="pb-section">
+      <h2 class="section-title"><span class="section-num">02</span>Prasyarat</h2>
+      <ul id="pb-prereq" class="checklist"></ul>
+    </section>
+
+    <section class="pb-section">
+      <h2 class="section-title"><span class="section-num">03</span>Langkah-Langkah</h2>
+      <div class="progress-wrap" id="progress-wrap">
+        <div class="progress-label">
+          <span>Progress</span>
+          <span id="progress-text">0 / 0 langkah</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      </div>
+      <div id="pb-steps"></div>
+    </section>
+
+    <section class="pb-section">
+      <h2 class="section-title"><span class="section-num">04</span>Kemungkinan Error &amp; Solusi</h2>
+      <div id="pb-errors"></div>
+    </section>
+
+    <section class="pb-section">
+      <h2 class="section-title"><span class="section-num">05</span>Hasil Jika Berhasil</h2>
+      <div class="success-box">
+        <span class="success-icon">✓</span>
+        <p id="pb-success"></p>
+      </div>
+    </section>
+
+    <section class="pb-section">
+      <h2 class="section-title"><span class="section-num">06</span>Referensi DJP</h2>
+      <ul id="pb-refs" class="ref-list"></ul>
+    </section>
+
+    <section class="pb-section" id="section-notes" style="display:none">
+      <h2 class="section-title"><span class="section-num">07</span>Catatan</h2>
+      <ul id="pb-notes-list" class="note-list"></ul>
+    </section>
+
+    <footer class="pb-footer">
+      Terverifikasi: <strong id="pb-verified"></strong>
+      <span class="dot">·</span> Revisi ke-<strong id="pb-revision"></strong>
+      <span class="dot">·</span> Diperbarui: <strong id="pb-date"></strong>
+    </footer>
+  </article>
+</main>
+
+<button id="sidebar-toggle">☰</button>
+<div id="sidebar-overlay" style="display:none"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
