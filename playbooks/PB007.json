@@ -1,0 +1,176 @@
+{
+  "id": "PB007",
+  "master_index_id": null,
+  "priority": 7,
+  "type": "pembayaran",
+  "title": "Membuat Kode Billing PPh Pasal 25",
+  "module": "Pembayaran — Layanan Mandiri Kode Billing",
+  "subcategory": "Pembuatan Kode Billing Mandiri",
+  "aliases": [
+    "billing PPh 25",
+    "kode billing angsuran PPh Pasal 25",
+    "bayar PPh Pasal 25",
+    "angsuran bulanan PPh",
+    "KAP 411125",
+    "billing mandiri PPh 25"
+  ],
+  "keywords": [
+    "kode billing", "PPh Pasal 25", "angsuran PPh", "layanan mandiri kode billing",
+    "KAP", "KJS", "411125-100", "411125-101", "masa pajak", "tahun pajak",
+    "unduh kode billing", "verifikasi identitas", "Pembayaran", "orang pribadi"
+  ],
+  "client_questions": [
+    "Bagaimana cara membuat kode billing untuk bayar PPh Pasal 25?",
+    "Di mana menu untuk buat billing angsuran PPh bulanan di Coretax?",
+    "Apa KAP dan KJS untuk PPh Pasal 25 Orang Pribadi?",
+    "Kode billing PPh Pasal 25 berlaku berapa lama?",
+    "Bagaimana cara membuat billing PPh 25 untuk bulan ini?"
+  ],
+  "objective": "Memandu WP OP untuk membuat Kode Billing PPh Pasal 25 (angsuran bulanan) secara mandiri melalui menu Layanan Mandiri Kode Billing di Coretax, sehingga dapat melakukan pembayaran melalui bank/kanal persepsi.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Mengetahui besaran angsuran PPh Pasal 25 yang harus dibayar",
+    "Mengetahui masa pajak (bulan dan tahun) yang akan dibayar"
+  ],
+  "estimated_time": "5–10 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Jika belum bisa login, selesaikan PB001 terlebih dahulu."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran",
+      "click": "Klik menu 'Pembayaran' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Pembayaran terbuka",
+      "note": "Menu Pembayaran berisi: Permohonan Pemindahbukuan, Layanan Mandiri Kode Billing, Pembuatan Kode Billing atas Tagihan Pajak, Daftar Kode Billing Belum Dibayar, dan menu lainnya."
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran → Layanan Mandiri Kode Billing",
+      "click": "Klik submenu 'Layanan Mandiri Kode Billing'",
+      "input": "-",
+      "expected_screen": "Halaman Layanan Mandiri Pembuatan Kode Billing terbuka. Langkah 1: Verifikasi Identitas Wajib Pajak menampilkan NPWP, Nama Wajib Pajak, dan Alamat Wajib Pajak.",
+      "note": "Menu ini digunakan khusus untuk pembayaran yang bersifat mandiri seperti angsuran PPh Pasal 25, PPh Final setor sendiri, dan lain-lain. Berbeda dengan menu 'Pembuatan Kode Billing atas Tagihan Pajak' yang untuk membayar STP atau SKPKB."
+    },
+    {
+      "step": 4,
+      "page": "Layanan Mandiri Kode Billing — Langkah 1: Verifikasi Identitas",
+      "menu": "-",
+      "click": "Klik tombol 'Lanjut'",
+      "input": "-",
+      "expected_screen": "Sistem maju ke Langkah 2: Pilih KAP-KJS",
+      "note": "Pastikan data identitas yang tampil (NPWP, Nama, Alamat) sudah sesuai dengan WP yang akan membayar. Jika tidak sesuai, hentikan proses dan periksa akun yang sedang digunakan."
+    },
+    {
+      "step": 5,
+      "page": "Layanan Mandiri Kode Billing — Langkah 2: Pilih KAP-KJS",
+      "menu": "KAP-KJS",
+      "click": "Pilih KAP-KJS dari dropdown",
+      "input": "Pilih: 411125-100 (PPh Pasal 25/29 Orang Pribadi - Masa) untuk WP OP biasa. Atau 411125-101 untuk WP OP Pengusaha Tertentu (OPPT).",
+      "expected_screen": "KAP-KJS terpilih, kolom Periode dan Tahun Pajak muncul",
+      "note": "Gunakan 411125-100 untuk WP OP karyawan/umum yang wajib bayar angsuran PPh Pasal 25. Gunakan 411125-101 khusus untuk WP OP Pengusaha Tertentu (OPPT) yang menghitung PPh 25 sebesar 0,75% dari omzet."
+    },
+    {
+      "step": 6,
+      "page": "Layanan Mandiri Kode Billing — Langkah 2: Pilih KAP-KJS",
+      "menu": "Periode dan Tahun Pajak",
+      "click": "-",
+      "input": "Pilih bulan masa pajak (contoh: Januari) dan tahun pajak (contoh: 2025)",
+      "expected_screen": "Periode dan tahun pajak terpilih",
+      "note": "Satu kode billing hanya berlaku untuk satu masa pajak. Untuk membayar beberapa bulan sekaligus, buat kode billing terpisah untuk masing-masing bulan."
+    },
+    {
+      "step": 7,
+      "page": "Layanan Mandiri Kode Billing — Langkah 2: Pilih KAP-KJS",
+      "menu": "-",
+      "click": "Klik tombol 'Lanjut'",
+      "input": "-",
+      "expected_screen": "Sistem maju ke Langkah 3: Unduh Kode Billing. Menampilkan kolom Mata Uang, Nilai, dan Keterangan.",
+      "note": "-"
+    },
+    {
+      "step": 8,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "Mata Uang",
+      "click": "-",
+      "input": "Pilih Mata Uang: Rupiah Indonesia (IDR) — sudah terisi otomatis oleh sistem",
+      "expected_screen": "Kolom Mata Uang terisi IDR",
+      "note": "Mata uang Rupiah Indonesia akan terisi otomatis. Mata uang asing (USD) hanya tersedia jika WP memiliki izin khusus penggunaan mata uang asing."
+    },
+    {
+      "step": 9,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "Nilai",
+      "click": "-",
+      "input": "Isikan Nilai (nominal angsuran PPh Pasal 25 yang akan dibayar, dalam Rupiah)",
+      "expected_screen": "Kolom Nilai terisi nominal",
+      "note": "Kolom Nilai bersifat wajib (mandatory). Masukkan nominal sesuai besaran angsuran PPh Pasal 25 yang telah dihitung."
+    },
+    {
+      "step": 10,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "Keterangan",
+      "click": "-",
+      "input": "Isikan Keterangan (opsional, contoh: 'PPh 25 Masa Januari 2025')",
+      "expected_screen": "Kolom Keterangan terisi (opsional)",
+      "note": "Kolom Keterangan tidak wajib diisi, namun dianjurkan diisi untuk memudahkan identifikasi pembayaran."
+    },
+    {
+      "step": 11,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "-",
+      "click": "Klik tombol 'Unduh Kode Billing'",
+      "input": "-",
+      "expected_screen": "File PDF Kode Billing terunduh secara otomatis. PDF berisi: NPWP, Nama, Alamat, Mata Uang, Nominal, KAP-KJS, Masa Pajak, Kode Billing (15 digit), dan Masa Aktif.",
+      "note": "Kode Billing yang telah dibuat berlaku selama 7 (tujuh) hari sejak diterbitkan. Segera lakukan pembayaran sebelum masa aktif habis."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "KAP-KJS 411125-100 tidak muncul dalam daftar pilihan",
+      "cause": "Jenis WP tidak sesuai atau pilihan KAP-KJS sudah disesuaikan dengan profil WP oleh sistem",
+      "solution": "Pastikan login menggunakan akun WP OP yang benar. Periksa kembali daftar KAP-KJS yang tersedia. Hubungi KPP terdaftar jika KAP-KJS yang dibutuhkan tidak ada."
+    },
+    {
+      "error": "Tombol 'Unduh Kode Billing' tidak aktif / tidak bisa diklik",
+      "cause": "Kolom Nilai belum diisi atau diisi dengan format yang salah",
+      "solution": "Pastikan kolom Nilai sudah diisi dengan angka yang valid (tanpa titik atau koma sebagai pemisah ribuan jika tidak sesuai format sistem). Coba hapus dan isi ulang kolom Nilai."
+    },
+    {
+      "error": "PDF kode billing tidak terunduh otomatis",
+      "cause": "Browser memblokir pop-up atau unduhan otomatis",
+      "solution": "Izinkan pop-up dan unduhan dari coretaxdjp.pajak.go.id di pengaturan browser. Atau cek folder unduhan (Downloads) di komputer — file mungkin sudah tersimpan di sana."
+    },
+    {
+      "error": "Kode billing sudah kedaluwarsa sebelum sempat dibayar",
+      "cause": "Masa aktif 7 hari sudah terlewati",
+      "solution": "Buat kode billing baru dengan mengulang proses dari langkah 3. Kode billing lama yang kedaluwarsa tidak dapat digunakan untuk pembayaran."
+    }
+  ],
+  "success_result": "File PDF Kode Billing berhasil terunduh, berisi Kode Billing 15 digit yang dapat digunakan untuk melakukan pembayaran PPh Pasal 25 melalui bank persepsi, ATM, internet banking, mobile banking, atau kanal pembayaran lain yang bekerja sama dengan DJP. Kode Billing aktif selama 7 hari sejak diterbitkan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Direktorat Jenderal Pajak",
+    "Panduan Ringkas Coretax DJP — Layanan Mandiri Kode Billing, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Bab Pembayaran Pajak, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "KAP-KJS untuk PPh Pasal 25 WP OP: 411125-100 (umum) atau 411125-101 (OPPT/Pengusaha Tertentu).",
+    "Satu kode billing hanya untuk satu KAP-KJS dan satu masa pajak. Tidak bisa digabung beberapa bulan dalam satu billing.",
+    "Kode Billing berlaku 7 hari sejak diterbitkan. Lewat dari itu, harus buat baru.",
+    "Menu ini (Layanan Mandiri Kode Billing) berbeda dengan 'Pembuatan Kode Billing atas Tagihan Pajak' yang khusus untuk STP/SKPKB.",
+    "Setelah pembayaran berhasil, status dapat dipantau melalui menu Buku Besar atau Ikhtisar Profil WP (PB006)."
+  ]
+}

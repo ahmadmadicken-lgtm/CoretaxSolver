@@ -1,0 +1,198 @@
+{
+  "id": "PB009",
+  "master_index_id": null,
+  "priority": 9,
+  "type": "spt",
+  "title": "SPT Tahunan PPh OP — Status Nihil",
+  "module": "Surat Pemberitahuan (SPT)",
+  "subcategory": "Pelaporan SPT Tahunan PPh Orang Pribadi",
+  "aliases": [
+    "lapor SPT tahunan nihil",
+    "SPT nihil orang pribadi",
+    "lapor pajak tahunan nol",
+    "SPT OP nihil Coretax",
+    "lapor SPT karyawan nihil",
+    "Personal Income Tax Return nihil"
+  ],
+  "keywords": [
+    "SPT Tahunan", "PPh Orang Pribadi", "status nihil", "lapor SPT",
+    "Create Tax Return", "Pay and Submit", "Sign Document",
+    "Formulir Induk", "BPE", "Bukti Penerimaan Elektronik",
+    "SPT Dilaporkan", "PPh yang harus dibayar nol"
+  ],
+  "client_questions": [
+    "Bagaimana cara lapor SPT Tahunan di Coretax?",
+    "SPT saya nihil, bagaimana cara lapornya di Coretax?",
+    "Apa itu status nihil di SPT Tahunan?",
+    "Bagaimana cara dapat Bukti Penerimaan Elektronik SPT di Coretax?",
+    "Saya karyawan, bagaimana cara lapor SPT Tahunan di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk membuat dan menyampaikan SPT Tahunan PPh Orang Pribadi dengan status Nihil melalui Coretax. Status Nihil berarti nilai PPh yang harus dibayar pada Formulir Induk nomor 11c adalah 0 (nol), sehingga tidak ada pembayaran yang diperlukan sebelum submit.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif untuk penandatanganan SPT (lihat PB002)",
+    "Data penghasilan dan bukti potong tahun pajak yang bersangkutan sudah siap",
+    "Belum pernah membuat SPT Tahunan Normal untuk tahun pajak yang sama"
+  ],
+  "estimated_time": "20–45 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "WP OP dapat melaporkan SPT Tahunan secara mandiri menggunakan akunnya sendiri, atau melalui Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Surat Pemberitahuan (SPT)",
+      "click": "Klik menu 'Surat Pemberitahuan (SPT)' pada navigation bar atas, lalu klik submenu 'Surat Pemberitahuan (SPT)'",
+      "input": "-",
+      "expected_screen": "Halaman Konsep SPT terbuka, menampilkan daftar SPT yang pernah dibuat (jika ada)",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Halaman Konsep SPT",
+      "menu": "Create Tax Return",
+      "click": "Klik tombol 'Create Tax Return' untuk membuat SPT baru",
+      "input": "-",
+      "expected_screen": "Formulir pemilihan jenis SPT terbuka",
+      "note": "Jika sudah ada Konsep SPT untuk tahun pajak yang sama, tidak perlu buat baru — klik ikon 'mata' (view) untuk melanjutkan pengisian."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Create Tax Return",
+      "menu": "Tax Type",
+      "click": "-",
+      "input": "Pilih Tax Type: PPh Orang Pribadi",
+      "expected_screen": "Pilihan Tax Return Type muncul",
+      "note": "Apabila login menggunakan akun WP OP, pilihan jenis pajak sudah otomatis menyesuaikan dengan kewajiban WP Orang Pribadi."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Create Tax Return",
+      "menu": "Tax Return Type",
+      "click": "-",
+      "input": "Pilih Tax Return Type: Personal Income Tax Return (SPT PPh Orang Pribadi)",
+      "expected_screen": "Pilihan Tax Return Period Type muncul",
+      "note": "-"
+    },
+    {
+      "step": 6,
+      "page": "Formulir Create Tax Return",
+      "menu": "Tax Return Period Type & Tax Period",
+      "click": "-",
+      "input": "Pilih Tax Return Period Type: SPT Tahunan. Pilih Tax Period: tahun pajak yang akan dilaporkan (contoh: 2025 Januari–Desember)",
+      "expected_screen": "Pilihan Tax Return Model (Status SPT) muncul",
+      "note": "Tahun pajak yang sudah ada SPT Normal-nya tidak akan muncul di pilihan. Jika tidak muncul, berarti SPT untuk tahun tersebut sudah pernah dibuat."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Create Tax Return",
+      "menu": "Tax Return Model",
+      "click": "-",
+      "input": "Pilih Tax Return Model: Normal",
+      "expected_screen": "Semua pilihan sudah terisi, tombol Save aktif",
+      "note": "Pilihan 'Pembetulan (Amendment)' hanya muncul jika sudah ada SPT Normal sebelumnya. Untuk SPT pertama kali, pilih Normal."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Create Tax Return",
+      "menu": "-",
+      "click": "Klik tombol 'Save'",
+      "input": "-",
+      "expected_screen": "Konsep SPT Tahunan berhasil dibuat dan muncul di daftar Konsep SPT. Terdapat ikon 'mata' (view) di sebelah kanan.",
+      "note": "Konsep SPT dapat dihapus jika terdapat kesalahan saat membuat. Klik ikon 'mata' untuk melanjutkan pengisian."
+    },
+    {
+      "step": 9,
+      "page": "Halaman Konsep SPT",
+      "menu": "View / Lihat SPT",
+      "click": "Klik ikon 'mata' (view) pada baris Konsep SPT yang baru dibuat",
+      "input": "-",
+      "expected_screen": "Formulir SPT Tahunan terbuka pada tab Formulir Induk (Main Form). Terdapat 12 bagian yang perlu diisi.",
+      "note": "Pengisian SPT di Coretax dimulai dari Formulir Induk terlebih dahulu, baru kemudian lampiran-lampiran yang dipersyaratkan berdasarkan jawaban di Formulir Induk."
+    },
+    {
+      "step": 10,
+      "page": "Formulir Induk (Main Form)",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi seluruh bagian Formulir Induk secara berurutan: A (Identitas WP), B (Sumber Penghasilan), C (Perhitungan PPh Terutang), D (Kredit Pajak), E (Kurang/Lebih Bayar), dan bagian lainnya sesuai kondisi WP",
+      "expected_screen": "Seluruh bagian Formulir Induk terisi. Bagian E (Underpayment/Overpayment) menampilkan nilai, dan bagian 11c (Income Tax that must be paid) bernilai 0 (nol) untuk status Nihil.",
+      "note": "Formulir Induk terdiri dari 12 bagian. Lampiran tambahan (L-1 s.d. L-5) akan muncul secara dinamis sesuai jawaban 'Ya/Tidak' di Formulir Induk. Isi lampiran yang dipersyaratkan sebelum submit."
+    },
+    {
+      "step": 11,
+      "page": "Formulir Induk (Main Form)",
+      "menu": "Pay and Submit",
+      "click": "Klik tombol 'Pay and Submit' (Bayar dan Kirim)",
+      "input": "-",
+      "expected_screen": "Halaman Sign Document (Penandatanganan SPT) terbuka",
+      "note": "Untuk status Nihil (11c = 0), tombol Pay and Submit langsung mengarah ke halaman penandatanganan tanpa perlu proses pembayaran. Tombol Pay and Submit aktif di posisi tabulasi manapun, namun disarankan berada di Formulir Induk sebelum submit."
+    },
+    {
+      "step": 12,
+      "page": "Halaman Sign Document (Penandatanganan SPT)",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan Passphrase KODJP (Kode Otorisasi DJP) pada kolom yang tersedia",
+      "expected_screen": "SPT berhasil ditandatangani dan terkirim. SPT berpindah ke menu 'SPT Dilaporkan'.",
+      "note": "Passphrase yang dimasukkan adalah passphrase KODJP yang dibuat saat permohonan Kode Otorisasi DJP (lihat PB002). Pastikan passphrase benar sebelum submit."
+    },
+    {
+      "step": 13,
+      "page": "Menu SPT Dilaporkan",
+      "menu": "Receipt / BPE",
+      "click": "Klik menu 'Receipt' pada baris SPT yang sudah dilaporkan",
+      "input": "-",
+      "expected_screen": "File PDF Bukti Penerimaan Elektronik (BPE) SPT Tahunan terunduh. BPE berisi: Tanggal Terima SPT, Tahun Pajak, Nama WP, NPWP, Jenis SPT, Status SPT, dan Nomor BPE.",
+      "note": "BPE adalah bukti resmi bahwa SPT Tahunan sudah diterima oleh DJP. Simpan BPE ini sebagai arsip. Selain Receipt, tersedia juga menu 'View' (lihat SPT) dan 'Submitted Download PDF' (unduh Lampiran Induk SPT)."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Tahun pajak yang ingin dilaporkan tidak muncul di pilihan Tax Period",
+      "cause": "SPT Tahunan Normal untuk tahun pajak tersebut sudah pernah dibuat sebelumnya",
+      "solution": "Cek di menu SPT — kemungkinan sudah ada Konsep SPT atau SPT Dilaporkan untuk tahun yang sama. Jika perlu koreksi, gunakan SPT Pembetulan (PB012)."
+    },
+    {
+      "error": "Passphrase KODJP salah / tidak diterima saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan salah atau KODJP belum aktif",
+      "solution": "Pastikan passphrase yang dimasukkan sama persis dengan passphrase yang dibuat saat permohonan KODJP. Jika lupa, ajukan KODJP baru (lihat PB002)."
+    },
+    {
+      "error": "Lampiran tambahan tidak muncul / SPT tidak lengkap",
+      "cause": "Pengisian Formulir Induk belum selesai atau ada pertanyaan yang belum dijawab",
+      "solution": "Kembali ke Formulir Induk dan pastikan semua pertanyaan 'Ya/Tidak' sudah dijawab dengan benar. Lampiran muncul secara dinamis berdasarkan jawaban di Formulir Induk."
+    },
+    {
+      "error": "Tombol 'Pay and Submit' tidak aktif",
+      "cause": "Masih ada bagian Formulir Induk atau lampiran yang belum diisi atau ada validasi yang belum terpenuhi",
+      "solution": "Periksa seluruh bagian Formulir Induk dan lampiran yang tersedia. Perhatikan notifikasi validasi dari sistem (biasanya ditandai warna merah atau pesan error di formulir)."
+    }
+  ],
+  "success_result": "SPT Tahunan PPh Orang Pribadi dengan status Nihil berhasil disampaikan dan tercatat di menu 'SPT Dilaporkan'. Bukti Penerimaan Elektronik (BPE) berhasil diunduh sebagai bukti resmi pelaporan SPT kepada DJP.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Edisi 20240924, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Bab 03 Pembuatan Konsep SPT, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Bab 05 Penyampaian SPT — Status Nihil, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Status Nihil = nilai PPh yang harus dibayar pada Formulir Induk nomor 11c adalah 0 (nol).",
+    "Untuk status Nihil, tidak diperlukan pembayaran — langsung ke penandatanganan SPT.",
+    "Pengisian SPT di Coretax dimulai dari Formulir Induk, bukan dari lampiran (berbeda dengan sistem lama).",
+    "Lampiran SPT muncul secara dinamis sesuai jawaban di Formulir Induk — tidak semua lampiran perlu diisi.",
+    "KODJP (Passphrase) wajib dimiliki untuk menandatangani SPT. Pastikan KODJP sudah aktif sebelum mulai (lihat PB002).",
+    "Batas waktu penyampaian SPT Tahunan PPh OP: 31 Maret tahun berikutnya. Jika terlambat, dapat dikenai sanksi denda.",
+    "BPE (Bukti Penerimaan Elektronik) adalah bukti resmi SPT diterima DJP — simpan sebagai arsip penting."
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "id": "PB010",
+  "master_index_id": null,
+  "priority": 10,
+  "type": "spt",
+  "title": "SPT Tahunan PPh OP — Status Kurang Bayar",
+  "module": "Surat Pemberitahuan (SPT)",
+  "subcategory": "Pelaporan SPT Tahunan PPh Orang Pribadi",
+  "aliases": [
+    "lapor SPT tahunan kurang bayar",
+    "SPT kurang bayar orang pribadi",
+    "SPT OP KB Coretax",
+    "bayar pajak kurang bayar SPT tahunan",
+    "kode billing kurang bayar SPT"
+  ],
+  "keywords": [
+    "SPT Tahunan", "PPh Orang Pribadi", "status kurang bayar", "lapor SPT",
+    "Create Tax Return", "Pay and Submit", "Sign Document", "kode billing",
+    "deposit pajak", "SPT Menunggu Pembayaran", "SPT Dilaporkan",
+    "Formulir Induk 11c positif", "BPE", "Bukti Penerimaan Elektronik",
+    "angsuran PPh Pasal 25 berikutnya"
+  ],
+  "client_questions": [
+    "Bagaimana cara lapor SPT Tahunan yang kurang bayar di Coretax?",
+    "SPT saya kurang bayar, bagaimana cara bayar dan lapornya?",
+    "Setelah lapor SPT kurang bayar, apa yang harus dilakukan?",
+    "Bisakah bayar SPT kurang bayar pakai deposit di Coretax?",
+    "Kode billing SPT kurang bayar diambil dari mana di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk membuat, mengisi, membayar, dan menyampaikan SPT Tahunan PPh Orang Pribadi dengan status Kurang Bayar melalui Coretax. Status Kurang Bayar terjadi ketika nilai PPh yang harus dibayar pada Formulir Induk nomor 11c bernilai positif, sehingga WP harus melunasi kekurangan pembayaran sebelum atau bersamaan dengan penyampaian SPT.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "Data penghasilan dan bukti potong tahun pajak yang bersangkutan sudah siap",
+    "Sudah menghitung besaran PPh kurang bayar",
+    "Memiliki saldo Deposit Pajak yang cukup (jika memilih bayar via deposit) ATAU siap membayar via kode billing"
+  ],
+  "estimated_time": "30–60 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "WP OP dapat melaporkan SPT secara mandiri atau melalui Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Surat Pemberitahuan (SPT)",
+      "click": "Klik menu 'Surat Pemberitahuan (SPT)' → klik submenu 'Surat Pemberitahuan (SPT)'",
+      "input": "-",
+      "expected_screen": "Halaman Konsep SPT terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Halaman Konsep SPT",
+      "menu": "Create Tax Return",
+      "click": "Klik tombol 'Create Tax Return'",
+      "input": "-",
+      "expected_screen": "Formulir pemilihan jenis SPT terbuka",
+      "note": "Jika sudah ada Konsep SPT untuk tahun pajak yang sama, klik ikon 'mata' untuk melanjutkan pengisian — tidak perlu buat baru."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Create Tax Return",
+      "menu": "-",
+      "click": "-",
+      "input": "Pilih: Tax Type = PPh Orang Pribadi, Tax Return Type = Personal Income Tax Return, Tax Return Period Type = SPT Tahunan, Tax Period = tahun pajak yang dilaporkan, Tax Return Model = Normal",
+      "expected_screen": "Semua pilihan terisi, tombol Save aktif",
+      "note": "Pilihan 'Pembetulan' hanya muncul jika sudah ada SPT Normal sebelumnya untuk tahun yang sama."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Create Tax Return",
+      "menu": "-",
+      "click": "Klik tombol 'Save'",
+      "input": "-",
+      "expected_screen": "Konsep SPT berhasil dibuat dan muncul di daftar",
+      "note": "-"
+    },
+    {
+      "step": 6,
+      "page": "Halaman Konsep SPT",
+      "menu": "View / Lihat SPT",
+      "click": "Klik ikon 'mata' (view) pada baris Konsep SPT",
+      "input": "-",
+      "expected_screen": "Formulir SPT Tahunan terbuka pada Formulir Induk (Main Form)",
+      "note": "Pengisian dimulai dari Formulir Induk, baru kemudian lampiran yang dipersyaratkan."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Induk (Main Form)",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi seluruh bagian Formulir Induk: A (Identitas WP), B (Sumber Penghasilan), C (Perhitungan PPh Terutang), D (Kredit Pajak), E (Kurang/Lebih Bayar), H (Angsuran PPh Pasal 25 tahun berikutnya), dan bagian lainnya. Isi pula lampiran yang muncul secara dinamis (L-1 s.d. L-5).",
+      "expected_screen": "Bagian 11c (Income Tax that must be paid) bernilai positif — ini menandakan status Kurang Bayar",
+      "note": "Bagian H (Income Tax Installment) wajib diisi jika status Kurang Bayar — berisi 3 pertanyaan yang menentukan besaran angsuran PPh Pasal 25 tahun berikutnya."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Induk (Main Form)",
+      "menu": "Pay and Submit",
+      "click": "Klik tombol 'Pay and Submit'",
+      "input": "-",
+      "expected_screen": "Muncul formulir notifikasi penggunaan Deposit Perpanjangan SPT Tahunan",
+      "note": "Untuk status Kurang Bayar, sebelum masuk ke halaman Sign (Penandatanganan), akan muncul notifikasi terkait Deposit Perpanjangan SPT Tahunan. Selesaikan notifikasi ini terlebih dahulu."
+    },
+    {
+      "step": 9,
+      "page": "Notifikasi Deposit Perpanjangan",
+      "menu": "-",
+      "click": "Selesaikan formulir notifikasi Deposit Perpanjangan (isi sesuai kondisi WP)",
+      "input": "-",
+      "expected_screen": "Halaman Sign Document (Penandatanganan SPT) terbuka",
+      "note": "Notifikasi ini berkaitan dengan layanan Perpanjangan SPT Tahunan. Jika WP tidak menggunakan layanan perpanjangan, ikuti instruksi di layar untuk melanjutkan."
+    },
+    {
+      "step": 10,
+      "page": "Halaman Sign Document (Penandatanganan SPT)",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan Passphrase KODJP pada kolom yang tersedia",
+      "expected_screen": "Muncul formulir pemilihan metode pembayaran: (1) Deposit Balance Transfer atau (2) Create Code Billing",
+      "note": "Setelah penandatanganan berhasil, sistem langsung masuk ke proses pembayaran karena status SPT adalah Kurang Bayar."
+    },
+    {
+      "step": 11,
+      "page": "Formulir Pemilihan Metode Pembayaran",
+      "menu": "Pilih metode pembayaran",
+      "click": "Pilih salah satu: (1) 'Deposit Balance Transfer' jika saldo deposit mencukupi, ATAU (2) 'Create Code Billing' untuk membuat kode billing",
+      "input": "-",
+      "expected_screen": "Jika memilih Deposit: SPT langsung tersampaikan dan masuk ke SPT Dilaporkan. Jika memilih Create Code Billing: Kode Billing otomatis ter-generate dan ter-download, SPT berpindah ke status 'SPT Menunggu Pembayaran'.",
+      "note": "Jika memilih Create Code Billing, kode billing mengandung seluruh parameter SPT (jenis pajak, masa/tahun pajak, dan nilai kurang bayar). Lakukan pembayaran segera melalui bank/kanal persepsi."
+    },
+    {
+      "step": 12,
+      "page": "SPT Menunggu Pembayaran (jika memilih kode billing)",
+      "menu": "-",
+      "click": "-",
+      "input": "Lakukan pembayaran menggunakan Kode Billing yang sudah diunduh melalui bank persepsi, ATM, internet banking, atau mobile banking",
+      "expected_screen": "Setelah pembayaran berhasil, SPT otomatis berpindah dari 'SPT Menunggu Pembayaran' ke 'SPT Dilaporkan'",
+      "note": "SPT berstatus 'Menunggu Pembayaran' selama kode billing belum dibayar. Setelah dibayar, status berubah otomatis ke 'Dilaporkan' tanpa perlu tindakan tambahan di Coretax."
+    },
+    {
+      "step": 13,
+      "page": "Menu SPT Dilaporkan",
+      "menu": "Receipt / BPE",
+      "click": "Klik menu 'Receipt' pada baris SPT yang sudah dilaporkan",
+      "input": "-",
+      "expected_screen": "File PDF Bukti Penerimaan Elektronik (BPE) terunduh",
+      "note": "BPE adalah bukti resmi SPT sudah diterima DJP. Simpan sebagai arsip penting."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan yang dibuat saat permohonan KODJP",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase lama tidak bisa dipulihkan."
+    },
+    {
+      "error": "Saldo Deposit tidak mencukupi untuk melunasi kurang bayar",
+      "cause": "Saldo Deposit Pajak yang tersedia lebih kecil dari nilai kurang bayar SPT",
+      "solution": "Pilih opsi 'Create Code Billing' dan lakukan pembayaran melalui bank/kanal persepsi menggunakan kode billing yang dihasilkan."
+    },
+    {
+      "error": "SPT tetap di status 'Menunggu Pembayaran' meskipun sudah dibayar",
+      "cause": "Sistem belum memproses konfirmasi pembayaran dari bank persepsi",
+      "solution": "Tunggu beberapa saat (bisa memakan waktu hingga 1x24 jam). Jika lebih dari 24 jam tidak berubah, hubungi KPP terdaftar atau Kring Pajak 1500200 dengan menyertakan bukti bayar."
+    },
+    {
+      "error": "Tombol 'Pay and Submit' tidak aktif",
+      "cause": "Ada bagian Formulir Induk atau lampiran yang belum diisi lengkap",
+      "solution": "Periksa seluruh bagian Formulir Induk dan lampiran. Perhatikan notifikasi validasi sistem. Pastikan bagian H (Angsuran PPh Pasal 25) sudah diisi."
+    }
+  ],
+  "success_result": "SPT Tahunan PPh OP status Kurang Bayar berhasil disampaikan (masuk ke menu 'SPT Dilaporkan') setelah pembayaran kurang bayar diselesaikan melalui Deposit atau Kode Billing. BPE (Bukti Penerimaan Elektronik) berhasil diunduh sebagai bukti resmi.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Bab 05 Penyampaian SPT — Status Kurang Bayar, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Direktorat Jenderal Pajak",
+    "Panduan Ringkas Coretax DJP, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Status Kurang Bayar = nilai PPh yang harus dibayar pada Formulir Induk nomor 11c bernilai POSITIF.",
+    "Pembayaran kurang bayar bisa melalui 2 cara: (1) Deposit Balance Transfer jika saldo mencukupi, atau (2) Kode Billing yang dibayar via bank/kanal persepsi.",
+    "Jika memilih Kode Billing, SPT masuk ke status 'Menunggu Pembayaran' — berpindah ke 'Dilaporkan' setelah pembayaran terkonfirmasi otomatis.",
+    "Bagian H (Angsuran PPh Pasal 25 tahun berikutnya) wajib diisi untuk SPT Kurang Bayar.",
+    "Batas waktu bayar dan lapor SPT Tahunan PPh OP: 31 Maret tahun berikutnya.",
+    "Terlambat lapor dan/atau bayar dapat dikenai sanksi bunga dan/atau denda administrasi."
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "PB006",
+  "master_index_id": null,
+  "priority": 6,
+  "type": "profil",
+  "title": "Ikhtisar Profil WP (TAM 360°)",
+  "module": "Taxpayer Account Management (TAM)",
+  "subcategory": "Ikhtisar Profil Wajib Pajak",
+  "aliases": [
+    "TAM 360",
+    "Taxpayer 360-Degree Overview",
+    "profil wajib pajak",
+    "ringkasan profil WP",
+    "dashboard profil",
+    "profil saya"
+  ],
+  "keywords": [
+    "TAM",
+    "Taxpayer Account Management",
+    "ikhtisar profil",
+    "360 degree overview",
+    "profil saya",
+    "alamat utama",
+    "kontak utama",
+    "KLU",
+    "kode billing aktif",
+    "saldo saat ini",
+    "SPT belum disampaikan",
+    "jenis pajak terdaftar",
+    "kasus aktif",
+    "fasilitas aktif",
+    "informasi detail",
+    "buku besar",
+    "hak dan kewajiban perpajakan"
+  ],
+  "client_questions": [
+    "Bagaimana cara melihat profil lengkap saya di Coretax?",
+    "Di mana saya bisa melihat ringkasan data pajak saya?",
+    "Bagaimana cara melihat saldo pajak saya di Coretax?",
+    "Bagaimana cara mengecek kode billing yang belum dibayar?",
+    "Bagaimana cara melihat SPT yang belum saya sampaikan?",
+    "Di mana saya bisa melihat jenis pajak yang saya miliki?",
+    "Bagaimana cara melihat fasilitas perpajakan saya yang masih aktif?",
+    "Di mana melihat kasus/permohonan yang sedang berjalan?",
+    "Apa itu TAM di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mengakses dan membaca halaman Ikhtisar Profil Wajib Pajak (Taxpayer 360-Degree Overview) pada modul TAM di Coretax, sehingga dapat memantau kondisi perpajakan secara komprehensif dalam satu tampilan.",
+  "prerequisites": [
+    "Sudah memiliki akun Coretax aktif",
+    "Sudah berhasil login ke Coretax (lihat PB001)",
+    "NPWP/NIK terdaftar dan terverifikasi"
+  ],
+  "estimated_time": "3–5 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "Halaman Login Coretax — https://coretaxdjp.pajak.go.id",
+      "menu": "-",
+      "click": "-",
+      "input": "ID Pengguna (NIK/NPWP 16 digit), Kata Sandi, Bahasa (id-ID), Kode Keamanan (captcha)",
+      "expected_screen": "Halaman login Coretax",
+      "note": "Pilih bahasa 'id-ID' untuk tampilan Bahasa Indonesia. Setelah berhasil login, sistem akan menampilkan Dashboard Coretax."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka, menampilkan antara lain: Dokumen Saya, Notifikasi Saya, Kasus Saya, Kasus Berjalan Saya, Profil Saya, dst.",
+      "note": "Menu 'Portal Saya' berada di posisi paling kiri pada navigation bar utama Coretax."
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Profil Saya",
+      "click": "Klik submenu 'Profil Saya'",
+      "input": "-",
+      "expected_screen": "Halaman Profil Saya terbuka. Pada panel kiri terdapat menu 'Informasi Detail'.",
+      "note": "Submenu 'Profil Saya' berisi informasi terkait identitas serta hak dan kewajiban perpajakan wajib pajak."
+    },
+    {
+      "step": 4,
+      "page": "Profil Saya",
+      "menu": "Informasi Detail",
+      "click": "Klik 'Informasi Detail' pada panel navigasi kiri",
+      "input": "-",
+      "expected_screen": "Sub-navigasi 'Informasi Detail' meluas/terbuka, menampilkan pilihan 'Ikhtisar Profil Wajib Pajak' di bawahnya.",
+      "note": "Setelah klik 'Informasi Detail', akan muncul submenu turunan termasuk 'Ikhtisar Profil Wajib Pajak'."
+    },
+    {
+      "step": 5,
+      "page": "Profil Saya → Informasi Detail",
+      "menu": "Ikhtisar Profil Wajib Pajak",
+      "click": "Klik submenu 'Ikhtisar Profil Wajib Pajak'",
+      "input": "-",
+      "expected_screen": "Halaman Ikhtisar Profil Wajib Pajak (Taxpayer 360-Degree Overview) tampil lengkap dengan semua panel informasi perpajakan WP.",
+      "note": "Ini adalah tampilan utama TAM yang menyajikan ringkasan komprehensif kondisi perpajakan WP."
+    },
+    {
+      "step": 6,
+      "page": "Ikhtisar Profil Wajib Pajak",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Halaman menampilkan panel-panel berikut secara berurutan: (a) Alamat Utama, (b) Kontak Utama, (c) KLU Utama, (d) Kode Billing Aktif, (e) Saldo Saat Ini, (f) SPT Belum Disampaikan, (g) Jenis Pajak Terdaftar, (h) Kasus Aktif, (i) Fasilitas Aktif.",
+      "note": "Penjelasan setiap panel: [a] Alamat Utama — alamat terdaftar WP. [b] Kontak Utama — nomor telepon dan email WP. [c] KLU Utama — kode dan deskripsi klasifikasi lapangan usaha utama. [d] Kode Billing Aktif — daftar kode billing yang belum dibayar (mencakup billing untuk SPT, pembayaran pajak, dan utang pajak). [e] Saldo Saat Ini — posisi akhir Buku Besar WP; sisi Debit = kewajiban/utang pajak, sisi Kredit = hak/deposit pajak. [f] SPT Belum Disampaikan — SPT berstatus kurang bayar yang sudah direkam di sistem namun belum dilaporkan dan dibayar. [g] Jenis Pajak Terdaftar — semua jenis pajak yang menjadi kewajiban WP (diperoleh dari proses pendaftaran). [h] Kasus Aktif — semua kasus/permohonan layanan perpajakan yang sedang berjalan (kecuali pemeriksaan bukti permulaan tertutup, penagihan, dan penyidikan). [i] Fasilitas Aktif — semua sertifikat atau fasilitas perpajakan yang masih aktif dan valid milik WP."
+    },
+    {
+      "step": 7,
+      "page": "Ikhtisar Profil Wajib Pajak",
+      "menu": "Tombol Unduh Tampilan 360 Derajat",
+      "click": "Klik tombol 'Unduh Tampilan 360 Derajat' (jika tersedia di kanan atas halaman)",
+      "input": "-",
+      "expected_screen": "File unduhan berhasil tersimpan berupa ringkasan profil WP dalam format yang dapat disimpan.",
+      "note": "Langkah ini opsional. Tombol unduh memungkinkan WP menyimpan ringkasan profil perpajakan secara lokal."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Halaman Ikhtisar Profil Wajib Pajak tidak memuat data / tampil kosong",
+      "cause": "Data WP belum tersinkronisasi dari proses pendaftaran, atau sesi login sudah kedaluwarsa",
+      "solution": "Lakukan refresh halaman (F5). Jika tetap kosong, logout lalu login kembali. Pastikan proses pendaftaran WP sudah selesai dan akun aktif."
+    },
+    {
+      "error": "Submenu 'Ikhtisar Profil Wajib Pajak' tidak muncul di bawah 'Informasi Detail'",
+      "cause": "Panel 'Informasi Detail' belum diklik/diperluas, atau tampilan halaman belum sepenuhnya dimuat",
+      "solution": "Pastikan klik 'Informasi Detail' terlebih dahulu hingga submenu muncul. Tunggu halaman selesai memuat sebelum mengklik."
+    },
+    {
+      "error": "Panel 'Kasus Aktif' tidak menampilkan kasus tertentu yang diketahui WP sedang berjalan",
+      "cause": "Kasus jenis pemeriksaan bukti permulaan tertutup, penagihan, dan penyidikan tidak ditampilkan di panel ini",
+      "solution": "Untuk melihat kasus pemeriksaan yang sedang berjalan, gunakan menu 'Informasi Umum' pada halaman Profil Saya."
+    },
+    {
+      "error": "Saldo Saat Ini menunjukkan nilai Debit lebih besar dari Kredit",
+      "cause": "WP memiliki utang/kewajiban pajak yang belum diselesaikan",
+      "solution": "Ini bukan error — kondisi ini menunjukkan adanya sisa kewajiban pajak yang harus diselesaikan. Cek detail pada Buku Besar (menu Buku Besar di navigation bar)."
+    }
+  ],
+  "success_result": "Halaman Ikhtisar Profil Wajib Pajak (Taxpayer 360-Degree Overview) berhasil ditampilkan secara lengkap, menampilkan Alamat Utama, Kontak Utama, KLU Utama, Kode Billing Aktif, Saldo Saat Ini, SPT Belum Disampaikan, Jenis Pajak Terdaftar, Kasus Aktif, dan Fasilitas Aktif milik WP.",
+  "references": [
+    "Buku Manual Coretax 2024 — Taxpayer Account Management (TAM), Edisi 20241129, Direktorat P2Humas KPDJP, Direktorat Jenderal Pajak, Kementerian Keuangan RI",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Bab 3 Profil Wajib Pajak, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Halaman Ikhtisar Profil WP adalah halaman read-only (hanya baca). Tidak ada perubahan data yang dapat dilakukan dari halaman ini.",
+    "Untuk mengubah data yang tampil di halaman ini (alamat, kontak, KLU, dll), gunakan menu Portal Saya → Perubahan Data.",
+    "Panel 'Kasus Aktif' tidak menampilkan: pemeriksaan bukti permulaan tertutup, penagihan, dan penyidikan. Gunakan menu 'Informasi Umum' untuk melihat kasus pemeriksaan.",
+    "Data yang ditampilkan diperbarui secara real-time dan terintegrasi dari proses bisnis registrasi, SPT, pembayaran, dan layanan perpajakan."
+  ]
+}

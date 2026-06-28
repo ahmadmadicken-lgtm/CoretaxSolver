@@ -1,0 +1,189 @@
+{
+  "id": "PB011",
+  "master_index_id": null,
+  "priority": 11,
+  "type": "spt",
+  "title": "SPT Tahunan PPh OP — Status Lebih Bayar",
+  "module": "Surat Pemberitahuan (SPT)",
+  "subcategory": "Pelaporan SPT Tahunan PPh Orang Pribadi",
+  "aliases": [
+    "SPT lebih bayar orang pribadi",
+    "restitusi pajak SPT tahunan",
+    "pengembalian kelebihan pembayaran pajak",
+    "SPT OP LB Coretax",
+    "refund pajak SPT tahunan"
+  ],
+  "keywords": [
+    "SPT Tahunan", "PPh Orang Pribadi", "status lebih bayar", "restitusi",
+    "refund", "pengembalian kelebihan pajak", "Bagian G Refund",
+    "Formulir Induk 11a negatif", "pemeriksaan", "pengembalian pendahuluan",
+    "SKPPKP", "SKPLB", "nomor rekening", "BPE", "SPT Dilaporkan"
+  ],
+  "client_questions": [
+    "SPT tahunan saya lebih bayar, bagaimana cara lapornya di Coretax?",
+    "Bagaimana cara mengajukan restitusi pajak melalui Coretax?",
+    "Apa perbedaan pengembalian melalui pemeriksaan dan pengembalian pendahuluan?",
+    "Nomor rekening apa yang harus diisi untuk pengembalian lebih bayar?",
+    "Setelah lapor SPT lebih bayar, berapa lama uang dikembalikan?"
+  ],
+  "objective": "Memandu WP OP untuk membuat, mengisi, dan menyampaikan SPT Tahunan PPh Orang Pribadi dengan status Lebih Bayar melalui Coretax, termasuk pengisian Bagian G (Refund) untuk memilih metode pengembalian kelebihan pembayaran pajak.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "Data penghasilan dan seluruh bukti potong tahun pajak sudah siap dan lengkap",
+    "Nomor rekening bank atas nama WP sudah terdaftar di Coretax (lihat PB005)",
+    "Sudah memahami pilihan metode pengembalian: Pemeriksaan atau Pengembalian Pendahuluan"
+  ],
+  "estimated_time": "30–60 menit",
+  "difficulty": "sulit",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "WP OP dapat melaporkan SPT secara mandiri atau melalui Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Surat Pemberitahuan (SPT)",
+      "click": "Klik menu 'Surat Pemberitahuan (SPT)' → klik submenu 'Surat Pemberitahuan (SPT)'",
+      "input": "-",
+      "expected_screen": "Halaman Konsep SPT terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Halaman Konsep SPT",
+      "menu": "Create Tax Return",
+      "click": "Klik tombol 'Create Tax Return'",
+      "input": "-",
+      "expected_screen": "Formulir pemilihan jenis SPT terbuka",
+      "note": "Jika sudah ada Konsep SPT untuk tahun yang sama, klik ikon 'mata' untuk melanjutkan."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Create Tax Return",
+      "menu": "-",
+      "click": "-",
+      "input": "Pilih: Tax Type = PPh Orang Pribadi, Tax Return Type = Personal Income Tax Return, Tax Return Period Type = SPT Tahunan, Tax Period = tahun pajak yang dilaporkan, Tax Return Model = Normal",
+      "expected_screen": "Semua pilihan terisi, tombol Save aktif",
+      "note": "-"
+    },
+    {
+      "step": 5,
+      "page": "Formulir Create Tax Return",
+      "menu": "-",
+      "click": "Klik tombol 'Save'",
+      "input": "-",
+      "expected_screen": "Konsep SPT berhasil dibuat",
+      "note": "-"
+    },
+    {
+      "step": 6,
+      "page": "Halaman Konsep SPT",
+      "menu": "View / Lihat SPT",
+      "click": "Klik ikon 'mata' (view) pada baris Konsep SPT",
+      "input": "-",
+      "expected_screen": "Formulir SPT Tahunan terbuka pada Formulir Induk (Main Form)",
+      "note": "Pengisian dimulai dari Formulir Induk. Lampiran muncul secara dinamis sesuai jawaban WP."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Induk — Header",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi Type Of Bookkeeping (Jenis Pembukuan/Pencatatan) dan Source Of Income (Sumber Penghasilan) sesuai kondisi WP",
+      "expected_screen": "Header terisi",
+      "note": "Tahun Pajak, Status SPT, dan Periode Akuntansi sudah ter-prepopulated otomatis oleh sistem."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Induk — Bagian A s.d. E",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi seluruh bagian: A (Identitas WP — prepopulated), B (Sumber Penghasilan — jawab Ya/Tidak), C (Perhitungan PPh Terutang), D (Kredit Pajak — termasuk bukti potong), E (Kurang/Lebih Bayar). Isi pula lampiran yang muncul secara dinamis.",
+      "expected_screen": "Bagian E nomor 11a (Underpayment or Overpayment) bernilai NEGATIF — ini menandakan status Lebih Bayar",
+      "note": "Nilai negatif di 11a berarti kredit pajak (bukti potong + pembayaran) melebihi PPh terutang. Pastikan seluruh bukti potong sudah diinput dengan benar di Bagian D."
+    },
+    {
+      "step": 9,
+      "page": "Formulir Induk — Bagian G (Refund)",
+      "menu": "G. Refund",
+      "click": "-",
+      "input": "Pilih metode pengembalian kelebihan pembayaran: (1) 'Dikembalikan melalui Pemeriksaan' ATAU (2) 'Dikembalikan melalui Permohonan Pengembalian Pendahuluan'. Kemudian pilih Nomor Rekening bank tujuan pengembalian.",
+      "expected_screen": "Bagian G terisi dengan metode pengembalian dan nomor rekening",
+      "note": "Perbedaan dua pilihan: (1) Pemeriksaan — DJP melakukan pemeriksaan terlebih dahulu sebelum mengembalikan (proses lebih lama). (2) Pengembalian Pendahuluan — penelitian lebih cepat tanpa pemeriksaan penuh, namun ada syarat tertentu. Nomor rekening yang dipilih harus sudah terdaftar di Coretax atas nama WP."
+    },
+    {
+      "step": 10,
+      "page": "Formulir Induk",
+      "menu": "Pay and Submit",
+      "click": "Klik tombol 'Pay and Submit'",
+      "input": "-",
+      "expected_screen": "Halaman Sign Document (Penandatanganan SPT) terbuka",
+      "note": "Untuk status Lebih Bayar, setelah Bagian G diisi, proses Pay and Submit berjalan seperti status Nihil — langsung ke penandatanganan tanpa proses pembayaran."
+    },
+    {
+      "step": 11,
+      "page": "Halaman Sign Document",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan Passphrase KODJP pada kolom yang tersedia",
+      "expected_screen": "SPT berhasil ditandatangani dan terkirim. SPT langsung berpindah ke menu 'SPT Dilaporkan'. Proses bisnis berpindah ke proses Pengembalian Lebih Bayar.",
+      "note": "Setelah SPT Lebih Bayar dilaporkan, DJP akan memproses permohonan pengembalian sesuai metode yang dipilih di Bagian G. Pemantauan progress dapat dilakukan melalui Portal Wajib Pajak."
+    },
+    {
+      "step": 12,
+      "page": "Menu SPT Dilaporkan",
+      "menu": "Receipt / BPE",
+      "click": "Klik menu 'Receipt' pada baris SPT yang sudah dilaporkan",
+      "input": "-",
+      "expected_screen": "File PDF Bukti Penerimaan Elektronik (BPE) terunduh",
+      "note": "Simpan BPE sebagai bukti resmi SPT sudah diterima DJP dan proses pengembalian sudah dimulai."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Bagian G (Refund) tidak muncul meskipun nilai 11a sudah negatif",
+      "cause": "Ada bagian lain di Formulir Induk yang belum diisi lengkap sehingga sistem belum memunculkan Bagian G",
+      "solution": "Pastikan semua bagian Formulir Induk (A s.d. E) sudah diisi dan tersimpan. Coba klik Save terlebih dahulu, lalu scroll ke bawah — Bagian G seharusnya muncul setelah nilai 11a bernilai negatif."
+    },
+    {
+      "error": "Nomor rekening tidak muncul sebagai pilihan di Bagian G",
+      "cause": "Nomor rekening bank belum didaftarkan di profil WP di Coretax",
+      "solution": "Daftarkan nomor rekening terlebih dahulu melalui Portal Saya → Profil Saya → Detail Bank (lihat PB005). Setelah terdaftar, kembali ke SPT dan isi Bagian G."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan yang dibuat saat permohonan KODJP",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase lama tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "Nilai kredit pajak (bukti potong) tidak sesuai dengan yang sebenarnya",
+      "cause": "Data bukti potong belum ter-prepopulated sempurna atau ada bukti potong yang belum dilaporkan oleh pihak pemotong",
+      "solution": "Cek dan bandingkan data di Bagian D dengan bukti potong fisik yang dimiliki. Jika ada selisih, input manual bukti potong yang belum muncul. Hubungi pihak pemotong jika bukti potong belum diterbitkan."
+    }
+  ],
+  "success_result": "SPT Tahunan PPh OP status Lebih Bayar berhasil disampaikan dan masuk ke menu 'SPT Dilaporkan'. BPE (Bukti Penerimaan Elektronik) berhasil diunduh. Proses pengembalian kelebihan pembayaran pajak (restitusi) sudah dimulai dan akan diproses oleh DJP sesuai metode yang dipilih.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Bab 05 Penyampaian SPT — Status Lebih Bayar, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Bagian G Refund, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Pengembalian Kelebihan Pembayaran Pajak, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Status Lebih Bayar = nilai pada Formulir Induk nomor 11a bernilai NEGATIF (kredit pajak > PPh terutang).",
+    "Wajib mengisi Bagian G (Refund) sebelum submit — pilih metode pengembalian dan nomor rekening.",
+    "Dua pilihan metode pengembalian: (1) Pemeriksaan (proses lebih lama, DJP menerbitkan SKPLB) atau (2) Pengembalian Pendahuluan (lebih cepat, DJP menerbitkan SKPPKP).",
+    "Nomor rekening tujuan pengembalian HARUS atas nama WP dan sudah terdaftar di Coretax.",
+    "Setelah SPT dilaporkan, progress pengembalian dapat dipantau melalui Portal Wajib Pajak.",
+    "SPT Lebih Bayar adalah yang paling kompleks di antara 3 status SPT — kesalahan pengisian bisa memperlambat atau membatalkan proses restitusi.",
+    "KODJP (Passphrase) wajib dimiliki dan aktif sebelum memulai — jika lupa, harus ajukan ulang dari awal."
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "id": "PB003",
+  "master_index_id": 93,
+  "priority": 3,
+  "type": "login",
+  "title": "Aktivasi Akun WP — Email atau Nomor HP Tidak Aktif",
+  "module": "Aktivasi Akun",
+  "subcategory": "Aktivasi Akun Coretax DJP",
+  "aliases": [
+    "email lama tidak aktif Coretax",
+    "nomor HP tidak aktif Coretax",
+    "tidak bisa terima OTP",
+    "ganti email Coretax",
+    "update kontak Coretax",
+    "permintaan akses digital"
+  ],
+  "keywords": [
+    "Aktivasi Akun Wajib Pajak",
+    "email tidak aktif",
+    "nomor HP tidak aktif",
+    "Permintaan Akses Digital",
+    "laman login",
+    "centang Wajib Pajak Terdaftar",
+    "proksi warisan tidak terbagi",
+    "penanggung jawab perusahaan",
+    "Cari",
+    "Detail Kontak",
+    "Take a photo",
+    "Validasi Foto",
+    "verifikasi wajah",
+    "Dukcapil",
+    "Imigrasi",
+    "Pernyataan Wajib Pajak",
+    "Simpan",
+    "Bukti Tanda Terima",
+    "Surat Penerbitan Akun Wajib Pajak",
+    "email dan nomor telepon terdaftar"
+  ],
+  "client_questions": [
+    "Email saya sudah ganti, tidak bisa dapat link reset password",
+    "Nomor HP lama sudah tidak aktif, bagaimana cara masuk Coretax?",
+    "OTP tidak masuk ke email atau HP, sudah tidak bisa diakses",
+    "Saya mau update email di Coretax tapi belum bisa login",
+    "Ada cara lain masuk Coretax tanpa email lama?",
+    "Aktivasi Akun Wajib Pajak itu untuk apa dan caranya bagaimana?"
+  ],
+  "objective": "Memandu konsultan agar klien WP OP yang email atau nomor HP-nya sudah tidak aktif dapat memperbarui data kontak melalui fitur 'Aktivasi Akun Wajib Pajak' di laman login Coretax, sehingga klien dapat kembali mengakses akun Coretax-nya.",
+  "prerequisites": [
+    "Klien memiliki NIK atau NPWP yang valid dan sudah terdaftar di sistem DJP.",
+    "Klien memiliki email baru atau nomor HP baru yang aktif dan dapat diakses untuk menerima verifikasi.",
+    "Klien dapat melakukan verifikasi wajah (foto) menggunakan kamera PC atau handphone — wajah akan dicocokkan dengan data Dukcapil atau Imigrasi."
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "Laman Login",
+      "click": "-",
+      "input": "Akses laman Coretax DJP melalui: https://coretaxdjp.pajak.go.id",
+      "expected_screen": "Laman Login Coretax tampil dengan tombol 'Lupa Kata Sandi?', 'Pengguna Baru? Daftar disini', dan 'Aktivasi Akun Wajib Pajak'.",
+      "note": "Fitur 'Aktivasi Akun Wajib Pajak' digunakan khusus untuk Wajib Pajak yang memiliki email atau nomor handphone yang sudah tidak aktif dan perlu diperbarui untuk mengakses akun kembali. Jangan klik 'Lupa Kata Sandi?' karena tautan tidak akan terkirim ke email atau HP yang tidak aktif."
+    },
+    {
+      "step": 2,
+      "page": "Laman Login",
+      "menu": "-",
+      "click": "Klik 'Aktivasi Akun Wajib Pajak'.",
+      "input": "-",
+      "expected_screen": "Laman Permintaan Akses Digital terbuka dengan formulir yang berisi: Manajemen Kasus, Pemilihan Wajib Pajak, Detail Kontak, Verifikasi Identitas, dan Pernyataan Wajib Pajak.",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Laman Permintaan Akses Digital",
+      "menu": "Manajemen Kasus",
+      "click": "-",
+      "input": "Centang pilihan yang sesuai dengan kondisi klien: (1) 'Apakah Wajib Pajak sudah terdaftar?' — centang jika klien sudah memiliki NPWP. (2) 'Sebagai Penanggung Jawab Wajib Pajak Perusahaan atau bukan?' — untuk WP OP, abaikan centang ini. (3) 'Proksi Warisan tidak terbagi?' — abaikan jika tidak relevan. Jika tidak keduanya, abaikan centang dan lanjut ke langkah berikutnya.",
+      "expected_screen": "Kotak centang yang sesuai terisi.",
+      "note": "Untuk WP OP biasa yang ingin memperbarui email/HP, cukup centang 'Apakah Wajib Pajak sudah terdaftar?'."
+    },
+    {
+      "step": 4,
+      "page": "Laman Permintaan Akses Digital",
+      "menu": "Pemilihan Wajib Pajak",
+      "click": "Klik tombol 'Cari'.",
+      "input": "Masukkan NIK/NPWP Wajib Pajak pada kolom 'Nomor Pokok Wajib Pajak'.",
+      "expected_screen": "Nama Wajib Pajak tampil otomatis di kolom 'Nama Wajib Pajak'. Pastikan nama yang muncul sesuai dengan identitas klien.",
+      "note": "Jika nama yang muncul tidak sesuai, hentikan proses dan verifikasi NIK/NPWP yang dimasukkan."
+    },
+    {
+      "step": 5,
+      "page": "Laman Permintaan Akses Digital",
+      "menu": "Detail Kontak",
+      "click": "-",
+      "input": "Isikan alamat email baru yang aktif pada kolom 'E-mail'. Isikan nomor telepon baru yang aktif pada kolom 'Nomor Telepon'. Pastikan tombol centang hijau telah muncul di sebelah kolom yang terisi dengan benar.",
+      "expected_screen": "Kolom E-mail dan Nomor Telepon terisi. Tanda centang hijau muncul di sebelah masing-masing kolom yang valid.",
+      "note": "Masukkan email dan nomor HP yang sebelumnya terdaftar pada sistem DJP jika masih diketahui. Jika sudah tidak bisa diakses, masukkan email dan nomor HP baru yang aktif."
+    },
+    {
+      "step": 6,
+      "page": "Laman Permintaan Akses Digital",
+      "menu": "Verifikasi Identitas",
+      "click": "Klik tombol 'Take a photo'.",
+      "input": "Arahkan kamera ke wajah klien. Usahakan gambar terlihat dengan baik dan wajah tidak tertutup aksesori seperti kacamata atau masker.",
+      "expected_screen": "Foto wajah klien tampil di kolom verifikasi.",
+      "note": "Setelah foto diambil, sistem akan mencocokkan hasilnya dengan data yang tersedia di Dukcapil atau Imigrasi."
+    },
+    {
+      "step": 7,
+      "page": "Laman Permintaan Akses Digital",
+      "menu": "Verifikasi Identitas",
+      "click": "Klik tombol 'Validasi Foto'.",
+      "input": "-",
+      "expected_screen": "Notifikasi 'Successfully verified your image!' atau 'Validasi foto berhasil!' muncul di layar.",
+      "note": "Pastikan notifikasi menunjukkan proses verifikasi telah berhasil sebelum melanjutkan. Jika verifikasi gagal, coba ulang pengambilan foto dengan pencahayaan yang lebih baik."
+    },
+    {
+      "step": 8,
+      "page": "Laman Permintaan Akses Digital",
+      "menu": "Pernyataan Wajib Pajak",
+      "click": "Centang kotak Pernyataan Wajib Pajak.",
+      "input": "-",
+      "expected_screen": "Kotak pernyataan tercentang.",
+      "note": "-"
+    },
+    {
+      "step": 9,
+      "page": "Laman Permintaan Akses Digital",
+      "menu": "-",
+      "click": "Klik tombol 'Simpan'.",
+      "input": "-",
+      "expected_screen": "Permohonan berhasil terkirim. Notifikasi keberhasilan tampil di layar.",
+      "note": "-"
+    },
+    {
+      "step": 10,
+      "page": "Kotak Masuk Email Klien (Email Baru)",
+      "menu": "-",
+      "click": "-",
+      "input": "Periksa kotak masuk email baru klien.",
+      "expected_screen": "Email dari Direktorat Jenderal Pajak masuk berisi dokumen 'Bukti Tanda Terima' dan 'Surat Penerbitan Akun Wajib Pajak'.",
+      "note": "Unduh 'Bukti Tanda Terima' dan 'Surat Penerbitan Akun Wajib Pajak' dari email tersebut. Di dalam Surat Penerbitan Akun terdapat Password akun yang di-generate oleh sistem DJP."
+    },
+    {
+      "step": 11,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "Laman Login",
+      "click": "Klik 'Login'.",
+      "input": "Masukkan NIK/NPWP pada kolom ID Pengguna; masukkan Password dari Surat Penerbitan Akun pada kolom Kata Sandi; masukkan kode captcha.",
+      "expected_screen": "Dashboard Coretax DJP tampil. Sistem akan meminta klien mengganti password.",
+      "note": "Setelah login berhasil, lakukan penggantian password untuk memudahkan akses pada akun. Gunakan PB001 sebagai panduan penggantian password jika diperlukan."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Verifikasi foto gagal — notifikasi keberhasilan tidak muncul",
+      "cause": "Pencahayaan kurang memadai, wajah tertutup aksesori, atau data foto tidak cocok dengan data Dukcapil/Imigrasi.",
+      "solution": "Ulangi pengambilan foto dengan memastikan: (1) pencahayaan cukup dan merata di wajah, (2) wajah tidak tertutup kacamata, masker, atau aksesori lain, (3) kamera menghadap langsung ke wajah klien."
+    },
+    {
+      "error": "Nama yang muncul setelah klik 'Cari' tidak sesuai atau kolom kosong",
+      "cause": "NIK atau NPWP yang dimasukkan tidak valid atau tidak terdaftar di sistem DJP.",
+      "solution": "Periksa kembali NIK atau NPWP klien. Pastikan angka yang dimasukkan benar. Jika NIK klien belum terdaftar sebagai wajib pajak, gunakan fitur 'Daftar disini' bukan 'Aktivasi Akun Wajib Pajak'."
+    },
+    {
+      "error": "Email dari DJP tidak masuk ke kotak masuk email baru klien",
+      "cause": "Tidak dijelaskan pada dokumentasi resmi.",
+      "solution": "Periksa folder Spam atau Junk di email klien. Jika masih tidak ada, hubungi Kring Pajak 1500 200."
+    }
+  ],
+  "success_result": "Email dari DJP berisi 'Bukti Tanda Terima' dan 'Surat Penerbitan Akun Wajib Pajak' masuk ke kotak masuk email baru klien. Klien dapat login ke Coretax menggunakan password dari surat tersebut dan melakukan penggantian password.",
+  "references": [
+    "Leaflet_Aktivasi_Akun_pada_Coretax_DJP.pdf",
+    "Buku_Panduan_Coretax_bagi_Wajib_Pajak_Badan_Migas_2025_.pdf",
+    "compressed_Buku_Panduan_Coretax_bagi_Instansi_Pemerintah_2025.pdf"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Fitur 'Aktivasi Akun Wajib Pajak' berbeda dari 'Lupa Kata Sandi?'. Gunakan 'Aktivasi Akun Wajib Pajak' HANYA jika email atau nomor HP klien sudah tidak aktif sehingga tidak bisa menerima tautan reset password.",
+    "Fitur 'Daftar disini' digunakan untuk WP yang belum memiliki NPWP atau NIK yang dimiliki belum aktif sebagai NPWP — bukan untuk kasus email tidak aktif.",
+    "Wajib Pajak yang telah terdaftar dan memiliki NPWP perlu mengaktivasi akun Coretax-nya untuk melakukan pemenuhan hak dan kewajiban perpajakannya termasuk untuk bayar dan lapor pajak melalui SPT."
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "id": "PB004",
+  "master_index_id": 13,
+  "priority": 4,
+  "type": "registrasi",
+  "title": "Pendaftaran NPWP WP Orang Pribadi Baru",
+  "module": "Registrasi",
+  "subcategory": "Pendaftaran Wajib Pajak Orang Pribadi",
+  "aliases": [
+    "daftar NPWP baru",
+    "buat NPWP online",
+    "cara dapat NPWP",
+    "daftar wajib pajak pertama kali",
+    "new registration Coretax",
+    "bikin NPWP Coretax"
+  ],
+  "keywords": [
+    "New Registration", "Pendaftaran Baru", "NPWP baru", "daftar NPWP",
+    "Perorangan", "NIK", "Taxpayer Identity", "Taxpayer Name", "Taxpayer Type",
+    "Place of Birth", "Date of Birth", "Gender", "Marital Status", "Religion",
+    "Work Type", "Mother's Full Name", "Family Card Number", "Family Member Status",
+    "Individual Category", "Head of FTU NIK", "Verify", "Contact Details",
+    "Email", "Mobile Phone Number", "OTP", "Resend", "Related Persons",
+    "pihak terkait", "hubungan istimewa", "Economic Data", "KLU",
+    "Source of Income", "Employee", "Professional", "Business Activity", "Others",
+    "Main Economic Code", "KLU Utama", "Address", "Domicile Address",
+    "National Identity Address", "RT RW 000", "Geometric Data", "Mark Address",
+    "Copy from Domicile", "Identity Verification", "Take a photo", "upload photo",
+    "Dukcapil", "Submit Application", "Kirim Pengajuan", "starter pack",
+    "cetakan NPWP PDF"
+  ],
+  "client_questions": [
+    "Saya belum punya NPWP, bagaimana cara daftarnya?",
+    "Bisa daftar NPWP sendiri dari rumah tanpa ke KPP?",
+    "Cara isi formulir pendaftaran NPWP di Coretax",
+    "Kolom KLU harus diisi apa?",
+    "Setelah daftar NPWP, kapan NPWP-nya terbit?",
+    "Saya perempuan sudah menikah, ada kolom tambahan apa?",
+    "Alamat KTP dan domisili berbeda, harus diisi keduanya?"
+  ],
+  "objective": "Memandu konsultan agar calon WP OP berhasil mendaftarkan diri dan memperoleh NPWP baru melalui fitur 'New Registration' di laman Coretax DJP, mulai dari pengisian identitas hingga NPWP terbit via email.",
+  "prerequisites": [
+    "Calon WP memiliki NIK (Nomor Induk Kependudukan) yang valid bagi WNI.",
+    "Calon WP memiliki alamat email aktif dan nomor handphone aktif untuk verifikasi OTP.",
+    "Calon WP dapat melakukan verifikasi wajah (foto) menggunakan kamera PC atau handphone — wajah dicocokkan dengan data Dukcapil.",
+    "Calon WP menyiapkan data: nama lengkap sesuai e-KTP, tempat dan tanggal lahir, nama ibu kandung, nomor Kartu Keluarga, dan informasi sumber penghasilan (jenis pekerjaan dan KLU)."
+  ],
+  "estimated_time": "20–30 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "Laman Login",
+      "click": "Klik 'New Registration (Pendaftaran Baru)'.",
+      "input": "Akses laman https://coretaxdjp.pajak.go.id",
+      "expected_screen": "Laman Login Coretax tampil. Tombol 'New Registration (Pendaftaran Baru)' terlihat di bawah tombol Login.",
+      "note": "Fitur 'New Registration' digunakan untuk WP yang belum memiliki NPWP atau NIK yang dimiliki belum aktif sebagai NPWP. Proses pengisian data terbagi menjadi 7 langkah. Calon WP diharapkan mengisi data dengan lengkap dan benar sesuai keadaan sebenarnya."
+    },
+    {
+      "step": 2,
+      "page": "Laman Persiapan Registrasi",
+      "menu": "-",
+      "click": "Pilih 'Perorangan' untuk pendaftaran WP Orang Pribadi.",
+      "input": "Apabila sudah memiliki NIK, pilih tombol 'Ya, ....'; lalu pilih jenis pendaftaran yang sesuai untuk NIK.",
+      "expected_screen": "Formulir pendaftaran dengan 7 tab langkah terbuka: Taxpayer Identity — Contact Details — Related Persons — Economic Data — Address — Identity Verification — Taxpayer Statement.",
+      "note": "Bagi WP OP WNI, NIK akan digunakan sebagai NPWP (16 digit)."
+    },
+    {
+      "step": 3,
+      "page": "Formulir Pendaftaran — Tab 1: Taxpayer Identity",
+      "menu": "-",
+      "click": "Klik tombol 'Verify (Periksa)' setelah seluruh kolom terisi.",
+      "input": "Isi seluruh kolom berikut: (1) National Identity Number / NIK. (2) Taxpayer Name — nama lengkap sesuai e-KTP. (3) Taxpayer Type — pilih jenis wajib pajak. (4) Place of Birth — tempat lahir. (5) Country of Origin — negara asal. (6) Date of Birth — tanggal lahir. (7) Gender — pilih Male (Laki-laki) atau Female (Perempuan). (8) Marital Status — pilih Single / Married / Divorce / Death Divorce. (9) Religion — pilih salah satu dari: Budha, Catholic, Christian, Hindu, Islam, Konghucu, Other, Trust. (10) Work Type — pilih tipe pekerjaan. (11) Mother's Full Name — nama lengkap ibu kandung. (12) Family Card Number — nomor Kartu Keluarga. (13) Family Member Status — pilih status dalam keluarga. (14) Individual Category — pilih kategori individu.",
+      "expected_screen": "Kolom terisi dan tombol Verify aktif. Setelah klik Verify, sistem memvalidasi data.",
+      "note": "Jika Gender dipilih 'Female' dan Marital Status 'Married', maka muncul kolom tambahan 'Head of FTU NIK (Kepala Keluarga)' dan pilihan Individual Category berupa: (a) Istri yang memilih melaksanakan hak dan kewajiban perpajakan terpisah, (b) Istri dengan perjanjian memisahkan aset dan penghasilan, (c) Wanita menikah yang telah hidup terpisah menurut keputusan hakim."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Pendaftaran — Tab 2: Contact Details",
+      "menu": "-",
+      "click": "Klik tombol 'Verify (Verifikasi)' di sebelah kolom email dan mobile phone number. Setelah OTP diterima, masukkan kode OTP lalu klik 'Verify'. Kemudian klik 'Next (Selanjutnya)'.",
+      "input": "Isi: Email, Mobile Phone Number, Phone Number (opsional), Facsimile Number (opsional). Masukkan kode OTP yang dikirim ke email dan nomor HP klien.",
+      "expected_screen": "Tanda verifikasi hijau muncul di sebelah kolom email dan nomor HP setelah OTP berhasil diverifikasi.",
+      "note": "Apabila tidak menerima OTP atau terjadi kesalahan pengisian email atau nomor HP, isikan 000 sebagai ganti kode OTP, klik Verify, lalu masukkan email atau nomor HP yang benar. Apabila OTP belum diterima setelah beberapa saat, klik tombol 'Resend (Kirim Ulang)'."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Pendaftaran — Tab 3: Related Persons",
+      "menu": "-",
+      "click": "Jika ingin menambahkan pihak terkait: klik tanda Plus (Tambah), isi data, klik 'Save (Simpan)'. Jika tidak ada, langsung klik 'Next (Berikutnya)'.",
+      "input": "Jika ada pihak terkait: isi Type of related person (tipe hubungan), Person NIK/TIN (NIK/NPWP orang terkait), tekan tombol 'Search (Cari)', isi Remark (komentar). Klik 'Save (Simpan)'.",
+      "expected_screen": "Data pihak terkait tersimpan dan tampil dalam daftar, atau halaman langsung lanjut ke Tab 4 jika dilewati.",
+      "note": "Penambahan pihak terkait bersifat opsional. Pihak terkait adalah orang yang memiliki hubungan tertentu dengan WP seperti pasangan, anak, cucu, saudara, atau orang tua. Tahapan ini bisa dilewati dengan langsung menekan tombol Next."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Pendaftaran — Tab 4: Economic Data",
+      "menu": "-",
+      "click": "Klik tombol 'Add (Tambah)' untuk menambahkan KLU. Pilih Source of Income, isi kolom sesuai pilihan, klik 'Save (Simpan)'. Setelah semua kolom wajib terisi, klik 'Next (Selanjutnya)'.",
+      "input": "Pilih Source of Income (Sumber Penghasilan): (a) Employee (Karyawan) — isi: KLU, deskripsi KLU, Workplace, Income per Month. (b) Professional (Pekerja Bebas) — isi: KLU, deskripsi KLU, Workplace, Trademark/Business, Income per Month, Yearly Turnover, Business License, Business License Date, Number of Employees. (c) Business Activity (Kegiatan Usaha) — isi: KLU, deskripsi KLU, Trademark/Business, Yearly Turnover, Business License, Business License Date, Number of Employees. (d) Others (Lainnya) — isi semua kolom yang tersedia.",
+      "expected_screen": "Data KLU tersimpan dan tampil dalam daftar. Pastikan kolom centang pada kode KLU sudah tercentang.",
+      "note": "Kode ekonomi (KLU) dapat ditambahkan lebih dari satu, namun hanya ada satu Main Economic Code (KLU Utama). Pastikan sudah mencentang pada kolom kode KLU sebelum klik Next."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Pendaftaran — Tab 5: Address",
+      "menu": "-",
+      "click": "Klik tombol 'Mark Address' untuk mengisi Data Geometris. Untuk alamat KTP: klik tombol 'Verify (Periksa)' untuk verifikasi dengan Dukcapil. Setelah data berhasil diverifikasi, klik 'Next (Berikutnya)'.",
+      "input": "Wajib isi: (1) Domicile Address (Alamat Domisili) — isi Address Detail, RT (jika tidak tahu isi 000), RW (jika tidak tahu isi 000), Province, City/Region, District, Sub-district. Sistem mengisi Kode Area dan Kode Pos otomatis berdasarkan kecamatan; Kode Pos dapat diubah. Isi Geometric Data dengan klik 'Mark Address'. (2) National Identity Address (Alamat KTP) — wajib diisi bagi yang memiliki NIK. Jika alamat KTP sama dengan domisili, klik tombol 'Copy from Domicile (Salin dari Domisili)'. Alamat KTP wajib diverifikasi dengan Dukcapil: klik tombol 'Verify (Periksa)'. Data pada kolom alamat KTP wajib disamakan tepat seperti data KTP.",
+      "expected_screen": "Kedua alamat terisi. Tanda verifikasi muncul setelah Verify berhasil. Data geometris muncul berupa altitude dan latitude.",
+      "note": "Untuk proses pendaftaran, diperlukan minimal satu alamat utama yaitu Domicile Address. Bagi individu dengan NIK, National Identity Address juga wajib diisi."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Pendaftaran — Tab 6: Identity Verification",
+      "menu": "-",
+      "click": "Klik 'Take a photo' untuk mengambil foto langsung dari kamera. Jika gagal, klik 'upload photo' untuk mengunggah foto dari file. Setelah foto terverifikasi, klik 'Next (Berikutnya)'.",
+      "input": "Arahkan kamera ke wajah klien. Pastikan pencahayaan baik dan wajah tidak tertutup aksesori seperti kacamata atau masker.",
+      "expected_screen": "Notifikasi verifikasi foto berhasil tampil. Tombol Next aktif.",
+      "note": "Verifikasi identitas dicocokkan dengan data DUKCAPIL. Apabila verifikasi melalui Take a photo tidak berhasil, lakukan verifikasi dengan cara kedua yaitu upload photo (dari file foto yang sudah ada)."
+    },
+    {
+      "step": 9,
+      "page": "Formulir Pendaftaran — Tab 7: Taxpayer Statement",
+      "menu": "-",
+      "click": "Centang kotak pernyataan, lalu klik tombol 'Submit Application (Kirim Pengajuan)'.",
+      "input": "-",
+      "expected_screen": "Notifikasi 'Permohonan Berhasil Diajukan' tampil di layar.",
+      "note": "Pernyataan berbunyi: 'Dengan menyadari sepenuhnya segala akibat termasuk sanksi sesuai ketentuan peraturan perundang-undangan yang berlaku, saya menyatakan bahwa apa yang saya sampaikan di atas adalah benar dan lengkap, dan saya setuju untuk menggunakan Akun Wajib Pajak saya sebagai sarana menerima keputusan dan dokumen perpajakan.'"
+    },
+    {
+      "step": 10,
+      "page": "Kotak Masuk Email Klien",
+      "menu": "-",
+      "click": "-",
+      "input": "Minta klien membuka email yang didaftarkan.",
+      "expected_screen": "Email dari sistem Coretax masuk berisi Nomor NPWP dan Cetakan NPWP dalam bentuk PDF. Wajib pajak yang baru terdaftar juga menerima starter pack berisi informasi mengenai hak dan kewajibannya.",
+      "note": "Cek secara berkala kotak masuk email untuk mendapatkan informasi terkait penerbitan NPWP. Bagi WP OP WNI, NIK klien berlaku sebagai NPWP 16 digit."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "OTP tidak masuk ke email atau nomor HP klien",
+      "cause": "Kesalahan pengisian email atau nomor HP, atau OTP terlambat terkirim.",
+      "solution": "Apabila tidak menerima OTP atau terjadi kesalahan pengisian email atau nomor HP, isikan 000 sebagai ganti kode OTP, klik Verify, lalu masukkan alamat email atau nomor HP yang benar. Apabila OTP masih belum diterima setelah beberapa saat, klik tombol 'Resend (Kirim Ulang)'."
+    },
+    {
+      "error": "Verifikasi foto (Identity Verification) gagal",
+      "cause": "Pencahayaan kurang, wajah tertutup aksesori, atau kualitas kamera tidak memadai untuk dicocokkan dengan data Dukcapil.",
+      "solution": "Apabila verifikasi melalui Take a photo tidak berhasil, lakukan verifikasi dengan cara kedua: klik 'upload photo' dan unggah foto wajah dari file yang sudah ada di perangkat. Pastikan foto jelas dan wajah tidak tertutup aksesori."
+    },
+    {
+      "error": "Kolom KLU tidak tersimpan atau tombol Next tidak aktif di Tab Economic Data",
+      "cause": "Kolom centang pada kode KLU belum dicentang, atau kolom wajib belum terisi lengkap.",
+      "solution": "Pastikan sudah mencentang pada kolom kode KLU setelah mengisi data KLU. Pastikan seluruh kolom wajib di Tab Economic Data sudah terisi sebelum klik Next."
+    },
+    {
+      "error": "Verifikasi alamat KTP (National Identity Address) gagal",
+      "cause": "Data alamat yang dimasukkan tidak cocok dengan data Dukcapil.",
+      "solution": "Pastikan data pada kolom alamat KTP disamakan tepat seperti data yang tertera di KTP klien. Jika alamat KTP sama dengan domisili, gunakan tombol 'Copy from Domicile' terlebih dahulu."
+    }
+  ],
+  "success_result": "Notifikasi 'Permohonan Berhasil Diajukan' tampil di layar. Email dari sistem Coretax masuk ke kotak masuk klien berisi Nomor NPWP dan Cetakan NPWP berbentuk PDF. Bagi WP OP WNI, NIK klien berlaku sebagai NPWP 16 digit.",
+  "references": [
+    "Buku_Manual_Coretax_2024__Pendaftaran_WP_Orang_Pribadi.pdf",
+    "Leaflet_Pendaftaran_WP_OP_pada_Coretax_v20260105_0.pdf"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Proses pengisian data terbagi menjadi 7 langkah (tab). Calon WP diharapkan mengisi data dengan lengkap dan benar sesuai keadaan sebenarnya.",
+    "Bagi WP OP WNI, NIK akan digunakan sebagai NPWP (16 digit). Wajib pajak yang baru mendaftar langsung memperoleh NPWP 16 digit saat pendaftaran.",
+    "Wajib pajak yang baru terdaftar akan menerima starter pack berisi informasi mengenai hak dan kewajibannya — dikirimkan ke email setelah proses pendaftaran berhasil.",
+    "Pendaftaran juga dapat dilakukan melalui saluran lain: Contact Center, Pos, Jasa Ekspedisi, KPP/KP2KP, OSS (untuk orang pribadi berusaha), atau PJAP. Playbook ini khusus memandu jalur Portal Wajib Pajak (online mandiri)."
+  ]
+}

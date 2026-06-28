@@ -1,0 +1,217 @@
+{
+  "id": "PB001",
+  "master_index_id": 97,
+  "priority": 1,
+  "type": "login",
+  "title": "Login Pertama Kali ke Coretax",
+  "module": "Aktivasi Akun",
+  "subcategory": "Aktivasi Akun Coretax DJP",
+  "aliases": [
+    "cara masuk Coretax pertama kali",
+    "reset password Coretax",
+    "lupa password pajak",
+    "tidak bisa login Coretax",
+    "aktivasi akun Coretax",
+    "ubah kata sandi Coretax"
+  ],
+  "keywords": [
+    "login Coretax",
+    "login pertama kali",
+    "kata sandi",
+    "lupa kata sandi",
+    "Lupa Kata Sandi?",
+    "reset password",
+    "NIK NPWP",
+    "pemadanan NIK",
+    "Permohonan Ubah Kata Sandi",
+    "Surat Elektronik",
+    "Nomor Gawai",
+    "captcha",
+    "tautan reset password",
+    "passphrase",
+    "aktivasi akun",
+    "Daftar disini",
+    "Aktivasi Akun Wajib Pajak",
+    "DJP Online",
+    "browser",
+    "cache",
+    "coretaxdjp.pajak.go.id"
+  ],
+  "client_questions": [
+    "Saya tidak bisa login Coretax, kata sandi salah terus",
+    "Cara login Coretax pertama kali bagaimana?",
+    "Password DJP Online saya sudah dimasukkan tapi tidak bisa masuk",
+    "Coretax minta ubah kata sandi, harus bagaimana?",
+    "Link reset password sudah saya klik tapi tidak bisa",
+    "Email saya tidak aktif lagi, bagaimana cara masuk Coretax?",
+    "Coretax tidak bisa dibuka di browser saya",
+    "Passphrase itu apa dan harus diisi di mana?",
+    "NIK saya tidak dikenali saat login"
+  ],
+  "objective": "Memandu klien WP OP agar berhasil masuk ke akun Coretax DJP untuk pertama kalinya, mulai dari mengakses laman, memilih jalur yang tepat, mengatur ulang kata sandi, hingga berhasil masuk ke dashboard.",
+  "prerequisites": [
+    "NIK dan NPWP klien sudah dilakukan pemadanan (padan) melalui DJP Online.",
+    "Klien memiliki akses ke email atau nomor HP yang terdaftar di sistem DJP.",
+    "Klien memiliki akses internet dan browser versi terbaru (Google Chrome, Mozilla Firefox, atau Microsoft Edge)."
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "Laman Login",
+      "click": "-",
+      "input": "Pastikan NIK dan NPWP klien sudah padan (terhubung) sebelum memulai. Akses Coretax DJP melalui alamat: https://coretaxdjp.pajak.go.id",
+      "expected_screen": "Laman Login Coretax dengan kolom ID Pengguna, Kata Sandi, Pemilihan Bahasa, dan Captcha",
+      "note": "Sebelum mengakses Coretax DJP, pastikan wajib pajak telah melakukan pemadanan NIK dengan NPWP. Gunakan browser Google Chrome, Mozilla Firefox, atau Microsoft Edge versi terbaru."
+    },
+    {
+      "step": 2,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "Laman Login",
+      "click": "Lupa Kata Sandi?",
+      "input": "-",
+      "expected_screen": "Laman Permohonan Ubah Kata Sandi",
+      "note": "Menu 'Lupa Kata Sandi?' digunakan untuk: (1) Login pertama kali ke Coretax bagi WP yang sudah memiliki akses DJP Online, ATAU (2) Reset Password Coretax jika lupa kata sandi yang telah didaftarkan. Klien yang pertama kali login HARUS melewati jalur ini terlebih dahulu."
+    },
+    {
+      "step": 3,
+      "page": "Laman Permohonan Ubah Kata Sandi",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan NIK/NPWP Wajib Pajak pada kolom yang tersedia",
+      "expected_screen": "Kolom NIK/NPWP terisi",
+      "note": "Gunakan NIK (16 digit) untuk WP OP WNI."
+    },
+    {
+      "step": 4,
+      "page": "Laman Permohonan Ubah Kata Sandi",
+      "menu": "Tujuan Konfirmasi",
+      "click": "Pilih 'Surat Elektronik' atau 'Nomor Gawai'",
+      "input": "Jika memilih 'Surat Elektronik': masukkan alamat email yang terdaftar di DJP. Jika memilih 'Nomor Gawai': masukkan nomor ponsel yang terdaftar di DJP.",
+      "expected_screen": "Kolom email atau nomor ponsel terisi sesuai pilihan",
+      "note": "Gunakan email atau nomor HP yang terdaftar pada sistem DJP (DJP Online). Pastikan email atau nomor HP tersebut masih aktif dan dapat diakses."
+    },
+    {
+      "step": 5,
+      "page": "Laman Permohonan Ubah Kata Sandi",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan kode Captcha sebagaimana ditampilkan oleh sistem",
+      "expected_screen": "Kolom captcha terisi",
+      "note": "-"
+    },
+    {
+      "step": 6,
+      "page": "Laman Permohonan Ubah Kata Sandi",
+      "menu": "Pernyataan",
+      "click": "Centang kotak Pernyataan",
+      "input": "-",
+      "expected_screen": "Kotak pernyataan tercentang",
+      "note": "-"
+    },
+    {
+      "step": 7,
+      "page": "Laman Permohonan Ubah Kata Sandi",
+      "menu": "-",
+      "click": "Klik tombol 'Kirim'",
+      "input": "-",
+      "expected_screen": "Sistem mengirimkan tautan reset password ke email atau SMS klien",
+      "note": "-"
+    },
+    {
+      "step": 8,
+      "page": "Kotak Masuk Email / SMS Klien",
+      "menu": "-",
+      "click": "Buka email atau SMS, lalu klik tautan reset password yang dikirimkan oleh sistem DJP",
+      "input": "-",
+      "expected_screen": "Laman Ubah Kata Sandi terbuka di browser",
+      "note": "Periksa email atau SMS untuk menemukan tautan reset password yang dikirimkan oleh sistem. Jika sukses, sistem menampilkan halaman reset password."
+    },
+    {
+      "step": 9,
+      "page": "Laman Ubah Kata Sandi",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan Password baru dengan ketentuan: minimal 8 karakter, minimal 1 huruf besar, minimal 1 huruf kecil, minimal 1 angka, minimal 1 karakter khusus",
+      "expected_screen": "Kolom password baru terisi",
+      "note": "Kata sandi (password) disarankan untuk tidak menggunakan karakter khusus: ' (apostrop), \\ (backslash), + (plus)."
+    },
+    {
+      "step": 10,
+      "page": "Laman Ubah Kata Sandi",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan Konfirmasi Password baru (sama persis dengan password di langkah 9)",
+      "expected_screen": "Kolom konfirmasi password terisi",
+      "note": "-"
+    },
+    {
+      "step": 11,
+      "page": "Laman Ubah Kata Sandi",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan kode Captcha",
+      "expected_screen": "Kolom captcha terisi",
+      "note": "-"
+    },
+    {
+      "step": 12,
+      "page": "Laman Ubah Kata Sandi",
+      "menu": "-",
+      "click": "Klik tombol 'Save'",
+      "input": "-",
+      "expected_screen": "Notifikasi bahwa reset password berhasil",
+      "note": "-"
+    },
+    {
+      "step": 13,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "Laman Login",
+      "click": "-",
+      "input": "Masukkan NIK/NPWP 16 digit pada kolom ID Pengguna; masukkan password baru yang telah dibuat pada kolom Kata Sandi; masukkan kode captcha; klik tombol 'Login'",
+      "expected_screen": "Dashboard Coretax / Halaman 'Selamat Datang'",
+      "note": "Setelah login berhasil pertama kali, sistem akan meminta klien untuk membuat passphrase. Passphrase disarankan berbeda dengan kata sandi. Passphrase juga disarankan untuk tidak menggunakan karakter khusus: ' (apostrop), \\ (backslash), + (plus)."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Klien tidak bisa mengakses laman Coretax sama sekali",
+      "cause": "Koneksi internet bermasalah, browser lama, atau cache browser bermasalah",
+      "solution": "Lakukan langkah berikut secara berurutan: (1) Periksa koneksi internet — pastikan aktif dan terhubung; jika bermasalah, putuskan dan sambungkan kembali. (2) Ganti browser ke Google Chrome, Mozilla Firefox, atau Microsoft Edge; pastikan versi terbaru. (3) Hapus cache dan cookies browser; gunakan mode incognito/in-private pada browser."
+    },
+    {
+      "error": "Email atau nomor HP klien sudah tidak aktif sehingga tautan reset password tidak dapat diterima",
+      "cause": "Email atau nomor HP yang terdaftar di DJP sudah tidak aktif",
+      "solution": "Sebelum 1 Januari 2025: WP dapat langsung memperbarui alamat email dan nomor telepon via DJP Online. Mulai 1 Januari 2025: (1) Pilih 'Aktivasi Akun Wajib Pajak' pada laman Login Coretax untuk mengisi dan verifikasi alamat email dan nomor telepon baru, ATAU (2) Datang ke KPP terdekat atau hubungi Kring Pajak 1500 200 untuk permohonan pembaruan email dan nomor telepon."
+    },
+    {
+      "error": "Klien belum memiliki NPWP atau NIK belum aktif sebagai NPWP",
+      "cause": "NIK klien belum terdaftar sebagai wajib pajak",
+      "solution": "Arahkan klien untuk klik 'Daftar disini' pada laman Login Coretax. Fitur ini digunakan untuk login bagi Wajib Pajak yang belum memiliki NPWP atau NIK yang dimiliki belum aktif sebagai NPWP."
+    },
+    {
+      "error": "Klien memiliki email atau nomor HP aktif namun bukan wajib pajak dan ingin melakukan aktivitas pada Coretax",
+      "cause": "Pengguna bukan wajib pajak",
+      "solution": "Arahkan klien untuk klik 'Aktivasi Akun Wajib Pajak' pada laman Login Coretax. Fitur ini digunakan untuk Wajib Pajak yang memiliki email atau nomor handphone yang sudah tidak aktif dan perlu diperbarui untuk mengakses akun kembali."
+    }
+  ],
+  "success_result": "Klien berhasil masuk ke dashboard Coretax DJP dan dapat mengakses seluruh fitur perpajakan sesuai hak aksesnya.",
+  "references": [
+    "compressed_Panduan_Ringkas_Coretax_DJP.pdf",
+    "Leaflet_Aktivasi_Akun_pada_Coretax_DJP.pdf",
+    "compressed_Buku_Panduan_Singkat_Coretax_v_1.pdf",
+    "Buku_Panduan_Coretax_bagi_Wajib_Pajak_Badan_Migas_2025_.pdf",
+    "compressed_Buku_Panduan_Coretax_bagi_Instansi_Pemerintah_2025.pdf",
+    "Panduan_Pemberitahuan_Penggunaan_NPPN.pdf"
+  ],
+  "verified": true,
+  "revision": 2,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Setiap klien WP OP yang baru pertama menggunakan Coretax wajib melewati proses ini sebelum dapat melakukan apapun — lapor SPT, bayar pajak, buat faktur, atau mengurus layanan administrasi. Tanpa berhasil login, tidak ada proses perpajakan lain yang bisa dilanjutkan.",
+    "Setelah login berhasil pertama kali, sistem akan meminta klien membuat passphrase untuk Kode Otorisasi DJP. Passphrase ini berbeda dari kata sandi login dan akan digunakan untuk menandatangani seluruh dokumen elektronik di Coretax (lihat PB002).",
+    "Demi keamanan, pastikan kredensial klien tetap rahasia dan tidak dibagikan kepada pihak lain."
+  ]
+}

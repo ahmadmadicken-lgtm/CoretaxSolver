@@ -1,0 +1,187 @@
+{
+  "id": "PB012",
+  "master_index_id": null,
+  "priority": 12,
+  "type": "spt",
+  "title": "Pembetulan SPT Tahunan PPh OP",
+  "module": "Surat Pemberitahuan (SPT)",
+  "subcategory": "Pelaporan SPT Tahunan PPh Orang Pribadi",
+  "aliases": [
+    "pembetulan SPT tahunan",
+    "amendment SPT tahunan",
+    "koreksi SPT tahunan orang pribadi",
+    "revisi SPT tahunan Coretax",
+    "betulkan SPT yang sudah dilaporkan"
+  ],
+  "keywords": [
+    "pembetulan SPT", "amendment", "koreksi SPT", "SPT Tahunan",
+    "PPh Orang Pribadi", "Tax Return Model Pembetulan",
+    "Bagian F Amendment", "PPh akibat pembetulan",
+    "kurang bayar pembetulan", "BPE pembetulan", "SPT Normal"
+  ],
+  "client_questions": [
+    "Bagaimana cara membetulkan SPT Tahunan yang sudah dilaporkan di Coretax?",
+    "Saya salah isi SPT Tahunan, bisakah diperbaiki?",
+    "Apa itu pembetulan SPT di Coretax?",
+    "Apakah bisa betulkan SPT tahunan lebih dari sekali?",
+    "Setelah pembetulan SPT, apakah ada sanksi yang harus dibayar?"
+  ],
+  "objective": "Memandu WP OP untuk membuat dan menyampaikan SPT Tahunan PPh Orang Pribadi Pembetulan melalui Coretax, guna memperbaiki kesalahan atau kekurangan pada SPT Normal yang sudah dilaporkan sebelumnya.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "SPT Tahunan Normal untuk tahun pajak yang sama sudah pernah dilaporkan dan berstatus 'Dilaporkan'",
+    "Mengetahui data yang perlu dikoreksi dan dokumen pendukungnya sudah siap",
+    "Jika pembetulan menghasilkan kurang bayar tambahan, siap melunasi dengan kode billing atau deposit"
+  ],
+  "estimated_time": "30–60 menit",
+  "difficulty": "sulit",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pembetulan SPT hanya bisa dilakukan jika SPT Normal untuk tahun yang sama sudah berstatus 'Dilaporkan'. Jika belum, laporkan SPT Normal dulu (PB009, PB010, atau PB011)."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Surat Pemberitahuan (SPT)",
+      "click": "Klik menu 'Surat Pemberitahuan (SPT)' → klik submenu 'Surat Pemberitahuan (SPT)'",
+      "input": "-",
+      "expected_screen": "Halaman Konsep SPT terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Halaman Konsep SPT",
+      "menu": "Create Tax Return",
+      "click": "Klik tombol 'Create Tax Return'",
+      "input": "-",
+      "expected_screen": "Formulir pemilihan jenis SPT terbuka",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Formulir Create Tax Return",
+      "menu": "Tax Type & Tax Return Type",
+      "click": "-",
+      "input": "Pilih: Tax Type = PPh Orang Pribadi, Tax Return Type = Personal Income Tax Return, Tax Return Period Type = SPT Tahunan, Tax Period = tahun pajak yang akan dibetulkan",
+      "expected_screen": "Pilihan Tax Return Model muncul",
+      "note": "Tahun pajak yang dipilih harus sama persis dengan tahun pajak SPT Normal yang ingin dibetulkan."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Create Tax Return",
+      "menu": "Tax Return Model — Pembetulan",
+      "click": "-",
+      "input": "Pilih Tax Return Model: Pembetulan (Amendment)",
+      "expected_screen": "Pilihan Pembetulan tersedia karena sistem sudah mendeteksi adanya SPT Normal untuk tahun pajak tersebut",
+      "note": "Pilihan 'Pembetulan' hanya muncul jika sistem sudah mencatat SPT Normal berstatus 'Dilaporkan' untuk tahun pajak yang dipilih. Jika tidak muncul, berarti SPT Normal belum dilaporkan atau tahun pajak yang dipilih salah."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Create Tax Return",
+      "menu": "-",
+      "click": "Klik tombol 'Save'",
+      "input": "-",
+      "expected_screen": "Konsep SPT Pembetulan berhasil dibuat dan muncul di daftar Konsep SPT dengan label 'Pembetulan'",
+      "note": "Konsep SPT Pembetulan dapat dihapus jika terdapat kesalahan saat membuat."
+    },
+    {
+      "step": 7,
+      "page": "Halaman Konsep SPT",
+      "menu": "View / Lihat SPT",
+      "click": "Klik ikon 'mata' (view) pada baris Konsep SPT Pembetulan",
+      "input": "-",
+      "expected_screen": "Formulir SPT Tahunan Pembetulan terbuka. Data dari SPT Normal sebelumnya sudah ter-prepopulated secara otomatis di seluruh bagian formulir.",
+      "note": "Seluruh data SPT Normal sudah otomatis terisi. WP hanya perlu mengubah bagian yang salah/perlu dikoreksi."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Induk — Bagian A s.d. E",
+      "menu": "-",
+      "click": "-",
+      "input": "Koreksi bagian yang perlu diperbaiki (Bagian A s.d. E dan lampiran terkait). Ubah hanya data yang salah — data lain biarkan sesuai prepopulated dari SPT Normal.",
+      "expected_screen": "Data yang dikoreksi sudah diperbarui. Nilai di Bagian E (11a dan 11c) berubah sesuai koreksi.",
+      "note": "Perubahan di satu bagian bisa berdampak pada bagian lain secara otomatis. Cek ulang seluruh formulir setelah melakukan koreksi."
+    },
+    {
+      "step": 9,
+      "page": "Formulir Induk — Bagian F (Amendment)",
+      "menu": "F. Amendment Tax Return",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian F otomatis terisi oleh sistem: menampilkan nilai PPh kurang/lebih bayar dari SPT Normal, dan nilai PPh kurang/lebih bayar akibat pembetulan (selisih antara SPT Normal dan SPT Pembetulan).",
+      "note": "Bagian F hanya muncul saat status SPT adalah Pembetulan. Bagian ini diisi otomatis oleh sistem — WP tidak perlu mengisi manual. Nilai di Bagian F menunjukkan dampak koreksi terhadap pajak yang harus dibayar."
+    },
+    {
+      "step": 10,
+      "page": "Formulir Induk",
+      "menu": "Pay and Submit",
+      "click": "Klik tombol 'Pay and Submit'",
+      "input": "-",
+      "expected_screen": "Halaman Sign Document terbuka (jika Nihil atau Lebih Bayar), ATAU muncul pilihan metode pembayaran (jika ada kurang bayar tambahan akibat pembetulan)",
+      "note": "Jika pembetulan menghasilkan kurang bayar tambahan, WP harus melunasinya via Deposit atau Kode Billing sebelum SPT Pembetulan dianggap sah dilaporkan. Jika Nihil atau Lebih Bayar, langsung ke penandatanganan."
+    },
+    {
+      "step": 11,
+      "page": "Halaman Sign Document",
+      "menu": "-",
+      "click": "-",
+      "input": "Masukkan Passphrase KODJP pada kolom yang tersedia",
+      "expected_screen": "SPT Pembetulan berhasil ditandatangani dan terkirim. Masuk ke menu 'SPT Dilaporkan' dengan label Pembetulan ke-1 (atau ke-N sesuai urutan pembetulan).",
+      "note": "SPT Pembetulan dapat dilakukan lebih dari sekali — setiap pembetulan akan tercatat sebagai Pembetulan ke-1, ke-2, dan seterusnya."
+    },
+    {
+      "step": 12,
+      "page": "Menu SPT Dilaporkan",
+      "menu": "Receipt / BPE",
+      "click": "Klik menu 'Receipt' pada baris SPT Pembetulan yang sudah dilaporkan",
+      "input": "-",
+      "expected_screen": "File PDF BPE SPT Pembetulan terunduh",
+      "note": "Simpan BPE Pembetulan ini. BPE Pembetulan berbeda dengan BPE SPT Normal — keduanya perlu disimpan sebagai arsip."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Pilihan 'Pembetulan' tidak muncul di Tax Return Model",
+      "cause": "SPT Normal untuk tahun pajak yang dipilih belum berstatus 'Dilaporkan', atau tahun pajak yang dipilih salah",
+      "solution": "Pastikan SPT Normal sudah dilaporkan dan berstatus 'Dilaporkan' di menu SPT Dilaporkan. Periksa kembali tahun pajak yang dipilih — harus sama persis dengan SPT Normal yang ingin dibetulkan."
+    },
+    {
+      "error": "Data prepopulated dari SPT Normal tidak sesuai / berbeda dari yang dilaporkan",
+      "cause": "Sistem mengambil data dari SPT Normal yang tersimpan di Coretax — jika ada perbedaan, bisa jadi ada pembetulan sebelumnya yang sudah dilakukan",
+      "solution": "Cek menu SPT Dilaporkan untuk memastikan data SPT Normal yang mana yang dijadikan dasar. Jika sudah ada Pembetulan ke-1 sebelumnya, sistem akan menggunakan data dari Pembetulan ke-1 sebagai dasar Pembetulan ke-2."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan SPT Pembetulan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan seluruh proses harus diulang dari awal."
+    },
+    {
+      "error": "Kurang bayar tambahan akibat pembetulan tidak bisa dibayar karena saldo deposit tidak cukup",
+      "cause": "Selisih antara SPT Normal dan SPT Pembetulan menghasilkan kurang bayar tambahan yang melebihi saldo deposit",
+      "solution": "Pilih opsi 'Create Code Billing' dan lakukan pembayaran melalui bank/kanal persepsi. SPT Pembetulan akan masuk status 'Menunggu Pembayaran' hingga pembayaran terkonfirmasi."
+    }
+  ],
+  "success_result": "SPT Tahunan PPh OP Pembetulan berhasil disampaikan dan masuk ke menu 'SPT Dilaporkan' dengan label Pembetulan ke-N. BPE SPT Pembetulan berhasil diunduh. Data perpajakan WP sudah diperbarui sesuai koreksi yang dilakukan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Bab 03 Pembuatan Konsep SPT — Pilihan Status Pembetulan, Edisi 20240924, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Bagian F Amendment Tax Return, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Pembetulan hanya bisa dilakukan jika SPT Normal sudah berstatus 'Dilaporkan' — tidak bisa membetulkan Konsep SPT yang belum disubmit.",
+    "Bagian F (Amendment) diisi otomatis oleh sistem — menampilkan selisih pajak antara SPT Normal dan SPT Pembetulan.",
+    "Pembetulan bisa dilakukan lebih dari sekali — Pembetulan ke-1, ke-2, dst. Setiap pembetulan menggunakan data dari pembetulan terakhir sebagai dasar.",
+    "Jika pembetulan menghasilkan kurang bayar tambahan, WP wajib melunasinya — SPT Pembetulan tidak sah sebelum lunas.",
+    "Pembetulan yang dilakukan setelah menerima Surat Pemeriksaan dari DJP memiliki konsekuensi hukum berbeda — konsultasikan dengan konsultan pajak.",
+    "Batas waktu pembetulan: sebelum DJP melakukan pemeriksaan atau 2 tahun setelah jatuh tempo pelaporan (ketentuan berlaku sesuai UU KUP)."
+  ]
+}

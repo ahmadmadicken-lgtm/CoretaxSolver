@@ -1,0 +1,243 @@
+{
+  "id": "PB002",
+  "master_index_id": 114,
+  "priority": 2,
+  "type": "sertifikat",
+  "title": "Memperoleh Kode Otorisasi DJP (KODJP)",
+  "module": "Portal Saya",
+  "subcategory": "Permohonan Kode Otorisasi DJP / Sertifikat Digital",
+  "aliases": [
+    "buat tanda tangan elektronik Coretax",
+    "daftar sertifikat digital pajak",
+    "cara buat passphrase Coretax",
+    "KO DJP",
+    "KODJP",
+    "sertifikat digital DJP"
+  ],
+  "keywords": [
+    "Kode Otorisasi DJP",
+    "KO DJP",
+    "KODJP",
+    "sertifikat digital",
+    "sertifikat elektronik",
+    "tanda tangan elektronik",
+    "passphrase",
+    "Permintaan Kode Otorisasi",
+    "Portal Saya",
+    "Profil Saya",
+    "Nomor Identifikasi Eksternal",
+    "Digital Certificate",
+    "Identity Verification",
+    "verifikasi identitas",
+    "Dukcapil",
+    "validasi mandiri KODJP",
+    "Periksa Status",
+    "Simpan",
+    "Submit",
+    "notifikasi sukses"
+  ],
+  "client_questions": [
+    "Pak saya belum punya tanda tangan elektronik, harus mulai dari mana?",
+    "Passphrase itu apa dan harus dibuat di mana?",
+    "Saya tidak bisa menandatangani dokumen di Coretax, kenapa?",
+    "KODJP itu apa dan kenapa harus dibuat?",
+    "Cara buat Kode Otorisasi DJP bagaimana?",
+    "Saya sudah submit tapi KODJP belum muncul, harus bagaimana?",
+    "Verifikasi foto gagal saat permohonan KODJP"
+  ],
+  "objective": "Memandu konsultan agar klien WP OP berhasil mengajukan permohonan dan memperoleh Kode Otorisasi DJP (KO DJP) melalui menu Portal Saya Coretax, termasuk validasi mandiri untuk memastikan KO DJP dapat digunakan.",
+  "prerequisites": [
+    "Klien sudah berhasil login ke Coretax DJP (lihat PB001).",
+    "Klien memiliki akses email aktif yang terdaftar di sistem DJP.",
+    "Klien memiliki nomor handphone aktif yang terdaftar di sistem DJP.",
+    "Untuk WP OP penduduk (memiliki NIK): verifikasi identitas akan dicocokkan dengan data Dukcapil — pastikan wajah klien dapat difoto dengan jelas."
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "-",
+      "click": "-",
+      "input": "Isikan ID Pengguna berupa NIK/NPWP 16 digit; masukkan kata sandi (password); pilih bahasa (id-ID untuk Bahasa Indonesia atau en-US untuk Bahasa Inggris); masukkan kode keamanan (captcha); klik tombol 'Login'.",
+      "expected_screen": "Dashboard Portal Wajib Pajak tampil dengan nama dan NPWP klien.",
+      "note": "Pastikan klien sudah berhasil login sebelum melanjutkan. Jika belum bisa login, gunakan PB001 terlebih dahulu."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Portal Wajib Pajak",
+      "menu": "Portal Saya (My Portal)",
+      "click": "Klik menu 'Portal Saya' pada navigation bar.",
+      "input": "-",
+      "expected_screen": "Dropdown list submenu Portal Saya terbuka.",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Portal Saya (My Portal)",
+      "menu": "Permohonan Kode Otorisasi/Sertifikat Digital",
+      "click": "Pada dropdown list, pilih 'Permintaan Kode Otorisasi/Sertifikat Elektronik'.",
+      "input": "-",
+      "expected_screen": "Formulir Digital Certificate Request (Permintaan Sertifikat Digital) terbuka. Sebagian kolom berwarna abu-abu — kolom tersebut terisi otomatis oleh sistem.",
+      "note": "Kolom yang terisi otomatis oleh sistem (berwarna abu-abu) tidak perlu diubah oleh klien."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Digital Certificate Request",
+      "menu": "-",
+      "click": "-",
+      "input": "Periksa bagian Taxpayer Identity: pastikan kolom NIK/TIN, Taxpayer Name, dan Address sudah sesuai dengan identitas klien.",
+      "expected_screen": "Data identitas klien tampil di bagian Taxpayer Identity.",
+      "note": "Jika data identitas tidak sesuai, klien perlu melakukan perubahan data terlebih dahulu sebelum melanjutkan permohonan KODJP."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Digital Certificate Request",
+      "menu": "-",
+      "click": "-",
+      "input": "Periksa bagian Contact Details: pastikan kolom Email dan Mobile Phone Number sudah terisi dan aktif.",
+      "expected_screen": "Kolom Email dan Mobile Phone Number tampil dengan data yang terdaftar di sistem DJP.",
+      "note": "Pastikan email dan nomor handphone yang tampil masih aktif dan dapat diakses oleh klien. Jika tidak aktif, klien perlu memperbarui kontak terlebih dahulu."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Digital Certificate Request",
+      "menu": "Certificate Details (Rincian Sertifikat)",
+      "click": "Klik kolom dropdown 'Digital Certificate Type (Tipe Sertifikat Digital)'.",
+      "input": "Pilih 'Kode Otorisasi DJP' dari dropdown list.",
+      "expected_screen": "Pilihan 'Kode Otorisasi DJP' terpilih. Kolom Passphrase dan Ulang Passphrase muncul di bawahnya.",
+      "note": "Terdapat dua kategori sertifikat: (1) Sertifikat Elektronik Tersertifikasi seperti BRIN, BSSN, ID Rahasia, Peruri, TekenAja, Vida, dll. (2) Sertifikat Elektronik Tidak Tersertifikasi, yaitu Kode Otorisasi DJP. Untuk klien yang tidak memiliki sertifikat tersertifikasi, pilih Kode Otorisasi DJP."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Digital Certificate Request",
+      "menu": "-",
+      "click": "-",
+      "input": "Isikan Passphrase pada kolom 'Passphrase'. Kombinasi passphrase: minimal 1 huruf besar, 1 huruf kecil, 1 karakter angka, dan 1 karakter khusus. Kemudian isikan ulang passphrase yang sama pada kolom 'Ulang Passphrase'.",
+      "expected_screen": "Kolom Passphrase dan Ulang Passphrase terisi.",
+      "note": "Passphrase disarankan berbeda dari kata sandi login. Passphrase akan digunakan untuk mengotorisasi seluruh transaksi di Coretax — minta klien mencatat dan menyimpan passphrase ini. Passphrase disarankan tidak menggunakan karakter khusus: ' (apostrop), \\ (backslash), + (plus)."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Digital Certificate Request",
+      "menu": "Identity Verification (Verifikasi Identitas)",
+      "click": "Klik tombol 'Take a photo' untuk mengambil foto wajah klien langsung dari kamera perangkat.",
+      "input": "Arahkan kamera ke wajah klien. Pastikan pencahayaan baik dan wajah tidak tertutup aksesori seperti kacamata atau masker.",
+      "expected_screen": "Foto wajah klien tampil di kolom Identity Verification. Notifikasi 'Successfully verified your image!' atau 'Validasi foto berhasil!' muncul.",
+      "note": "Untuk WP OP penduduk yang memiliki NIK, verifikasi identitas akan dicocokkan dengan data yang ada di Dukcapil. Apabila verifikasi melalui 'Take a photo' tidak berhasil, lakukan verifikasi dengan cara kedua yaitu 'Upload photo' (mengunggah foto dari file yang sudah ada)."
+    },
+    {
+      "step": 9,
+      "page": "Formulir Digital Certificate Request",
+      "menu": "Taxpayer Statement (Pernyataan Wajib Pajak)",
+      "click": "Centang kotak 'Statement' (Pernyataan).",
+      "input": "-",
+      "expected_screen": "Kotak pernyataan tercentang.",
+      "note": "Pernyataan berbunyi: 'Dengan menyadari sepenuhnya akan segala akibatnya termasuk sanksi sesuai dengan ketentuan peraturan perundang-undangan yang berlaku, saya menyatakan bahwa apa yang saya sampaikan di atas adalah benar dan lengkap, dan saya menyetujui untuk menggunakan Akun Wajib Pajak saya sebagai sarana penerimaan surat dan dokumen perpajakan.'"
+    },
+    {
+      "step": 10,
+      "page": "Formulir Digital Certificate Request",
+      "menu": "-",
+      "click": "Klik tombol 'Simpan' (atau 'Submit' pada beberapa tampilan).",
+      "input": "-",
+      "expected_screen": "Notifikasi permohonan berhasil diajukan. Sistem memproses permohonan secara otomatis.",
+      "note": "Permohonan yang disampaikan secara elektronik melalui laman DJP akan diproses secara otomatis. Jika permohonan memenuhi ketentuan, DJP memberikan Kode Otorisasi DJP dan menerbitkan Surat Keterangan Penerbitan Kode Otorisasi DJP kepada wajib pajak secara otomatis segera setelah permohonan disampaikan."
+    },
+    {
+      "step": 11,
+      "page": "Dashboard Portal Wajib Pajak",
+      "menu": "-",
+      "click": "Periksa ikon 'Lonceng' di kanan atas dashboard.",
+      "input": "-",
+      "expected_screen": "Notifikasi baru tampil pada ikon Lonceng, menandakan jawaban atas permohonan Sertifikat Digital/KO DJP telah terbit.",
+      "note": "Jawaban atas permohonan juga dapat dicek melalui menu Portal Saya → Notifikasi Saya (My Notification) dan dokumen terkait persetujuan/penolakan dapat dicek melalui menu Portal Saya → Dokumen Saya (My Document)."
+    },
+    {
+      "step": 12,
+      "page": "Portal Saya → Profil Saya",
+      "menu": "Portal Saya (My Portal)",
+      "click": "Klik menu 'Portal Saya', lalu pilih 'Profil Saya'.",
+      "input": "-",
+      "expected_screen": "Halaman Profil Saya terbuka menampilkan data identitas wajib pajak.",
+      "note": "Langkah 12–16 adalah prosedur Validasi Mandiri KODJP untuk memastikan KODJP dapat digunakan."
+    },
+    {
+      "step": 13,
+      "page": "Profil Saya",
+      "menu": "-",
+      "click": "-",
+      "input": "Gulir ke bawah halaman hingga menemukan bagian 'Nomor Identifikasi Eksternal'.",
+      "expected_screen": "Bagian Nomor Identifikasi Eksternal tampil dengan dua tab: 'External Identification Numbers' dan 'Digital Certificate'.",
+      "note": "-"
+    },
+    {
+      "step": 14,
+      "page": "Profil Saya — Nomor Identifikasi Eksternal",
+      "menu": "-",
+      "click": "Pilih tab 'Digital Certificate'.",
+      "input": "-",
+      "expected_screen": "Tabel Digital Certificate tampil dengan kolom: Jenis Sertifikat Digital dan Aksi. Baris 'Kode Otorisasi DJP' terlihat dalam tabel.",
+      "note": "-"
+    },
+    {
+      "step": 15,
+      "page": "Profil Saya — Digital Certificate",
+      "menu": "-",
+      "click": "Pada baris 'Kode Otorisasi DJP', gulir kolom ke kanan hingga menemukan kolom 'Aksi'. Klik tombol 'Periksa Status'.",
+      "input": "-",
+      "expected_screen": "Notifikasi 'Success' dan tulisan 'Next Generate' muncul. Tombol 'Menghasilkan' menjadi aktif (tidak lagi abu-abu).",
+      "note": "Jika tombol 'Menghasilkan' tidak aktif setelah klik 'Periksa Status', berarti KODJP belum berhasil diterbitkan."
+    },
+    {
+      "step": 16,
+      "page": "Profil Saya — Digital Certificate",
+      "menu": "-",
+      "click": "Klik tombol 'Menghasilkan'.",
+      "input": "-",
+      "expected_screen": "Muncul Notifikasi Sukses. Kotak masuk email klien menerima dokumen penerbitan KODJP.",
+      "note": "Minta klien mengecek kotak masuk emailnya untuk mendapatkan dokumen penerbitan KODJP (Surat Keterangan Penerbitan Kode Otorisasi DJP). Pastikan notifikasi 'Sertifikat Digital Berhasil Dibuat' muncul pada layar. Unduh Bukti Tanda Terima dari halaman tersebut."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Verifikasi foto (Identity Verification) gagal saat pengambilan foto langsung",
+      "cause": "Pencahayaan kurang, wajah tertutup aksesori (kacamata, masker), atau kualitas kamera perangkat tidak memadai untuk dicocokkan dengan data Dukcapil.",
+      "solution": "Apabila verifikasi melalui cara pertama (Take a photo) tidak berhasil, lakukan verifikasi dengan cara kedua: klik 'Upload photo' dan unggah foto wajah dari file yang sudah ada di perangkat. Pastikan foto jelas, pencahayaan baik, dan wajah tidak tertutup aksesori."
+    },
+    {
+      "error": "Tombol 'Menghasilkan' tidak aktif setelah klik 'Periksa Status'",
+      "cause": "Permohonan KODJP belum diproses oleh sistem atau permohonan tidak memenuhi ketentuan sehingga diterbitkan Surat Penolakan.",
+      "solution": "Periksa menu Portal Saya → Notifikasi Saya untuk melihat status permohonan. Periksa menu Portal Saya → Dokumen Saya untuk dokumen persetujuan atau penolakan. Jika ditolak, periksa penyebab penolakan pada dokumen tersebut dan ajukan permohonan ulang setelah memenuhi ketentuan yang diperlukan."
+    },
+    {
+      "error": "Kolom Email atau Mobile Phone Number pada formulir kosong atau tidak aktif",
+      "cause": "Email atau nomor HP yang terdaftar di sistem DJP sudah tidak aktif atau belum pernah diisi.",
+      "solution": "Tidak dijelaskan pada dokumentasi resmi untuk skenario ini dalam konteks permohonan KODJP. Klien perlu memperbarui data kontak terlebih dahulu sebelum mengajukan permohonan KODJP."
+    },
+    {
+      "error": "Notifikasi permohonan KODJP tidak muncul di ikon Lonceng atau email",
+      "cause": "Tidak dijelaskan pada dokumentasi resmi.",
+      "solution": "Periksa menu Portal Saya → Notifikasi Saya dan Portal Saya → Dokumen Saya. Jika masih tidak ada, hubungi Kring Pajak 1500 200."
+    }
+  ],
+  "success_result": "Notifikasi 'Sertifikat Digital Berhasil Dibuat' tampil di layar. Tombol 'Menghasilkan' pada halaman validasi mandiri menghasilkan Notifikasi Sukses. Dokumen penerbitan KODJP (Surat Keterangan Penerbitan Kode Otorisasi DJP) masuk ke kotak masuk email klien. Klien dapat mulai menggunakan passphrase KODJP untuk menandatangani dokumen elektronik di Coretax.",
+  "references": [
+    "Leaflet_Panduan_Memperoleh_KODJP_v202512_0.pdf",
+    "Kurasi_Manual_Coretax_2024__Permintaan_Sertifikat_Digital.pdf",
+    "compressed_Panduan_Ringkas_Coretax_DJP.pdf",
+    "Buku_Panduan_Coretax_bagi_Wajib_Pajak_Badan_Migas_2025_.pdf",
+    "compressed_Buku_Panduan_Coretax_bagi_Instansi_Pemerintah_2025.pdf",
+    "Panduan_Pemberitahuan_Penggunaan_NPPN.pdf"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Passphrase akan digunakan untuk mengotorisasi SELURUH transaksi elektronik di Coretax (tanda tangan bukti potong, SPT, faktur pajak, dll.). Minta klien mencatat dan menyimpan passphrase di tempat yang aman.",
+    "Passphrase disarankan tidak menggunakan karakter khusus: ' (apostrop), \\ (backslash), + (plus).",
+    "Permohonan yang disampaikan secara elektronik melalui laman DJP: jika memenuhi ketentuan, KODJP diterbitkan secara otomatis segera setelah permohonan disampaikan. Jika tidak memenuhi ketentuan, Surat Penolakan diterbitkan secara otomatis.",
+    "Permohonan yang disampaikan secara tertulis: jawaban diterbitkan paling lama 1 hari kerja setelah permohonan diterima lengkap."
+  ]
+}

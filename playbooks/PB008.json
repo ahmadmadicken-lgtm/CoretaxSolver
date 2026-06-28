@@ -1,0 +1,180 @@
+{
+  "id": "PB008",
+  "master_index_id": null,
+  "priority": 8,
+  "type": "pembayaran",
+  "title": "Membuat Kode Billing Pajak Final PP-23 (UMKM)",
+  "module": "Pembayaran — Layanan Mandiri Kode Billing",
+  "subcategory": "Pembuatan Kode Billing Mandiri",
+  "aliases": [
+    "billing PP 23",
+    "billing UMKM",
+    "PPh Final UMKM",
+    "pajak 0,5 persen omzet",
+    "PPh peredaran bruto tertentu",
+    "KAP 411128-420",
+    "billing PPh Final setor sendiri"
+  ],
+  "keywords": [
+    "PPh Final", "PP-23", "PP 55/2022", "UMKM", "peredaran bruto tertentu",
+    "411128-420", "PPh Final UMKM Setor Sendiri", "kode billing",
+    "layanan mandiri kode billing", "0,5 persen", "omzet", "setor sendiri",
+    "KAP", "KJS", "masa pajak"
+  ],
+  "client_questions": [
+    "Bagaimana cara buat kode billing PPh Final UMKM di Coretax?",
+    "Di mana menu untuk bayar pajak 0,5% omzet di Coretax?",
+    "Apa KAP dan KJS untuk PPh Final PP-23 setor sendiri?",
+    "Bagaimana cara bayar PPh Final peredaran bruto tertentu bulanan?",
+    "Klien saya UMKM, bagaimana cara buat billing pajaknya di Coretax?"
+  ],
+  "objective": "Memandu WP OP yang memiliki peredaran bruto tertentu (UMKM, dikenai PPh Final PP-23/2018 atau PP-55/2022) untuk membuat Kode Billing PPh Final secara mandiri melalui menu Layanan Mandiri Kode Billing di Coretax, sehingga dapat melakukan pembayaran bulanan.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "WP terdaftar sebagai WP OP dengan peredaran bruto tertentu (UMKM) yang dikenai PPh Final",
+    "Mengetahui omzet/peredaran bruto bulan yang akan dibayar",
+    "Mengetahui masa pajak (bulan dan tahun) yang akan dibayar"
+  ],
+  "estimated_time": "5–10 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Jika belum bisa login, selesaikan PB001 terlebih dahulu."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran",
+      "click": "Klik menu 'Pembayaran' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Pembayaran terbuka",
+      "note": "Menu Pembayaran berisi beberapa submenu. Untuk PPh Final UMKM setor sendiri, gunakan 'Layanan Mandiri Kode Billing' — bukan 'Pembuatan Kode Billing atas Tagihan Pajak'."
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran → Layanan Mandiri Kode Billing",
+      "click": "Klik submenu 'Layanan Mandiri Kode Billing'",
+      "input": "-",
+      "expected_screen": "Halaman Layanan Mandiri Pembuatan Kode Billing terbuka. Langkah 1: Verifikasi Identitas Wajib Pajak menampilkan NPWP, Nama, dan Alamat WP.",
+      "note": "Menu ini digunakan untuk pembayaran yang bersifat mandiri/setor sendiri, termasuk PPh Final UMKM (PP-23/PP-55)."
+    },
+    {
+      "step": 4,
+      "page": "Layanan Mandiri Kode Billing — Langkah 1: Verifikasi Identitas",
+      "menu": "-",
+      "click": "Klik tombol 'Lanjut'",
+      "input": "-",
+      "expected_screen": "Sistem maju ke Langkah 2: Pilih KAP-KJS",
+      "note": "Pastikan data identitas yang tampil sudah sesuai dengan WP yang akan membayar."
+    },
+    {
+      "step": 5,
+      "page": "Layanan Mandiri Kode Billing — Langkah 2: Pilih KAP-KJS",
+      "menu": "KAP-KJS",
+      "click": "Pilih KAP-KJS dari dropdown",
+      "input": "Pilih: 411128-420 (PPh Final UMKM Setor Sendiri)",
+      "expected_screen": "KAP-KJS 411128-420 terpilih, kolom Periode dan Tahun Pajak muncul",
+      "note": "KAP-KJS 411128-420 adalah kode untuk PPh Final UMKM (peredaran bruto tertentu) setor sendiri, sesuai PP-23/2018 yang telah diubah dengan PP-55/2022. Tarif yang berlaku adalah 0,5% dari peredaran bruto per bulan."
+    },
+    {
+      "step": 6,
+      "page": "Layanan Mandiri Kode Billing — Langkah 2: Pilih KAP-KJS",
+      "menu": "Periode dan Tahun Pajak",
+      "click": "-",
+      "input": "Pilih bulan masa pajak (contoh: Januari) dan tahun pajak (contoh: 2025)",
+      "expected_screen": "Periode dan tahun pajak terpilih",
+      "note": "Satu kode billing hanya berlaku untuk satu masa pajak. PPh Final UMKM dibayar paling lambat tanggal 15 bulan berikutnya setelah masa pajak berakhir."
+    },
+    {
+      "step": 7,
+      "page": "Layanan Mandiri Kode Billing — Langkah 2: Pilih KAP-KJS",
+      "menu": "-",
+      "click": "Klik tombol 'Lanjut'",
+      "input": "-",
+      "expected_screen": "Sistem maju ke Langkah 3: Unduh Kode Billing. Menampilkan kolom Mata Uang, Nilai, dan Keterangan.",
+      "note": "-"
+    },
+    {
+      "step": 8,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "Mata Uang",
+      "click": "-",
+      "input": "Pilih Mata Uang: Rupiah Indonesia (IDR) — sudah terisi otomatis",
+      "expected_screen": "Kolom Mata Uang terisi IDR",
+      "note": "Mata uang Rupiah Indonesia terisi otomatis oleh sistem."
+    },
+    {
+      "step": 9,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "Nilai",
+      "click": "-",
+      "input": "Isikan Nilai (nominal PPh Final yang harus dibayar = 0,5% x peredaran bruto bulan tersebut)",
+      "expected_screen": "Kolom Nilai terisi nominal",
+      "note": "Kolom Nilai bersifat wajib. Hitung terlebih dahulu: Peredaran Bruto bulan × 0,5% = Nilai PPh Final yang dibayar. Contoh: omzet Rp20.000.000 → PPh Final = Rp100.000."
+    },
+    {
+      "step": 10,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "Keterangan",
+      "click": "-",
+      "input": "Isikan Keterangan (opsional, contoh: 'PPh Final UMKM Masa Januari 2025')",
+      "expected_screen": "Kolom Keterangan terisi (opsional)",
+      "note": "Dianjurkan diisi untuk memudahkan rekonsiliasi dan pelaporan SPT Tahunan."
+    },
+    {
+      "step": 11,
+      "page": "Layanan Mandiri Kode Billing — Langkah 3: Unduh Kode Billing",
+      "menu": "-",
+      "click": "Klik tombol 'Unduh Kode Billing'",
+      "input": "-",
+      "expected_screen": "File PDF Kode Billing terunduh otomatis. Berisi: NPWP, Nama, Alamat, Mata Uang, Nominal, KAP-KJS 411128-420, Masa Pajak, Kode Billing 15 digit, dan Masa Aktif.",
+      "note": "Kode Billing berlaku selama 7 (tujuh) hari sejak diterbitkan. Segera lakukan pembayaran sebelum masa aktif habis."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "KAP-KJS 411128-420 tidak muncul dalam daftar pilihan",
+      "cause": "Profil WP tidak terdaftar sebagai WP dengan peredaran bruto tertentu, atau pilihan KAP-KJS sudah disesuaikan dengan jenis WP oleh sistem",
+      "solution": "Pastikan status WP sudah benar sebagai WP OP UMKM/peredaran bruto tertentu. Hubungi KPP terdaftar jika KAP-KJS tidak muncul."
+    },
+    {
+      "error": "Nilai PPh Final yang dihitung tidak sesuai dengan catatan omzet",
+      "cause": "Kesalahan perhitungan omzet atau tarif yang digunakan",
+      "solution": "Hitung ulang: PPh Final = Peredaran Bruto (omzet) bulan tersebut × 0,5%. Pastikan omzet yang digunakan adalah omzet bruto bulan yang bersangkutan sebelum dikurangi biaya apapun."
+    },
+    {
+      "error": "PDF kode billing tidak terunduh otomatis",
+      "cause": "Browser memblokir pop-up atau unduhan otomatis",
+      "solution": "Izinkan pop-up dan unduhan dari coretaxdjp.pajak.go.id di pengaturan browser. Cek folder Downloads di komputer."
+    },
+    {
+      "error": "Kode billing sudah kedaluwarsa sebelum sempat dibayar",
+      "cause": "Masa aktif 7 hari sudah terlewati",
+      "solution": "Buat kode billing baru dari langkah 3. Kode billing lama yang kedaluwarsa tidak dapat digunakan."
+    }
+  ],
+  "success_result": "File PDF Kode Billing PPh Final UMKM berhasil terunduh dengan KAP-KJS 411128-420, berisi Kode Billing 15 digit yang dapat digunakan untuk pembayaran melalui bank persepsi, ATM, internet banking, atau mobile banking. Kode Billing aktif selama 7 hari sejak diterbitkan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Tabel 2 Daftar KAP-KJS yang dapat dibuat secara mandiri, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Menu Layanan Pembuatan Kode Billing Secara Mandiri, Direktorat Jenderal Pajak",
+    "Panduan Ringkas Coretax DJP — Layanan Mandiri Kode Billing, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "KAP-KJS untuk PPh Final UMKM setor sendiri: 411128-420 (PPh Final UMKM Setor Sendiri).",
+    "Tarif PPh Final UMKM: 0,5% dari peredaran bruto (omzet) per bulan.",
+    "Batas waktu setor: paling lambat tanggal 15 bulan berikutnya setelah masa pajak berakhir.",
+    "Kode Billing berlaku 7 hari sejak diterbitkan. Lewat dari itu, harus buat baru.",
+    "Proses pembuatan kode billing PP-008 ini sama persis dengan PB007 (PPh Pasal 25) — hanya berbeda di pilihan KAP-KJS.",
+    "Pembayaran PPh Final ini wajib dilaporkan di SPT Tahunan PPh OP pada Lampiran 3B (Peredaran Bruto Tertentu PP-23)."
+  ]
+}

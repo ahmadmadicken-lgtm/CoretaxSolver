@@ -1,0 +1,167 @@
+{
+  "id": "PB005",
+  "master_index_id": 44,
+  "priority": 5,
+  "type": "registrasi",
+  "title": "Perubahan KLU Utama dan Data Rekening Bank WP OP",
+  "module": "Portal Saya",
+  "subcategory": "Perubahan Data Wajib Pajak",
+  "aliases": [
+    "ganti KLU Coretax",
+    "ubah kode lapangan usaha",
+    "update rekening bank DJP",
+    "ganti rekening bank pajak",
+    "Taxpayer Identity update",
+    "pengkinian data identitas wajib pajak"
+  ],
+  "keywords": [
+    "Perubahan Data", "Taxpayer Identity", "Identitas Wajib Pajak",
+    "KLU Utama", "Kode Ekonomi Utama", "Main Economic Code",
+    "Perbarui Kode Ekonomi Utama", "Valid Dari", "Kaca Pembesar",
+    "Rekening Bank", "Perbarui Rekening Bank Utama", "Bank",
+    "Nomor Rekening Bank", "Jenis Rekening Bank", "Nama Pemilik Rekening Bank",
+    "Tambah atau perbarui rekening bank lain",
+    "Manajemen Kasus", "Kuasa Wajib Pajak",
+    "Pernyataan Wajib Pajak", "Kirim", "Kotak Centang",
+    "Unduh Bukti Tanda Terima", "Portal Saya", "Perubahan Data",
+    "Pengkinian Data Identitas Wajib Pajak", "dokumen pendukung",
+    "halaman pertama buku rekening", "Choose", "Pilih"
+  ],
+  "client_questions": [
+    "KLU saya salah, bagaimana cara menggantinya di Coretax?",
+    "Saya mau update rekening bank untuk keperluan restitusi pajak",
+    "Cara ubah nomor rekening bank di Coretax bagaimana?",
+    "KLU utama saya masih yang lama, usaha sudah berbeda sekarang",
+    "Apakah perubahan KLU harus ke KPP atau bisa online?",
+    "Rekening bank saya sudah berganti, harus lapor ke mana?"
+  ],
+  "objective": "Memandu konsultan agar klien WP OP berhasil melakukan perubahan KLU Utama dan/atau data rekening bank melalui menu Perubahan Data → Identitas Wajib Pajak di Portal Saya Coretax.",
+  "prerequisites": [
+    "Klien sudah berhasil login ke Coretax DJP (lihat PB001).",
+    "Klien mengetahui KLU baru yang ingin digunakan — siapkan kode KLU atau nama bidang usaha untuk dicari di sistem.",
+    "Untuk perubahan rekening bank: siapkan data bank (nama bank, nomor rekening, jenis rekening, nama pemilik) dan dokumen pendukung berupa salinan halaman pertama buku rekening terbaru dalam format file yang dapat diunggah."
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "coretaxdjp.pajak.go.id",
+      "menu": "Laman Login",
+      "click": "Klik tombol 'Login'.",
+      "input": "Masukkan NIK/NPWP pada kolom ID Pengguna; masukkan kata sandi; masukkan captcha.",
+      "expected_screen": "Dashboard Portal Wajib Pajak tampil.",
+      "note": "Pastikan klien sudah berhasil login sebelum melanjutkan."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Portal Wajib Pajak",
+      "menu": "Portal Saya (My Portal)",
+      "click": "Klik menu 'Portal Saya', arahkan ke 'Perubahan Data', lalu klik 'Identitas Wajib Pajak'.",
+      "input": "-",
+      "expected_screen": "Halaman 'Pengkinian Data: Identitas Wajib Pajak' terbuka.",
+      "note": "Menu Perubahan Data Wajib Pajak dapat diakses pada menu My Portal Coretax. Terdapat 4 submenu: Identitas Wajib Pajak, Perubahan Alamat Utama, Perubahan Data Objek Pajak PBB P5L, dan Perubahan Data Pemungut PPN PMSE dengan Perdirjen. Playbook ini hanya membahas Identitas Wajib Pajak."
+    },
+    {
+      "step": 3,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "Manajemen Kasus",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Manajemen Kasus terisi otomatis oleh sistem dengan kolom Kanal (Daring/Portal Wajib Pajak) dan Tanggal Permohonan.",
+      "note": "Data pada bagian Manajemen Kasus terisi secara otomatis, tidak perlu diubah."
+    },
+    {
+      "step": 4,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "Kuasa Wajib Pajak",
+      "click": "-",
+      "input": "Jika klien mengisi sendiri (bukan melalui kuasa): lewati bagian ini, data terisi otomatis. Jika mengisi sebagai kuasa WP: klik 'Kotak Centang' pada 'Diisi oleh perwakilan Wajib Pajak?', lalu klik ikon 'Kaca Pembesar' untuk mencari data Kuasa Wajib Pajak.",
+      "expected_screen": "Bagian Kuasa Wajib Pajak tampil. Jika bukan kuasa, data terisi otomatis.",
+      "note": "-"
+    },
+    {
+      "step": 5,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "Identitas Wajib Pajak",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Identitas Wajib Pajak tampil dengan data yang sudah ada, terisi secara otomatis dari sistem.",
+      "note": "Pada bagian Identitas Wajib Pajak, data terisi secara otomatis. Tidak perlu diubah kecuali ada kolom yang memang ingin diperbarui seperti Informasi Umum (nama)."
+    },
+    {
+      "step": 6,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "KLU Utama",
+      "click": "Klik 'Kotak Centang' pada 'Perbarui Kode Ekonomi Utama'. Klik ikon 'Kaca Pembesar' untuk mencari KLU baru. Isi tanggal mulai berlaku pada kolom 'Valid Dari' dengan klik ikon 'Kalender'.",
+      "input": "Masukkan kode KLU atau nama bidang usaha pada kolom pencarian, pilih KLU yang sesuai dari hasil pencarian. Isi tanggal berlaku KLU Utama baru pada kolom 'Valid Dari'.",
+      "expected_screen": "KLU baru terpilih dan tampil di kolom KLU Utama. Tanggal Valid Dari terisi.",
+      "note": "Langkah ini HANYA dilakukan jika klien ingin mengubah KLU Utama. Jika tidak ada perubahan KLU, lewati langkah ini."
+    },
+    {
+      "step": 7,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "Rekening Bank",
+      "click": "Klik 'Kotak Centang' pada 'Perbarui Rekening Bank Utama' untuk mengubah rekening bank utama. Atau klik 'Kotak Centang' pada 'Tambah atau perbarui rekening bank lain' untuk menambah/mengubah rekening bank lain.",
+      "input": "Isi kolom: Bank (pilih dari dropdown), Nomor Rekening Bank, Jenis Rekening Bank (pilih dari dropdown), Nama Pemilik Rekening Bank, Valid Dari (pilih tanggal dengan klik ikon kalender).",
+      "expected_screen": "Data rekening bank terisi di kolom yang tersedia.",
+      "note": "Langkah ini HANYA dilakukan jika klien ingin mengubah atau menambah data rekening bank. Jika tidak ada perubahan rekening, lewati langkah ini."
+    },
+    {
+      "step": 8,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "Detail (Dokumen Pendukung)",
+      "click": "Klik tombol 'Pilih' (atau 'Choose') untuk mengunggah dokumen pendukung.",
+      "input": "Unggah dokumen pendukung berupa salinan halaman pertama buku rekening terbaru yang telah diperbarui.",
+      "expected_screen": "Nama file dokumen tampil setelah berhasil diunggah.",
+      "note": "Dokumen pendukung berupa salinan halaman pertama buku rekening terbaru yang telah diubah wajib diunggah jika melakukan perubahan data rekening bank."
+    },
+    {
+      "step": 9,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "Pernyataan Wajib Pajak",
+      "click": "Klik 'Kotak Centang' pada pernyataan, lalu klik tombol 'Kirim'.",
+      "input": "-",
+      "expected_screen": "Notifikasi bahwa permohonan berhasil terkirim untuk diteliti oleh petugas tampil di layar.",
+      "note": "Pernyataan berbunyi: 'Dengan menyadari sepenuhnya segala akibat termasuk sanksi sesuai ketentuan peraturan perundang-undangan yang berlaku, saya menyatakan bahwa apa yang saya informasikan di atas adalah benar dan lengkap.'"
+    },
+    {
+      "step": 10,
+      "page": "Pengkinian Data: Identitas Wajib Pajak",
+      "menu": "-",
+      "click": "Klik tombol 'Unduh Bukti Tanda Terima'.",
+      "input": "-",
+      "expected_screen": "Dokumen Bukti Tanda Terima berhasil diunduh.",
+      "note": "Simpan Bukti Tanda Terima sebagai bukti pengajuan permohonan perubahan data. Permohonan akan diteliti oleh petugas DJP."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "KLU yang dicari tidak ditemukan melalui ikon Kaca Pembesar",
+      "cause": "Kata kunci pencarian KLU kurang spesifik atau kode KLU tidak diketahui.",
+      "solution": "Coba cari dengan kata kunci yang berbeda atau lebih umum. Gunakan nama bidang usaha utama klien sebagai kata kunci. Pastikan kolom 'Perbarui Kode Ekonomi Utama' sudah dicentang sebelum mencari KLU."
+    },
+    {
+      "error": "Tombol 'Kirim' tidak aktif atau tidak bisa diklik",
+      "cause": "Kotak centang Pernyataan Wajib Pajak belum dicentang, atau terdapat kolom wajib yang belum diisi.",
+      "solution": "Pastikan seluruh kolom wajib yang ingin diubah sudah terisi lengkap. Pastikan Kotak Centang pada Pernyataan Wajib Pajak sudah dicentang sebelum klik Kirim."
+    },
+    {
+      "error": "Dokumen pendukung tidak bisa diunggah",
+      "cause": "Format file tidak sesuai atau ukuran file terlalu besar.",
+      "solution": "Tidak dijelaskan pada dokumentasi resmi. Coba konversi dokumen ke format yang umum (PDF atau JPG) dan pastikan ukuran file tidak terlalu besar sebelum mengunggah ulang."
+    }
+  ],
+  "success_result": "Notifikasi permohonan berhasil terkirim tampil di layar. Dokumen 'Bukti Tanda Terima' berhasil diunduh. Permohonan perubahan KLU Utama dan/atau rekening bank akan diteliti oleh petugas DJP.",
+  "references": [
+    "Buku_Manual_Coretax_2024__Perubahan_Data_Wajib_Pajak.pdf"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Menu Perubahan Data → Identitas Wajib Pajak digunakan untuk mengubah KLU Utama, data rekening bank, dan data lain yang berkaitan dengan WP. Playbook ini membahas khusus perubahan KLU Utama dan rekening bank — dua kebutuhan yang paling umum untuk WP OP.",
+    "Perubahan data Wajib Pajak dapat dilakukan secara omnichannel: melalui Portal Wajib Pajak (online mandiri), Contact Center, Pos, Jasa Ekspedisi, atau KPP/KP2KP. Playbook ini khusus memandu jalur Portal Wajib Pajak.",
+    "Permohonan yang diajukan melalui Portal WP akan diteliti oleh petugas DJP — hasilnya tidak instan dan klien perlu menunggu."
+  ]
+}

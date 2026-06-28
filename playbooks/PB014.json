@@ -1,0 +1,186 @@
+{
+  "id": "PB014",
+  "master_index_id": null,
+  "priority": 14,
+  "type": "perubahan-data",
+  "title": "Perubahan Alamat Utama WP OP",
+  "module": "Portal Saya — Perubahan Data",
+  "subcategory": "Main Address Change (Perubahan Alamat Utama)",
+  "aliases": [
+    "ganti alamat pajak",
+    "ubah alamat NPWP",
+    "perubahan alamat wajib pajak Coretax",
+    "update alamat WP OP",
+    "Main Address Change Coretax"
+  ],
+  "keywords": [
+    "perubahan alamat utama", "alamat utama baru", "Main Address Change",
+    "Portal Saya", "Perubahan Data", "alamat domisili",
+    "RT RW", "kode pos", "data geometrik", "dokumen pendukung",
+    "valid dari", "tanggal berlaku", "KODJP"
+  ],
+  "client_questions": [
+    "Bagaimana cara mengubah alamat di Coretax?",
+    "Saya pindah rumah, bagaimana cara update alamat pajak saya?",
+    "Apakah perubahan alamat bisa dilakukan online di Coretax?",
+    "Dokumen apa yang diperlukan untuk ubah alamat di Coretax?",
+    "Setelah ganti alamat di Coretax, apakah KPP terdaftar otomatis berubah?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan perubahan alamat utama secara mandiri melalui menu Perubahan Data di Coretax, tanpa harus datang ke Kantor Pelayanan Pajak (KPP).",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "Mengetahui alamat baru secara lengkap (nama jalan, RT, RW, kelurahan, kecamatan, kota, provinsi, kode pos)",
+    "Menyiapkan dokumen pendukung perubahan alamat (contoh: KTP baru, tagihan listrik/air terbaru, atau surat keterangan domisili)"
+  ],
+  "estimated_time": "15–25 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Perubahan alamat dapat dilakukan sendiri oleh WP atau melalui Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Data",
+      "click": "Klik submenu 'Perubahan Data'",
+      "input": "-",
+      "expected_screen": "Submenu Perubahan Data terbuka dengan 4 pilihan: Taxpayer Identity, Main Address Change, Land & Building Tax Object Update, PSME Data Update",
+      "note": "Terdapat 4 submenu Perubahan Data: (1) Taxpayer Identity untuk KLU dan rekening bank, (2) Main Address Change untuk alamat utama, (3) Land & Building Tax Object Update untuk PBB P5L, (4) PSME Data Update."
+    },
+    {
+      "step": 4,
+      "page": "Portal Saya → Perubahan Data",
+      "menu": "Main Address Change (Perubahan Alamat Utama)",
+      "click": "Klik 'Main Address Change' atau 'Perubahan Alamat Utama'",
+      "input": "-",
+      "expected_screen": "Formulir Perubahan Alamat Utama terbuka dengan 4 bagian: Manajemen Kasus, Kuasa Wajib Pajak, Identitas Wajib Pajak, Alamat Utama Saat Ini, Alamat Utama Baru, dan Dokumen yang Diperlukan",
+      "note": "-"
+    },
+    {
+      "step": 5,
+      "page": "Formulir Perubahan Alamat Utama — Manajemen Kasus",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Manajemen Kasus terisi otomatis oleh sistem",
+      "note": "Data pada bagian Manajemen Kasus terisi secara otomatis — tidak perlu diisi manual."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Perubahan Alamat Utama — Kuasa Wajib Pajak",
+      "menu": "-",
+      "click": "Jika mengisi sebagai diri sendiri (bukan kuasa): lewati bagian ini. Jika sebagai Kuasa WP: centang kotak 'Kuasa Wajib Pajak' dan cari data kuasa menggunakan ikon kaca pembesar.",
+      "input": "-",
+      "expected_screen": "Bagian Kuasa WP terisi (jika sebagai kuasa) atau dilewati (jika WP sendiri)",
+      "note": "Buku ini mencontohkan pengisian bukan oleh Kuasa Wajib Pajak — data terisi otomatis."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Perubahan Alamat Utama — Identitas WP",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Identitas WP terisi otomatis (NPWP, Nama, dll)",
+      "note": "Data identitas WP terisi otomatis dari profil WP yang sudah terdaftar — tidak perlu diisi manual."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Perubahan Alamat Utama — Alamat Utama Saat Ini",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Alamat Utama Saat Ini menampilkan alamat yang sudah terdaftar sebelumnya — terisi otomatis",
+      "note": "Alamat lama ditampilkan sebagai referensi. Tidak perlu diubah."
+    },
+    {
+      "step": 9,
+      "page": "Formulir Perubahan Alamat Utama — Alamat Utama Baru",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi seluruh kolom alamat baru: Detail Alamat Baru (nama jalan, nomor), RT Baru, RW Baru, Provinsi Baru, Kota Baru, Kecamatan Baru, Kelurahan Baru, Kode Pos Baru. Klik tombol Data Geometrik untuk menandai lokasi di peta. Jika lokasi sewaan, centang 'Lokasi Baru Disewa' dan isi nama pemberi sewa. Pilih tanggal 'Valid dari' (tanggal berlaku alamat baru).",
+      "expected_screen": "Seluruh kolom alamat baru terisi lengkap",
+      "note": "Semua kolom wajib diisi. Untuk RT atau RW yang tidak diketahui, isikan 000. Kode Pos dapat disesuaikan jika berbeda dari yang terisi otomatis oleh sistem."
+    },
+    {
+      "step": 10,
+      "page": "Formulir Perubahan Alamat Utama — Dokumen yang Diperlukan",
+      "menu": "-",
+      "click": "Klik tombol 'Choose' untuk mengunggah dokumen pendukung",
+      "input": "Unggah dokumen pendukung perubahan alamat (contoh: scan KTP baru atau dokumen lain yang membuktikan alamat baru)",
+      "expected_screen": "Dokumen berhasil diunggah",
+      "note": "Dokumen pendukung wajib diunggah. Format yang diterima biasanya PDF atau gambar (JPG/PNG). Pastikan file tidak terlalu besar dan terbaca dengan jelas."
+    },
+    {
+      "step": 11,
+      "page": "Formulir Perubahan Alamat Utama",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta untuk penandatanganan digital",
+      "expected_screen": "Permohonan berhasil terkirim. Nomor kasus muncul dan status masuk ke 'Permohonan Dalam Proses' atau langsung disetujui.",
+      "note": "Penandatanganan menggunakan Passphrase KODJP diperlukan. Setelah disetujui, alamat utama WP di Coretax akan berubah sesuai yang diajukan."
+    },
+    {
+      "step": 12,
+      "page": "Portal Saya → Profil Saya → Informasi Detail → Ikhtisar Profil WP",
+      "menu": "Verifikasi perubahan",
+      "click": "Cek halaman Ikhtisar Profil WP (PB006) untuk memastikan Alamat Utama sudah berubah",
+      "input": "-",
+      "expected_screen": "Alamat Utama di halaman Ikhtisar Profil WP sudah menampilkan alamat baru yang diajukan",
+      "note": "Jika perubahan belum tampil, cek status permohonan di Portal Saya → Kasus Saya atau Kasus Berjalan Saya."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Tombol 'Submit' tidak aktif meskipun semua kolom sudah diisi",
+      "cause": "Ada kolom wajib yang terlewat atau dokumen pendukung belum diunggah",
+      "solution": "Periksa kembali semua kolom di Alamat Utama Baru — pastikan tidak ada yang kosong. Pastikan dokumen pendukung sudah berhasil diunggah (ada indikator nama file di kolom unggah)."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "Perubahan KPP terdaftar tidak otomatis berubah meskipun alamat sudah diperbarui",
+      "cause": "Perubahan KPP terdaftar memerlukan proses terpisah dari perubahan alamat — tidak otomatis",
+      "solution": "Jika perubahan alamat menyebabkan WP berpindah wilayah kerja KPP, ajukan permohonan pemindahan KPP secara terpisah ke KPP lama. Hubungi KPP terdaftar untuk informasi lebih lanjut."
+    },
+    {
+      "error": "Data geometrik (peta) tidak bisa ditandai / peta tidak muncul",
+      "cause": "Koneksi internet lambat atau browser tidak mendukung fitur peta interaktif",
+      "solution": "Coba refresh halaman dan pastikan koneksi internet stabil. Gunakan browser Chrome versi terbaru. Jika peta tetap tidak muncul, skip kolom data geometrik dan coba submit — beberapa kasus masih bisa diproses tanpa data geometrik."
+    }
+  ],
+  "success_result": "Permohonan Perubahan Alamat Utama berhasil terkirim dan disetujui. Alamat Utama WP di Coretax berubah sesuai alamat baru yang diajukan, dan dapat dilihat di halaman Ikhtisar Profil WP.",
+  "references": [
+    "Buku Manual Coretax 2024 — Perubahan Data Wajib Pajak, Bab 02 Perubahan Data Wajib Pajak, Menu Main Address Change (Perubahan Alamat Utama), Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Perubahan Data Wajib Pajak, Pengisian Formulir Perubahan Alamat Utama, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Perubahan alamat utama di Coretax bisa dilakukan secara online tanpa harus datang ke KPP.",
+    "Kolom RT/RW yang tidak diketahui diisi dengan 000.",
+    "Perubahan KPP terdaftar TIDAK otomatis berubah meskipun alamat sudah diperbarui — perlu proses terpisah jika WP berpindah wilayah KPP.",
+    "KODJP wajib aktif sebelum mengajukan — jika passphrase lupa, selesaikan PB002 terlebih dahulu.",
+    "Dokumen pendukung wajib diunggah — tanpa dokumen, permohonan tidak bisa disubmit.",
+    "Setelah disetujui, perubahan alamat dapat dicek di halaman Ikhtisar Profil WP (PB006)."
+  ]
+}

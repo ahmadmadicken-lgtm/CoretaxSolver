@@ -1,0 +1,158 @@
+{
+  "id": "PB013",
+  "master_index_id": null,
+  "priority": 13,
+  "type": "layanan",
+  "title": "Pemberitahuan Penggunaan NPPN",
+  "module": "Layanan Wajib Pajak — Layanan Administrasi",
+  "subcategory": "AS.04 Pemberitahuan Penggunaan NPPN dan Pembukuan Stelsel Kas",
+  "aliases": [
+    "NPPN", "norma penghitungan penghasilan neto",
+    "pemberitahuan norma", "daftar NPPN Coretax",
+    "AS.04-01", "penggunaan norma penghasilan"
+  ],
+  "keywords": [
+    "NPPN", "Norma Penghitungan Penghasilan Neto", "pemberitahuan",
+    "AS.04-01", "Layanan Wajib Pajak", "Layanan Administrasi",
+    "Buat Permohonan Layanan Administrasi", "31 Maret",
+    "KODJP", "BPE", "Daftar Fasilitas Saya", "peredaran bruto"
+  ],
+  "client_questions": [
+    "Bagaimana cara daftar NPPN di Coretax?",
+    "Apa itu NPPN dan siapa yang bisa menggunakannya?",
+    "Bagaimana cara mengajukan pemberitahuan penggunaan norma penghitungan penghasilan neto?",
+    "Sampai kapan batas waktu daftar NPPN?",
+    "Setelah daftar NPPN, apa buktinya?"
+  ],
+  "objective": "Memandu WP OP yang memiliki peredaran bruto di bawah Rp4,8 miliar untuk mengajukan Pemberitahuan Penggunaan Norma Penghitungan Penghasilan Neto (NPPN) melalui menu Layanan Administrasi di Coretax, sebagai syarat agar dapat menggunakan NPPN dalam penghitungan PPh di SPT Tahunan.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif untuk penandatanganan (lihat PB002)",
+    "WP OP memiliki peredaran bruto (omzet) tidak melebihi Rp4.800.000.000 dalam setahun",
+    "Pemberitahuan diajukan paling lambat 31 Maret tahun pajak yang bersangkutan"
+  ],
+  "estimated_time": "10–20 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pastikan login menggunakan akun WP OP yang akan mengajukan NPPN."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak",
+      "click": "Klik menu 'Layanan Wajib Pajak' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Layanan Wajib Pajak terbuka",
+      "note": "Menu Layanan Wajib Pajak berisi antara lain: Layanan Administrasi, Pertanyaan Umum, Layanan Pengaduan, Layanan Edukasi, dan Daftar Fasilitas Saya."
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak → Layanan Administrasi",
+      "click": "Arahkan kursor ke 'Layanan Administrasi' hingga submenu muncul",
+      "input": "-",
+      "expected_screen": "Submenu Layanan Administrasi terbuka",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Administrasi → Buat Permohonan Layanan Administrasi",
+      "click": "Klik 'Buat Permohonan Layanan Administrasi'",
+      "input": "-",
+      "expected_screen": "Halaman Buat Permohonan Layanan Administrasi terbuka dengan kolom pencarian layanan",
+      "note": "Terdapat fitur pencarian dengan mengetik nama layanan untuk mempercepat pencarian."
+    },
+    {
+      "step": 5,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "Pencarian Layanan",
+      "click": "-",
+      "input": "Ketik 'NPPN' atau 'AS.04' pada kolom pencarian, atau navigasi manual: pilih 'AS.04 Pemberitahuan Penggunaan NPPN dan Pembukuan Stelsel Kas'",
+      "expected_screen": "Daftar layanan AS.04 muncul dengan dua pilihan: AS.04-01 dan AS.04-02",
+      "note": "Bapak/Ibu juga dapat memanfaatkan fitur pencarian dengan mengetik 'NP' untuk langsung menemukan layanan NPPN."
+    },
+    {
+      "step": 6,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "AS.04-01",
+      "click": "Pilih 'AS.04-01 Pemberitahuan Penggunaan Norma Penghitungan Penghasilan Neto (NPPN)'",
+      "input": "-",
+      "expected_screen": "Formulir Pemberitahuan Penggunaan NPPN terbuka",
+      "note": "Pilih AS.04-01, bukan AS.04-02 (AS.04-02 adalah untuk Pemberitahuan Pembukuan Stelsel Kas yang berbeda)."
+    },
+    {
+      "step": 7,
+      "page": "Formulir AS.04-01 Pemberitahuan NPPN",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi formulir: Tahun Pajak yang menggunakan NPPN, konfirmasi pilihan menggunakan NPPN",
+      "expected_screen": "Formulir terisi lengkap, tombol Submit/Kirim aktif",
+      "note": "Pastikan tahun pajak yang diisi sesuai — pemberitahuan berlaku untuk tahun pajak yang bersangkutan dan harus diajukan paling lambat 31 Maret tahun pajak tersebut."
+    },
+    {
+      "step": 8,
+      "page": "Formulir AS.04-01",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta untuk penandatanganan digital",
+      "expected_screen": "Permohonan berhasil terkirim. Nomor permohonan muncul dan status masuk ke 'Permohonan Dalam Proses'.",
+      "note": "Penandatanganan menggunakan Passphrase KODJP diperlukan. Pastikan KODJP sudah aktif sebelum memulai (lihat PB002)."
+    },
+    {
+      "step": 9,
+      "page": "Layanan Wajib Pajak → Layanan Administrasi → Daftar Fasilitas Saya",
+      "menu": "Verifikasi BPE",
+      "click": "Klik menu 'Layanan Wajib Pajak' → 'Layanan Administrasi' → 'Daftar Fasilitas Saya'",
+      "input": "-",
+      "expected_screen": "Daftar Fasilitas Saya menampilkan BPE Pemberitahuan Penggunaan NPPN yang sudah diterbitkan",
+      "note": "BPE (Bukti Penerimaan Elektronik) NPPN adalah bukti resmi bahwa pemberitahuan sudah diterima DJP. Simpan BPE ini — diperlukan sebagai dasar penggunaan NPPN di SPT Tahunan."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Menu AS.04-01 tidak ditemukan atau tidak bisa dipilih",
+      "cause": "WP tidak memenuhi syarat menggunakan NPPN (peredaran bruto melebihi Rp4,8 miliar), atau pencarian menggunakan kata kunci yang salah",
+      "solution": "Pastikan peredaran bruto WP di bawah Rp4.800.000.000. Coba ketik 'NPPN' atau 'AS.04' di kolom pencarian. Jika tetap tidak muncul, hubungi KPP terdaftar."
+    },
+    {
+      "error": "Pemberitahuan ditolak karena melewati batas waktu 31 Maret",
+      "cause": "Permohonan diajukan setelah tanggal 31 Maret tahun pajak yang bersangkutan",
+      "solution": "Pemberitahuan NPPN yang terlambat tidak dapat diproses untuk tahun pajak yang bersangkutan. WP harus menggunakan pembukuan biasa untuk tahun pajak tersebut, dan mengajukan NPPN tepat waktu untuk tahun pajak berikutnya."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan formulir",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "BPE NPPN tidak muncul di Daftar Fasilitas Saya setelah submit",
+      "cause": "Permohonan masih dalam proses atau belum disetujui sistem",
+      "solution": "Cek menu 'Permohonan Dalam Proses' untuk melihat status permohonan. Tunggu beberapa saat dan refresh halaman. Jika lebih dari 1 hari kerja belum muncul, hubungi KPP terdaftar."
+    }
+  ],
+  "success_result": "BPE Pemberitahuan Penggunaan NPPN berhasil diterbitkan dan tampil di menu Daftar Fasilitas Saya. WP dapat menggunakan NPPN sebagai metode penghitungan penghasilan neto pada SPT Tahunan PPh OP untuk tahun pajak yang bersangkutan.",
+  "references": [
+    "Panduan Pemberitahuan Penggunaan Norma Penghitungan Penghasilan Neto (NPPN), Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Layanan Wajib Pajak (Seri 19), AS.04 Pemberitahuan Penggunaan NPPN dan Pembukuan Stelsel Kas, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Lampiran L-3B NPPN, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "NPPN hanya boleh digunakan WP OP dengan peredaran bruto (omzet) tidak melebihi Rp4.800.000.000 per tahun.",
+    "Batas waktu pengajuan: paling lambat 31 Maret tahun pajak yang bersangkutan. Terlambat = tidak bisa digunakan untuk tahun itu.",
+    "Pemberitahuan NPPN berlaku selama WP tidak mencabut dan tidak melebihi batas peredaran bruto.",
+    "Setelah BPE NPPN diterima, WP dapat memilih NPPN di SPT Tahunan pada pertanyaan 1.b.3 di Bagian B (Summary of Income).",
+    "Jenis profesi yang dapat menggunakan NPPN antara lain: Dagang, Jasa, Industri, Dokter, Pengacara, Konsultan, Akuntan, Notaris/PPAT, Artis, Penulis, Pelatih, dan profesi lainnya.",
+    "KODJP wajib aktif sebelum mengajukan — jika belum punya atau passphrase lupa, selesaikan PB002 terlebih dahulu."
+  ]
+}
