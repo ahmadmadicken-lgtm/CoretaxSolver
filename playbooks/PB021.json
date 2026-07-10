@@ -1,0 +1,162 @@
+{
+  "id": "PB021",
+  "master_index_id": null,
+  "priority": 21,
+  "type": "registrasi",
+  "title": "Permohonan Pengukuhan PKP",
+  "module": "Portal Saya — Pengukuhan PKP",
+  "subcategory": "Pengukuhan Pengusaha Kena Pajak (PKP) Berdasarkan Permohonan",
+  "aliases": [
+    "daftar PKP", "pengukuhan PKP", "menjadi PKP",
+    "PKP online Coretax", "Pengusaha Kena Pajak",
+    "daftar PPN", "wajib pungut PPN"
+  ],
+  "keywords": [
+    "PKP", "Pengusaha Kena Pajak", "pengukuhan PKP",
+    "Portal Saya", "Pengukuhan PKP", "omzet tahunan",
+    "tempat usaha", "Status Kepemilikan Tempat Usaha",
+    "Tanggal Mulai Transaksi PPN", "Surat Pengukuhan PKP",
+    "Bukti Penerimaan Surat", "risiko rendah", "risiko menengah"
+  ],
+  "client_questions": [
+    "Bagaimana cara daftar PKP di Coretax?",
+    "Saya ingin menjadi PKP, bagaimana caranya di Coretax?",
+    "Apa syarat untuk menjadi PKP?",
+    "Berapa lama proses pengukuhan PKP di Coretax?",
+    "Setelah dikukuhkan sebagai PKP, apa yang harus dilakukan?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan Permohonan Pengukuhan Pengusaha Kena Pajak (PKP) secara online melalui menu Pengukuhan PKP di Coretax, sehingga WP mendapatkan status PKP dan akses untuk membuat faktur pajak serta melaporkan SPT Masa PPN.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki NPWP aktif yang sudah terdaftar di Coretax",
+    "Peredaran bruto (omzet) sudah mencapai atau diperkirakan akan melebihi Rp4.800.000.000 dalam setahun, ATAU WP memilih untuk dikukuhkan sebagai PKP meskipun omzet belum mencapai batas",
+    "Mengetahui status kepemilikan tempat usaha (milik sendiri, sewa/kontrak, atau virtual office)",
+    "Mengetahui tanggal mulai transaksi PPN yang akan digunakan"
+  ],
+  "estimated_time": "15–25 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Jika pengukuhan PKP diajukan atas nama pihak yang diwakili, lakukan impersonating ke akun WP yang bersangkutan terlebih dahulu setelah login."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Permohonan Pengukuhan PKP",
+      "click": "Klik submenu 'Permohonan Pengukuhan PKP'",
+      "input": "-",
+      "expected_screen": "Formulir Permohonan Pengukuhan PKP terbuka. Sebagian kolom sudah terisi otomatis oleh sistem (ditampilkan dalam warna abu-abu).",
+      "note": "Pastikan status WP belum PKP sebelum mengajukan. Jika sudah PKP, menu ini tidak perlu digunakan."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Pengukuhan PKP — Kuasa WP",
+      "menu": "-",
+      "click": "Jika mengajukan atas nama diri sendiri: lewati bagian ini. Jika diajukan oleh kuasa/wakil: centang kolom 'Diisi oleh Perwakilan Wajib Pajak?' dan pilih ID Penunjukan Perwakilan menggunakan ikon kaca pembesar.",
+      "input": "-",
+      "expected_screen": "Bagian kuasa WP terisi (jika sebagai kuasa) atau dilewati (jika WP sendiri)",
+      "note": "Untuk pengajuan atas nama diri sendiri, langsung lanjut ke langkah berikutnya."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Pengukuhan PKP — Detail Informasi",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi: (1) Status Kepemilikan Tempat Usaha — pilih salah satu: Sewa/Kontrak, Milik/Perusahaan, atau Sewa Kantor Virtual. Jika memilih Sewa Kantor Virtual, isi NIK Penyedia Kantor Virtual. (2) Omzet Tahunan — isi besar peredaran bruto tahunan (contoh: 5000000000 untuk Rp5 miliar). (3) Tanggal Mulai Transaksi PPN — pilih tanggal mulai WP akan melakukan transaksi PPN.",
+      "expected_screen": "Kolom Status Kepemilikan Tempat Usaha, Omzet Tahunan, dan Tanggal Mulai Transaksi PPN terisi",
+      "note": "Tanggal Mulai Transaksi PPN menentukan sejak kapan WP wajib memungut dan melaporkan PPN. Pilih tanggal yang realistis sesuai rencana usaha."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Pengukuhan PKP — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang kotak Pernyataan Wajib Pajak",
+      "input": "-",
+      "expected_screen": "Kotak pernyataan tercentang",
+      "note": "Dengan mencentang pernyataan, WP menyatakan bahwa data yang diisikan adalah benar dan bertanggung jawab atas kebenaran data tersebut."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Pengukuhan PKP",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' (Kirim)",
+      "input": "-",
+      "expected_screen": "Notifikasi permohonan berhasil terkirim muncul. Tombol 'Unduh Bukti Tanda Terima' tersedia.",
+      "note": "Setelah submit, sistem akan menilai risiko WP: Risiko Rendah → diselesaikan melalui penelitian kantor, paling lama 1 hari kerja. Risiko Menengah/Tinggi → diselesaikan melalui penelitian lapangan (kunjungan ke tempat usaha), paling lama 1 hari kerja."
+    },
+    {
+      "step": 8,
+      "page": "Notifikasi Submit",
+      "menu": "Unduh Bukti Tanda Terima",
+      "click": "Klik tombol 'Unduh Bukti Tanda Terima'",
+      "input": "-",
+      "expected_screen": "Bukti Penerimaan Surat Permohonan Pengukuhan PKP berhasil diunduh",
+      "note": "Simpan Bukti Penerimaan Surat ini sebagai bukti bahwa permohonan sudah terkirim."
+    },
+    {
+      "step": 9,
+      "page": "Portal Saya → Dokumen Saya / Notifikasi Saya",
+      "menu": "Pantau hasil permohonan",
+      "click": "Cek Portal Saya → Dokumen Saya dan Portal Saya → Notifikasi Saya untuk melihat hasil persetujuan atau penolakan",
+      "input": "-",
+      "expected_screen": "Dokumen Surat Pengukuhan PKP (jika disetujui) atau Surat Penolakan Pengukuhan PKP (jika ditolak) tersedia di Dokumen Saya dan Notifikasi Saya.",
+      "note": "Hasil persetujuan/penolakan juga dikirim ke email WP. Jika disetujui, status PKP dapat dicek di Portal Saya → Profil Saya — tanda centang pada Status Pengusaha Kena Pajak."
+    },
+    {
+      "step": 10,
+      "page": "Portal Saya → Profil Saya",
+      "menu": "Verifikasi Status PKP",
+      "click": "Klik Portal Saya → Profil Saya, cek bagian Status Pengusaha Kena Pajak",
+      "input": "-",
+      "expected_screen": "Status Pengusaha Kena Pajak bertanda centang (✓) dengan tanggal pengukuhan PKP",
+      "note": "Setelah dikukuhkan sebagai PKP, WP otomatis mendapat akses untuk membuat e-Faktur Pajak dan melaporkan SPT Masa PPN melalui Coretax."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan pengukuhan PKP ditolak",
+      "cause": "Tempat usaha tidak ditemukan saat penelitian lapangan, data yang diisi tidak valid, atau WP belum memenuhi syarat sebagai PKP",
+      "solution": "Pastikan tempat usaha benar-benar ada dan dapat diverifikasi. Perbaiki data yang tidak valid dan ajukan permohonan ulang — proses harus diulang dari awal."
+    },
+    {
+      "error": "Menu 'Permohonan Pengukuhan PKP' tidak tersedia di Portal Saya",
+      "cause": "WP sudah berstatus PKP aktif, sehingga menu tidak ditampilkan",
+      "solution": "Cek status PKP di Portal Saya → Profil Saya. Jika sudah PKP, tidak perlu mengajukan lagi. Jika bukan PKP tapi menu tidak muncul, hubungi KPP terdaftar."
+    },
+    {
+      "error": "Petugas melakukan kunjungan lapangan dan tempat usaha tidak ditemukan",
+      "cause": "Alamat tempat usaha yang diisikan tidak akurat atau tempat usaha tidak memenuhi syarat",
+      "solution": "Pastikan alamat tempat usaha diisi dengan benar dan lengkap. Pastikan ada orang yang bisa menemui petugas saat kunjungan berlangsung. Jika ditolak, perbaiki data dan ajukan ulang."
+    }
+  ],
+  "success_result": "Permohonan Pengukuhan PKP disetujui. Surat Pengukuhan PKP diterbitkan dan tersedia di Dokumen Saya. Status PKP bertanda centang di Profil Saya. WP mendapat akses e-Faktur Pajak dan SPT Masa PPN di Coretax.",
+  "references": [
+    "Buku Manual Coretax 2024 — Permohonan Pengukuhan PKP, Edisi 20241129, Seri Registrasi, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "PKP wajib jika omzet melebihi Rp4.800.000.000 per tahun. Di bawah itu bersifat opsional (pilihan WP).",
+    "Setelah dikukuhkan PKP, WP WAJIB memungut, menyetor, dan melaporkan PPN setiap bulan via SPT Masa PPN.",
+    "Proses: Risiko Rendah → selesai 1 hari kerja via penelitian kantor. Risiko Menengah/Tinggi → 1 hari kerja via penelitian lapangan.",
+    "Hasil (disetujui/ditolak) dikirim ke email dan tersedia di Dokumen Saya dan Notifikasi Saya.",
+    "Permohonan dapat diajukan di KPP atau KP2KP mana saja, tidak terbatas pada KPP terdaftar WP.",
+    "Setelah PKP, WP mendapat akses e-Faktur di menu e-Faktur Coretax dan SPT Masa PPN di menu SPT."
+  ]
+}

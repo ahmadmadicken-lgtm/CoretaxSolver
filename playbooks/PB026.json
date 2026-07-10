@@ -1,0 +1,156 @@
+{
+  "id": "PB026",
+  "master_index_id": null,
+  "priority": 26,
+  "type": "layanan",
+  "title": "Laporan Realisasi Investasi (Bebas PPh Dividen)",
+  "module": "Layanan Wajib Pajak — Layanan Administrasi",
+  "subcategory": "AS.39-01 Laporan Realisasi Investasi",
+  "aliases": [
+    "lapor realisasi investasi dividen",
+    "bebas PPh dividen",
+    "AS.39-01",
+    "laporan investasi dividen Coretax",
+    "dividen bebas pajak syarat laporan"
+  ],
+  "keywords": [
+    "laporan realisasi investasi", "AS.39-01", "dividen bebas PPh",
+    "penghasilan lain luar negeri", "PMK-81 Tahun 2024",
+    "Layanan Administrasi", "AS.39 e-Pelaporan",
+    "Periode Pelaporan", "Tambah Data", "Refresh Pemenuhan Kewajiban",
+    "31 Maret", "tahun ketiga", "bentuk investasi"
+  ],
+  "client_questions": [
+    "Bagaimana cara lapor realisasi investasi dividen di Coretax?",
+    "Apa syarat agar dividen bebas PPh di Coretax?",
+    "Kapan batas waktu laporan realisasi investasi?",
+    "Berapa kali laporan realisasi investasi harus disampaikan?",
+    "Apa yang terjadi jika tidak lapor realisasi investasi?"
+  ],
+  "objective": "Memandu WP OP untuk menyampaikan Laporan Realisasi Investasi atas dividen dan/atau penghasilan lain dari luar negeri melalui menu AS.39-01 di Coretax, sebagai syarat untuk memperoleh fasilitas pembebasan PPh atas dividen sesuai ketentuan PMK-81 Tahun 2024.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "WP menerima dividen dalam negeri atau dividen/penghasilan lain dari luar negeri yang diinvestasikan kembali sesuai ketentuan",
+    "Status WP aktif di Coretax",
+    "Mengetahui detail investasi yang dilakukan: jenis investasi, nilai, mata uang, dan periode"
+  ],
+  "estimated_time": "15–30 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pastikan status WP aktif. Jika tidak aktif, klik tombol 'Refresh Pemenuhan Kewajiban Perpajakan' di formulir laporan sebelum mengisi data."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan Layanan Administrasi",
+      "click": "Klik 'Layanan Wajib Pajak' → 'Layanan Administrasi' → 'Buat Permohonan Layanan Administrasi'",
+      "input": "-",
+      "expected_screen": "Halaman Buat Permohonan Layanan Administrasi terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "AS.39-01",
+      "click": "-",
+      "input": "Pilih: TPS Service Type = 'AS.39 e-Pelaporan', TPS Subservice Type = 'AS.39-01 Laporan Realisasi Investasi'. Klik tombol 'Simpan'.",
+      "expected_screen": "Formulir Laporan Realisasi Investasi terbuka dengan Informasi Umum dan nomor permohonan",
+      "note": "Dapat juga dicari dengan kata kunci 'realisasi investasi' atau 'AS.39' di kolom pencarian layanan."
+    },
+    {
+      "step": 4,
+      "page": "Formulir AS.39-01 — Alur Kasus",
+      "menu": "Alur Kasus",
+      "click": "Klik 'Alur Kasus' untuk memulai pengisian formulir",
+      "input": "-",
+      "expected_screen": "Formulir pengisian Laporan Realisasi Investasi terbuka",
+      "note": "Pastikan status WP aktif. Jika tidak, klik tombol 'Refresh Pemenuhan Kewajiban Perpajakan' terlebih dahulu sebelum mengisi."
+    },
+    {
+      "step": 5,
+      "page": "Formulir — Laporan Dividen atau Penghasilan Lain",
+      "menu": "Tambah Data Dividen",
+      "click": "Klik tombol 'Tambah Data' pada bagian Laporan Dividen atau Penghasilan Lain",
+      "input": "Isi: Reporting Period (Periode Pelaporan) — isi angka 1 (dividen diterima tahun ini), 2 (tahun lalu), atau 3 (dua tahun lalu). Isi detail dividen/penghasilan lain yang diterima.",
+      "expected_screen": "Data dividen/penghasilan lain berhasil ditambahkan",
+      "note": "Periode Pelaporan: 1 = dividen diterima tahun pajak berjalan, 2 = diterima tahun lalu, 3 = diterima dua tahun lalu. Laporan disampaikan selama 3 tahun berturut-turut sejak tahun dividen diterima."
+    },
+    {
+      "step": 6,
+      "page": "Formulir — Laporan Investasi",
+      "menu": "Tambah Data Investasi",
+      "click": "Klik tombol 'Tambah Data' pada bagian Laporan Investasi",
+      "input": "Isi periode pelaporan yang sama dengan langkah 5. Isi detail investasi: pilih mata uang investasi, isi besaran nilai investasi yang dilakukan. Klik 'Simpan'.",
+      "expected_screen": "Data investasi berhasil disimpan",
+      "note": "Bentuk investasi yang diperbolehkan sesuai PMK-81/2024: antara lain investasi di sektor riil, surat berharga, penyertaan modal, dan bentuk lain sesuai ketentuan."
+    },
+    {
+      "step": 7,
+      "page": "Formulir — Dokumen Lampiran",
+      "menu": "-",
+      "click": "Unggah dokumen pendukung di bagian Dokumen Lampiran",
+      "input": "Dokumen pendukung investasi sesuai jenis investasi yang dilakukan",
+      "expected_screen": "Dokumen berhasil diunggah",
+      "note": "-"
+    },
+    {
+      "step": 8,
+      "page": "Formulir — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang Pernyataan Wajib Pajak, lalu klik 'Kirim'",
+      "input": "-",
+      "expected_screen": "Laporan berhasil terkirim. Arsip laporan tersedia untuk diunduh.",
+      "note": "Setelah terkirim, arsip Laporan Realisasi Investasi dapat diunduh melalui Detail Kasus atau Portal Saya → Dokumen Saya."
+    },
+    {
+      "step": 9,
+      "page": "Portal Saya → Dokumen Saya",
+      "menu": "Unduh Arsip Laporan",
+      "click": "Buka Portal Saya → Dokumen Saya, cari laporan yang baru dikirim, klik 'Unduh'",
+      "input": "-",
+      "expected_screen": "Arsip Laporan Realisasi Investasi berhasil diunduh",
+      "note": "Simpan arsip laporan sebagai bukti pemenuhan kewajiban pelaporan untuk memperoleh fasilitas bebas PPh dividen."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Status WP tidak aktif saat membuka formulir laporan",
+      "cause": "WP berstatus non-aktif atau ada masalah pada profil WP",
+      "solution": "Klik tombol 'Refresh Pemenuhan Kewajiban Perpajakan' di formulir. Jika tetap tidak aktif, aktifkan kembali status WP melalui KPP terdaftar sebelum menyampaikan laporan."
+    },
+    {
+      "error": "Laporan disampaikan terlambat (melewati 31 Maret)",
+      "cause": "WP melewati batas waktu penyampaian laporan",
+      "solution": "Laporan yang terlambat dapat menyebabkan fasilitas bebas PPh tidak berlaku dan PPh terutang dihitung berdasarkan ketentuan umum (Pasal 17 UU PPh). Tetap sampaikan laporan dan konsultasikan dengan KPP terdaftar mengenai konsekuensinya."
+    },
+    {
+      "error": "Periode pelaporan salah diisi",
+      "cause": "Salah memilih angka periode (1, 2, atau 3)",
+      "solution": "Pastikan periode pelaporan sesuai: angka 1 untuk dividen yang diterima pada tahun pajak terbaru, angka 2 untuk tahun sebelumnya, angka 3 untuk dua tahun sebelumnya. Koreksi sebelum klik Kirim."
+    }
+  ],
+  "success_result": "Laporan Realisasi Investasi berhasil disampaikan melalui Coretax. Arsip laporan tersedia di Dokumen Saya. Fasilitas pembebasan PPh atas dividen berlaku selama laporan disampaikan secara berkala (3 tahun) dan tepat waktu sesuai ketentuan PMK-81 Tahun 2024.",
+  "references": [
+    "Cara Lapor Realisasi Investasi pada Aplikasi Coretax, Direktorat Jenderal Pajak, berlaku sejak 1 Januari 2025",
+    "Buku Manual Coretax 2024 — Layanan Wajib Pajak (Seri 19), AS.39-01 Laporan Realisasi Investasi, Direktorat Jenderal Pajak",
+    "PMK-81 Tahun 2024, Pasal 370, 371, 373, 374, Kementerian Keuangan RI"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Laporan Realisasi Investasi wajib disampaikan SETIAP TAHUN selama 3 tahun berturut-turut sejak tahun dividen diterima.",
+    "Batas waktu: paling lambat 31 Maret (WP OP) atau 30 April (WP Badan) setelah tahun pajak berakhir.",
+    "Jika tidak lapor atau terlambat: fasilitas bebas PPh tidak berlaku dan PPh terutang dihitung berdasarkan Pasal 17 UU PPh.",
+    "Berlaku untuk: dividen dalam negeri (wajib setor PPh Final 10% dulu) dan dividen/penghasilan lain luar negeri yang diinvestasikan kembali.",
+    "Bentuk investasi yang memenuhi syarat diatur dalam PMK-81/2024 — pastikan investasi sesuai ketentuan sebelum mengklaim fasilitas bebas PPh.",
+    "Berlaku sejak 1 Januari 2025 sesuai PMK-81 Tahun 2024."
+  ]
+}

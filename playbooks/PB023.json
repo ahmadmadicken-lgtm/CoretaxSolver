@@ -1,0 +1,166 @@
+{
+  "id": "PB023",
+  "master_index_id": null,
+  "priority": 23,
+  "type": "registrasi",
+  "title": "Penghapusan NPWP WP OP",
+  "module": "Portal Saya — Penghapusan & Pencabutan",
+  "subcategory": "Penghapusan NPWP Orang Pribadi",
+  "aliases": [
+    "hapus NPWP", "penghapusan NPWP orang pribadi",
+    "deregistrasi NPWP", "non aktif NPWP",
+    "Penghapusan NPWP Coretax"
+  ],
+  "keywords": [
+    "penghapusan NPWP", "Penghapusan & Pencabutan",
+    "Portal Saya", "Jenis Pembatalan", "Penghapusan NPWP",
+    "alasan pembatalan", "meninggal dunia", "keluar Indonesia",
+    "NPWP ganda", "warisan belum terbagi",
+    "dokumen pendukung", "Bukti Tanda Terima"
+  ],
+  "client_questions": [
+    "Bagaimana cara hapus NPWP di Coretax?",
+    "Klien saya meninggal dunia, bagaimana cara hapus NPWP-nya?",
+    "Apa saja alasan yang bisa digunakan untuk hapus NPWP?",
+    "Apakah NPWP bisa dihapus jika sudah tidak aktif?",
+    "Berapa lama proses penghapusan NPWP di Coretax?"
+  ],
+  "objective": "Memandu WP OP atau ahli waris/kuasa untuk mengajukan permohonan Penghapusan NPWP Orang Pribadi melalui menu Penghapusan & Pencabutan di Coretax, karena WP sudah tidak memenuhi syarat subjektif dan/atau objektif sebagai Wajib Pajak.",
+  "prerequisites": [
+    "Sudah login ke Coretax menggunakan akun WP yang akan dihapus NPWP-nya, atau login sebagai kuasa/ahli waris",
+    "Memiliki alasan yang valid sesuai ketentuan untuk penghapusan NPWP",
+    "Seluruh kewajiban perpajakan sudah diselesaikan",
+    "Menyiapkan dokumen pendukung sesuai alasan penghapusan (contoh: akta kematian, surat pernyataan meninggalkan Indonesia, dll)"
+  ],
+  "estimated_time": "15–25 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Jika WP sudah meninggal, permohonan dapat diajukan oleh ahli waris atau kuasa WP dengan melakukan impersonating ke akun WP yang bersangkutan."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Penghapusan & Pencabutan",
+      "click": "Klik submenu 'Penghapusan & Pencabutan'",
+      "input": "-",
+      "expected_screen": "Halaman Penghapusan Pendaftaran terbuka dengan bagian Manajemen Kasus",
+      "note": "Menu ini juga digunakan untuk Pencabutan PKP — pastikan memilih 'Penghapusan NPWP' di langkah berikutnya."
+    },
+    {
+      "step": 4,
+      "page": "Halaman Penghapusan Pendaftaran — Manajemen Kasus",
+      "menu": "Jenis Pembatalan",
+      "click": "-",
+      "input": "Pilih Jenis Pembatalan: 'Penghapusan NPWP'",
+      "expected_screen": "Pilihan Penghapusan NPWP terpilih",
+      "note": "Pastikan memilih 'Penghapusan NPWP', bukan 'Pencabutan Pengukuhan PKP/SKT PBB'. Penghapusan NPWP bersifat permanen."
+    },
+    {
+      "step": 5,
+      "page": "Halaman Penghapusan Pendaftaran — Kuasa WP",
+      "menu": "-",
+      "click": "Jika mengajukan sebagai diri sendiri: data terisi otomatis. Jika sebagai Kuasa/Wakil WP: centang kotak 'Kuasa Wajib Pajak' dan cari data kuasa menggunakan ikon kaca pembesar.",
+      "input": "-",
+      "expected_screen": "Bagian Kuasa WP terisi (jika sebagai kuasa) atau terisi otomatis (jika WP sendiri)",
+      "note": "-"
+    },
+    {
+      "step": 6,
+      "page": "Halaman Penghapusan Pendaftaran — Identitas WP",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Identitas Wajib Pajak terisi otomatis dari data profil WP",
+      "note": "Data identitas terisi otomatis — tidak perlu diubah."
+    },
+    {
+      "step": 7,
+      "page": "Halaman Penghapusan Pendaftaran — Alasan Pembatalan",
+      "menu": "Alasan Pembatalan",
+      "click": "-",
+      "input": "Pilih alasan pembatalan yang sesuai: (a) Alasan Lain, (b) Warisan belum terbagi dalam hal warisan telah selesai dibagi, (c) WP orang pribadi yang telah meninggal dunia dan tidak meninggalkan warisan dan sudah tidak memiliki NIK, (d) WP orang pribadi yang telah meninggalkan Indonesia untuk selamanya (SPLN yang sudah tidak memiliki NIK), (e) WP yang memiliki lebih dari 1 NPWP. Jika memilih alasan (a), isi kolom tambahan 'Alasan Lain' yang muncul.",
+      "expected_screen": "Alasan pembatalan terpilih. Jika alasan (a) dipilih, kolom tambahan muncul.",
+      "note": "Pilih alasan yang paling sesuai dengan kondisi WP. Alasan yang tidak sesuai dapat menyebabkan penolakan."
+    },
+    {
+      "step": 8,
+      "page": "Halaman Penghapusan Pendaftaran — Dokumen Pendukung",
+      "menu": "-",
+      "click": "Klik tombol unggah dokumen untuk mengunggah dokumen pendukung",
+      "input": "Dokumen pendukung sesuai alasan: akta kematian (alasan c), surat pernyataan meninggalkan Indonesia (alasan d), atau dokumen relevan lainnya",
+      "expected_screen": "Dokumen berhasil diunggah",
+      "note": "Dokumen pendukung wajib diunggah. Tanpa dokumen yang memadai, permohonan dapat ditolak."
+    },
+    {
+      "step": 9,
+      "page": "Halaman Penghapusan Pendaftaran — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang kotak Pernyataan Wajib Pajak, lalu klik tombol 'Kirim'",
+      "input": "-",
+      "expected_screen": "Notifikasi permohonan berhasil terkirim. Tombol 'Unduh Bukti Tanda Terima' tersedia.",
+      "note": "Permohonan akan diteliti oleh petugas KPP terdaftar setelah terkirim."
+    },
+    {
+      "step": 10,
+      "page": "Notifikasi Submit",
+      "menu": "Unduh Bukti Tanda Terima",
+      "click": "Klik tombol 'Unduh Bukti Tanda Terima'",
+      "input": "-",
+      "expected_screen": "Bukti Penerimaan Surat berhasil diunduh",
+      "note": "Simpan Bukti Penerimaan Surat. Pantau hasil permohonan di Portal Saya → Dokumen Saya dan Notifikasi Saya."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan penghapusan NPWP ditolak",
+      "cause": "WP masih memiliki kewajiban perpajakan yang belum diselesaikan, dokumen tidak memadai, atau alasan tidak memenuhi syarat",
+      "solution": "Selesaikan seluruh kewajiban perpajakan terlebih dahulu, lengkapi dokumen pendukung yang lebih kuat, kemudian ajukan ulang — proses harus diulang dari awal."
+    },
+    {
+      "error": "Salah memilih 'Pencabutan Pengukuhan PKP' padahal ingin hapus NPWP",
+      "cause": "Kedua pilihan ada di menu yang sama sehingga rawan salah pilih",
+      "solution": "Hentikan sebelum submit. Kembali ke langkah 4 dan pilih 'Penghapusan NPWP'. Penghapusan NPWP dan Pencabutan PKP adalah dua proses yang berbeda."
+    },
+    {
+      "error": "Alasan 'Alasan Lain' tidak jelas sehingga permohonan ditolak",
+      "cause": "Penjelasan alasan pada kolom 'Alasan Lain' tidak cukup spesifik atau tidak didukung dokumen yang memadai",
+      "solution": "Isi kolom alasan dengan penjelasan yang sangat spesifik dan detail. Sertakan dokumen pendukung yang relevan. Ajukan ulang setelah alasan diperbaiki."
+    },
+    {
+      "error": "NPWP tidak bisa dihapus karena WP masih PKP aktif",
+      "cause": "WP yang masih berstatus PKP aktif tidak bisa langsung dihapus NPWP-nya",
+      "solution": "Ajukan pencabutan PKP terlebih dahulu (lihat PB022) dan tunggu hingga status PKP dicabut. Setelah itu baru ajukan penghapusan NPWP."
+    }
+  ],
+  "success_result": "Permohonan Penghapusan NPWP WP OP disetujui. Surat Keputusan Penghapusan NPWP diterbitkan dan tersedia di Portal Saya → Dokumen Saya. NPWP WP dinyatakan tidak aktif/hapus secara resmi.",
+  "references": [
+    "Buku Manual Coretax 2024 — Penghapusan NPWP, Bab Penghapusan NPWP Orang Pribadi, Edisi 20241129, Seri Registrasi, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Penghapusan NPWP bersifat PERMANEN — berbeda dari pencabutan PKP yang hanya mencabut status PKP.",
+    "Alasan penghapusan NPWP OP yang tersedia: (a) Alasan Lain, (b) Warisan telah selesai dibagi, (c) Meninggal dunia tanpa warisan dan tanpa NIK, (d) Meninggalkan Indonesia selamanya (SPLN tanpa NIK), (e) Memiliki lebih dari 1 NPWP.",
+    "Jika WP masih PKP, cabut PKP dulu (PB022) sebelum hapus NPWP.",
+    "Seluruh kewajiban perpajakan harus diselesaikan sebelum NPWP dapat dihapus.",
+    "Hasil persetujuan/penolakan tersedia di Portal Saya → Dokumen Saya dan Notifikasi Saya.",
+    "WP OP yang memiliki NIK aktif pada umumnya tidak dapat dihapus NPWP-nya karena NIK berfungsi sebagai NPWP secara otomatis — penghapusan NPWP berlaku untuk kondisi-kondisi khusus yang memenuhi syarat."
+  ]
+}

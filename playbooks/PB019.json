@@ -1,0 +1,151 @@
+{
+  "id": "PB019",
+  "master_index_id": null,
+  "priority": 19,
+  "type": "layanan",
+  "title": "Perpanjangan Waktu Penyampaian SPT Tahunan",
+  "module": "Layanan Wajib Pajak — Layanan Administrasi",
+  "subcategory": "AS.08-01 Pemberitahuan Perpanjangan Jangka Waktu Penyampaian SPT Tahunan",
+  "aliases": [
+    "perpanjangan SPT tahunan",
+    "penundaan lapor SPT",
+    "AS.08-01",
+    "minta perpanjangan waktu SPT",
+    "extend batas waktu SPT Tahunan"
+  ],
+  "keywords": [
+    "perpanjangan SPT Tahunan", "AS.08-01", "penundaan penyampaian SPT",
+    "Layanan Administrasi", "Layanan Wajib Pajak",
+    "Buat Permohonan Layanan Administrasi",
+    "batas waktu 31 Maret", "perpanjangan 2 bulan",
+    "KODJP", "Deposit Perpanjangan", "BPE"
+  ],
+  "client_questions": [
+    "Bagaimana cara minta perpanjangan waktu lapor SPT Tahunan di Coretax?",
+    "Saya belum siap lapor SPT sebelum 31 Maret, bisakah diperpanjang?",
+    "Apa itu perpanjangan SPT Tahunan di Coretax?",
+    "Berapa lama perpanjangan yang bisa diminta?",
+    "Apakah ada denda jika minta perpanjangan SPT Tahunan?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan Pemberitahuan Perpanjangan Jangka Waktu Penyampaian SPT Tahunan PPh OP melalui menu Layanan Administrasi (AS.08-01) di Coretax, sehingga mendapat tambahan waktu maksimal 2 bulan setelah batas waktu normal (31 Maret).",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif untuk penandatanganan (lihat PB002)",
+    "Pemberitahuan diajukan SEBELUM batas waktu penyampaian SPT Tahunan (31 Maret)",
+    "Jika ada PPh yang diperkirakan kurang bayar, siapkan penghitungan sementara untuk mengisi estimasi kurang bayar"
+  ],
+  "estimated_time": "10–20 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pemberitahuan perpanjangan HARUS diajukan sebelum 31 Maret. Pengajuan setelah 31 Maret tidak akan diproses."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak",
+      "click": "Klik menu 'Layanan Wajib Pajak' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Layanan Wajib Pajak terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan Layanan Administrasi",
+      "click": "Arahkan kursor ke 'Layanan Administrasi' → klik 'Buat Permohonan Layanan Administrasi'",
+      "input": "-",
+      "expected_screen": "Halaman Buat Permohonan Layanan Administrasi terbuka",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "Pilih Kategori AS.08-01",
+      "click": "-",
+      "input": "Pilih kategori: 'AS.08 Pemberitahuan Perpanjangan Jangka Waktu Penyampaian SPT', kemudian pilih subjenis: 'AS.08-01 Pemberitahuan Perpanjangan Jangka Waktu Penyampaian SPT Tahunan'",
+      "expected_screen": "Formulir Pemberitahuan Perpanjangan SPT Tahunan terbuka",
+      "note": "Dapat juga dicari dengan mengetik 'perpanjangan' atau 'AS.08' di kolom pencarian layanan."
+    },
+    {
+      "step": 5,
+      "page": "Formulir AS.08-01",
+      "menu": "Identitas WP",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Data identitas WP (NPWP, Nama, Alamat) sudah terisi otomatis",
+      "note": "Data identitas terisi otomatis — tidak perlu diubah."
+    },
+    {
+      "step": 6,
+      "page": "Formulir AS.08-01",
+      "menu": "Isian Pemberitahuan",
+      "click": "-",
+      "input": "Isi kolom yang tersedia: Tahun Pajak yang dimohonkan perpanjangan, alasan perpanjangan, dan estimasi PPh kurang bayar (jika ada). Jika ada estimasi kurang bayar, isi dengan penghitungan sementara.",
+      "expected_screen": "Formulir terisi lengkap",
+      "note": "Alasan perpanjangan harus diisi dengan jelas. Contoh alasan yang umum diterima: 'Laporan keuangan belum selesai disusun', 'Data pendukung penghasilan masih dalam proses pengumpulan'. Jika diperkirakan ada kurang bayar, isi estimasinya — kurang bayar ini harus dilunasi paling lambat saat pemberitahuan diajukan."
+    },
+    {
+      "step": 7,
+      "page": "Formulir AS.08-01",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta untuk penandatanganan digital",
+      "expected_screen": "Pemberitahuan berhasil terkirim. Nomor permohonan muncul. WP mendapat perpanjangan waktu penyampaian SPT Tahunan.",
+      "note": "Perpanjangan yang diberikan adalah 2 (dua) bulan setelah batas waktu penyampaian SPT Tahunan (31 Maret), sehingga batas waktu baru menjadi paling lambat 30 Juni tahun yang bersangkutan."
+    },
+    {
+      "step": 8,
+      "page": "Portal Saya → Dokumen Saya",
+      "menu": "Verifikasi BPE Perpanjangan",
+      "click": "Cek Portal Saya → Dokumen Saya untuk mendapatkan BPE Pemberitahuan Perpanjangan SPT",
+      "input": "-",
+      "expected_screen": "BPE Pemberitahuan Perpanjangan SPT Tahunan tersedia dan dapat diunduh",
+      "note": "Simpan BPE perpanjangan sebagai bukti bahwa WP telah mengajukan perpanjangan secara resmi."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Pemberitahuan perpanjangan tidak bisa diajukan / menu tidak aktif",
+      "cause": "Batas waktu 31 Maret sudah terlewati saat mengajukan",
+      "solution": "Pemberitahuan perpanjangan hanya bisa diajukan sebelum tanggal 31 Maret. Jika sudah lewat, WP harus segera lapor SPT Tahunan dan siap membayar denda keterlambatan — perpanjangan tidak dapat diajukan dan proses tidak bisa diulang untuk tahun pajak tersebut."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "BPE perpanjangan tidak muncul setelah pemberitahuan terkirim",
+      "cause": "Sistem sedang dalam proses atau ada penundaan pemrosesan",
+      "solution": "Cek Portal Saya → Dokumen Saya dan Portal Saya → Notifikasi Saya. Tunggu beberapa saat dan refresh. Jika lebih dari 1 jam tidak muncul, hubungi KPP terdaftar."
+    },
+    {
+      "error": "Ada estimasi kurang bayar tapi WP tidak bisa melunasi saat mengajukan perpanjangan",
+      "cause": "WP belum memiliki dana atau kode billing untuk melunasi estimasi kurang bayar",
+      "solution": "Buat kode billing untuk melunasi estimasi kurang bayar terlebih dahulu melalui menu Pembayaran → Layanan Mandiri Kode Billing, kemudian lakukan pembayaran sebelum atau bersamaan dengan pengajuan perpanjangan."
+    }
+  ],
+  "success_result": "Pemberitahuan Perpanjangan Jangka Waktu Penyampaian SPT Tahunan berhasil diajukan. WP mendapat tambahan waktu 2 bulan untuk menyampaikan SPT Tahunan (batas waktu baru: paling lambat 30 Juni). BPE Perpanjangan tersedia di Portal Saya → Dokumen Saya.",
+  "references": [
+    "Buku Manual Coretax 2024 — Layanan Wajib Pajak (Seri 19), AS.08-01 Pemberitahuan Perpanjangan Jangka Waktu Penyampaian SPT Tahunan, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh Orang Pribadi, Notifikasi Penggunaan Deposit Perpanjangan SPT Tahunan, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Perpanjangan HARUS diajukan SEBELUM tanggal 31 Maret — tidak bisa diajukan setelah batas waktu lewat.",
+    "Perpanjangan yang diberikan adalah maksimal 2 bulan — batas waktu baru menjadi 30 Juni.",
+    "Jika ada estimasi PPh kurang bayar, harus dilunasi paling lambat bersamaan dengan pengajuan perpanjangan.",
+    "Saat submit SPT Tahunan Kurang Bayar setelah menggunakan perpanjangan, sistem akan menampilkan notifikasi penggunaan Deposit Perpanjangan SPT Tahunan.",
+    "Perpanjangan tidak membebaskan WP dari kewajiban membayar PPh terutang — hanya memperpanjang batas waktu pelaporan.",
+    "KODJP wajib aktif sebelum mengajukan — jika passphrase lupa, selesaikan PB002 terlebih dahulu."
+  ]
+}

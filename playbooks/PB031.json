@@ -1,0 +1,109 @@
+{
+  "id": "PB031",
+  "master_index_id": null,
+  "priority": 31,
+  "type": "perubahan-data",
+  "title": "Penambahan & Perubahan Rekening Bank WP",
+  "module": "Portal Saya — Perubahan Data",
+  "subcategory": "Taxpayer Identity — Detail Bank",
+  "aliases": [
+    "tambah rekening bank", "ganti rekening bank DJP",
+    "update nomor rekening NPWP", "Bank Details Coretax",
+    "daftar rekening bank pajak"
+  ],
+  "keywords": [
+    "rekening bank", "Bank Details", "Taxpayer Identity",
+    "Perubahan Data", "Portal Saya", "nomor rekening",
+    "nama bank", "KODJP", "restitusi", "pengembalian pajak",
+    "tambah rekening", "Detail Bank"
+  ],
+  "client_questions": [
+    "Bagaimana cara tambah rekening bank di Coretax?",
+    "Saya ingin ganti rekening bank untuk pengembalian pajak, bagaimana caranya?",
+    "Rekening bank di Coretax saya belum terdaftar, bagaimana cara mendaftarkannya?",
+    "Apakah bisa memiliki lebih dari satu rekening bank di Coretax?",
+    "Kenapa rekening bank harus terdaftar di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk menambahkan atau mengubah data rekening bank yang terdaftar di Coretax melalui menu Perubahan Data — Taxpayer Identity, sehingga rekening tersedia sebagai pilihan untuk pengembalian pajak (restitusi) dan pembayaran dari DJP.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "Mengetahui detail rekening bank yang akan didaftarkan: nama bank, nomor rekening, nama pemilik rekening"
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "-"
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Data → Taxpayer Identity",
+      "click": "Klik 'Portal Saya' → 'Perubahan Data' → 'Taxpayer Identity'",
+      "input": "-",
+      "expected_screen": "Formulir Identitas Wajib Pajak terbuka",
+      "note": "Rekening bank dikelola di bagian 'Detail Bank' dalam formulir Taxpayer Identity yang sama."
+    },
+    {
+      "step": 3,
+      "page": "Formulir Identitas WP — Detail Bank",
+      "menu": "Tambah Rekening Bank",
+      "click": "Scroll ke bagian 'Detail Bank', klik tombol 'Tambah' atau 'Add' untuk menambah rekening baru",
+      "input": "Isi: Nama Bank, Nomor Rekening, Nama Pemilik Rekening (harus sesuai nama WP)",
+      "expected_screen": "Data rekening bank baru berhasil ditambahkan ke daftar",
+      "note": "Rekening bank yang didaftarkan HARUS atas nama WP yang bersangkutan. Rekening atas nama orang lain tidak akan diterima untuk pengembalian pajak."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Identitas WP",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta",
+      "expected_screen": "Permohonan berhasil terkirim. Rekening bank baru terdaftar di profil WP.",
+      "note": "Setelah berhasil, rekening bank akan tersedia sebagai pilihan di formulir pengembalian pajak (SPT Lebih Bayar, Restitusi, dll)."
+    },
+    {
+      "step": 5,
+      "page": "Portal Saya → Profil Saya → Detail Bank",
+      "menu": "Verifikasi",
+      "click": "Cek Portal Saya → Profil Saya → tab 'Detail Bank' untuk memastikan rekening sudah terdaftar",
+      "input": "-",
+      "expected_screen": "Rekening bank baru tampil di daftar Detail Bank profil WP",
+      "note": "-"
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Rekening bank tidak muncul sebagai pilihan saat mengisi formulir restitusi",
+      "cause": "Rekening belum terdaftar di profil WP atau perubahan belum tersimpan",
+      "solution": "Daftarkan rekening terlebih dahulu melalui langkah di atas, tunggu beberapa saat, lalu coba lagi di formulir restitusi."
+    },
+    {
+      "error": "Passphrase KODJP salah",
+      "cause": "Passphrase tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (PB002) — proses harus diulang dari awal."
+    }
+  ],
+  "success_result": "Rekening bank berhasil terdaftar di profil WP dan tersedia sebagai pilihan untuk pengembalian pajak (restitusi, SKPPKP, dll) di Coretax.",
+  "references": [
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Modul Portal Saya — Detail Bank, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pelaporan SPT Tahunan PPh OP, Bagian G Refund — Pilihan Nomor Rekening, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Rekening bank WAJIB atas nama WP yang bersangkutan — rekening atas nama orang lain tidak diterima.",
+    "Rekening yang sudah terdaftar akan muncul sebagai pilihan di formulir SPT Lebih Bayar (PB011) dan permohonan restitusi.",
+    "WP dapat mendaftarkan lebih dari satu rekening bank.",
+    "KODJP wajib aktif — jika passphrase lupa, selesaikan PB002 terlebih dahulu.",
+    "Perubahan rekening bank menggunakan menu yang sama dengan perubahan KLU (Taxpayer Identity)."
+  ]
+}

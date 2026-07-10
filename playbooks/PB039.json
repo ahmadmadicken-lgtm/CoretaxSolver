@@ -1,0 +1,109 @@
+{
+  "id": "PB039",
+  "master_index_id": null,
+  "priority": 39,
+  "type": "layanan",
+  "title": "Permohonan S-KET PP55/2022 (Keterangan UMKM)",
+  "module": "Layanan Wajib Pajak — Layanan Administrasi",
+  "subcategory": "AS.06-01 Surat Keterangan Memenuhi Kriteria WP PP-55 Tahun 2022",
+  "aliases": [
+    "S-KET PP55", "AS.06-01", "surat keterangan UMKM pajak",
+    "keterangan memenuhi kriteria PP 55",
+    "S-KET PPh Final UMKM Coretax"
+  ],
+  "keywords": [
+    "S-KET PP55", "AS.06-01", "PP-55 Tahun 2022",
+    "Surat Keterangan Memenuhi Kriteria", "UMKM",
+    "peredaran bruto tertentu", "Layanan Administrasi",
+    "AS.06", "Daftar Fasilitas Saya", "PPh Final 0,5 persen"
+  ],
+  "client_questions": [
+    "Bagaimana cara dapat S-KET PP55 di Coretax?",
+    "Klien UMKM saya butuh surat keterangan pajak 0,5%, bagaimana caranya?",
+    "Apa itu S-KET PP55 dan untuk apa kegunaannya?",
+    "Apakah harus punya S-KET PP55 untuk bisa pakai tarif 0,5%?",
+    "Bagaimana cara ajukan AS.06-01 di Coretax?"
+  ],
+  "objective": "Memandu WP OP yang memiliki peredaran bruto tertentu (UMKM) untuk mengajukan permohonan Surat Keterangan Memenuhi Kriteria sebagai WP berdasarkan PP-55 Tahun 2022 (S-KET PP55) melalui menu Layanan Administrasi di Coretax. S-KET ini diperlukan sebagai bukti bahwa WP memenuhi kriteria untuk dikenai PPh Final tarif 0,5%.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "KODJP aktif (lihat PB002)",
+    "WP OP dengan peredaran bruto tidak melebihi Rp4.800.000.000 per tahun",
+    "WP sudah menggunakan tarif PPh Final PP-55/2022 (0,5% dari omzet)"
+  ],
+  "estimated_time": "10–20 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "-"
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan Layanan Administrasi",
+      "click": "Klik 'Layanan Wajib Pajak' → 'Layanan Administrasi' → 'Buat Permohonan Layanan Administrasi'",
+      "input": "-",
+      "expected_screen": "Halaman Buat Permohonan Layanan Administrasi terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "AS.06-01",
+      "click": "-",
+      "input": "Pilih: 'AS.06 Surat Keterangan Memenuhi Kriteria WP PP-55 Tahun 2022' → 'AS.06-01 Pemberian Surat Keterangan Memenuhi Kriteria'. Klik Simpan.",
+      "expected_screen": "Formulir permohonan S-KET PP55 terbuka",
+      "note": "Dapat dicari dengan kata kunci 'PP55' atau 'AS.06' di kolom pencarian layanan."
+    },
+    {
+      "step": 4,
+      "page": "Formulir AS.06-01",
+      "menu": "Isian & Submit",
+      "click": "-",
+      "input": "Isi kolom yang tersedia sesuai kondisi WP. Unggah dokumen pendukung jika diminta. Centang Pernyataan WP. Masukkan Passphrase KODJP. Klik Kirim.",
+      "expected_screen": "Permohonan berhasil terkirim. Status masuk ke Permohonan Dalam Proses.",
+      "note": "S-KET PP55 yang diterbitkan tersedia di Daftar Fasilitas Saya setelah disetujui."
+    },
+    {
+      "step": 5,
+      "page": "Layanan Wajib Pajak → Layanan Administrasi → Daftar Fasilitas Saya",
+      "menu": "Unduh S-KET",
+      "click": "Cek Daftar Fasilitas Saya untuk mengunduh S-KET PP55 setelah diterbitkan",
+      "input": "-",
+      "expected_screen": "S-KET PP55 tersedia dan dapat diunduh",
+      "note": "S-KET ini dapat digunakan sebagai bukti kepada pihak yang memotong pajak bahwa WP dikenai PPh Final 0,5%, bukan tarif PPh umum."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan S-KET PP55 ditolak",
+      "cause": "WP tidak memenuhi kriteria PP-55/2022 atau peredaran bruto melebihi batas",
+      "solution": "Pastikan peredaran bruto WP tidak melebihi Rp4.800.000.000 per tahun. Jika sudah melebihi, WP tidak lagi memenuhi kriteria PP-55/2022."
+    },
+    {
+      "error": "Passphrase KODJP salah",
+      "cause": "Passphrase tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (PB002) — proses harus diulang dari awal."
+    }
+  ],
+  "success_result": "S-KET PP55 (Surat Keterangan Memenuhi Kriteria WP PP-55/2022) diterbitkan dan tersedia di Daftar Fasilitas Saya. WP dapat menggunakan S-KET ini sebagai bukti kepada pemotong pajak bahwa penghasilan WP dikenai PPh Final 0,5%.",
+  "references": [
+    "Buku Manual Coretax 2024 — Layanan Wajib Pajak (Seri 19), AS.06-01 S-KET PP55, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, AS.06-01 S-KET PP55, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "S-KET PP55 diperlukan agar pemotong pajak tidak memotong PPh dengan tarif umum dari penghasilan UMKM.",
+    "Hanya berlaku untuk WP dengan peredaran bruto tidak melebihi Rp4.800.000.000 per tahun.",
+    "Ada dua subjenis: AS.06-01 (mendapat S-KET PP55) dan AS.06-02 (memilih dikenakan PPh ketentuan umum, bukan Final).",
+    "S-KET yang diterbitkan tersedia di Daftar Fasilitas Saya — simpan dan serahkan kepada pemotong pajak jika diminta."
+  ]
+}

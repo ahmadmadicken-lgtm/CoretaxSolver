@@ -1,0 +1,92 @@
+{
+  "id": "PB033",
+  "master_index_id": null,
+  "priority": 33,
+  "type": "layanan",
+  "title": "Konfirmasi Status Wajib Pajak (AS.01-02)",
+  "module": "Layanan Wajib Pajak — Layanan Administrasi",
+  "subcategory": "AS.01-02 Konfirmasi Status Wajib Pajak",
+  "aliases": [
+    "konfirmasi status WP", "AS.01-02",
+    "cek status WP lain", "verifikasi WP aktif",
+    "KSWP Coretax", "konfirmasi kepatuhan WP"
+  ],
+  "keywords": [
+    "konfirmasi status WP", "AS.01-02", "KSWP",
+    "Layanan Administrasi", "AS.01 Pemenuhan Kewajiban Perpajakan",
+    "status aktif WP", "kepatuhan perpajakan",
+    "NPWP lawan transaksi", "verifikasi mitra bisnis"
+  ],
+  "client_questions": [
+    "Bagaimana cara cek status aktif NPWP di Coretax?",
+    "Bagaimana cara konfirmasi apakah mitra bisnis saya patuh pajak?",
+    "Apa itu Konfirmasi Status Wajib Pajak (KSWP)?",
+    "Bisakah saya cek status WP orang lain di Coretax?",
+    "Untuk keperluan tender, bagaimana membuktikan WP aktif dan patuh?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan permohonan Konfirmasi Status Wajib Pajak (KSWP/AS.01-02) melalui menu Layanan Administrasi di Coretax, untuk memverifikasi status kepatuhan perpajakan WP tertentu (diri sendiri atau pihak lain).",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Mengetahui NPWP atau NIK WP yang akan dikonfirmasi statusnya"
+  ],
+  "estimated_time": "5–10 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "-"
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan Layanan Administrasi",
+      "click": "Klik 'Layanan Wajib Pajak' → 'Layanan Administrasi' → 'Buat Permohonan Layanan Administrasi'",
+      "input": "-",
+      "expected_screen": "Halaman Buat Permohonan Layanan Administrasi terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "AS.01-02",
+      "click": "-",
+      "input": "Pilih: 'AS.01 Pemenuhan Kewajiban Perpajakan' → 'AS.01-02 Konfirmasi Status Wajib Pajak'. Klik Simpan.",
+      "expected_screen": "Formulir KSWP terbuka",
+      "note": "Dapat dicari dengan kata kunci 'konfirmasi status' atau 'AS.01-02'."
+    },
+    {
+      "step": 4,
+      "page": "Formulir AS.01-02",
+      "menu": "Isian NPWP yang dikonfirmasi",
+      "click": "-",
+      "input": "Isi NPWP atau NIK WP yang akan dikonfirmasi statusnya. Submit formulir.",
+      "expected_screen": "Hasil konfirmasi status WP tersedia: menampilkan informasi status aktif/non-aktif dan kepatuhan perpajakan WP tersebut.",
+      "note": "Hasil KSWP menampilkan status kepatuhan WP yang dikonfirmasi — apakah aktif, memiliki tunggakan, atau tidak."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "NPWP yang dikonfirmasi tidak ditemukan",
+      "cause": "NPWP/NIK yang dimasukkan salah atau WP belum terdaftar di Coretax",
+      "solution": "Pastikan NPWP/NIK dimasukkan dengan benar (16 digit). Jika masih tidak ditemukan, WP mungkin belum terdaftar atau menggunakan NPWP lama."
+    }
+  ],
+  "success_result": "Konfirmasi Status Wajib Pajak berhasil diperoleh, menampilkan informasi kepatuhan perpajakan WP yang dikonfirmasi.",
+  "references": [
+    "Buku Manual Coretax 2024 — Layanan Wajib Pajak (Seri 19), AS.01-02 Konfirmasi Status Wajib Pajak, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, AS.01-02 KSWP, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "KSWP (Konfirmasi Status Wajib Pajak) berguna untuk memverifikasi status WP mitra bisnis sebelum bertransaksi.",
+    "Berbeda dari SKF (PB018) — KSWP lebih cepat dan ringkas, SKF lebih formal dan memiliki masa berlaku.",
+    "Hasil KSWP menampilkan status kepatuhan pada saat dilakukan konfirmasi."
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "PB027",
+  "master_index_id": null,
+  "priority": 27,
+  "type": "registrasi",
+  "title": "Pengaktifan Kembali WP Non-Aktif",
+  "module": "Portal Saya — Perubahan Status",
+  "subcategory": "Pengaktifan Kembali Status Wajib Pajak Non-Aktif",
+  "aliases": [
+    "aktifkan kembali NPWP", "reaktivasi WP non aktif",
+    "aktifkan WP NE", "Taxpayer Status Activation",
+    "pulihkan status WP aktif Coretax"
+  ],
+  "keywords": [
+    "pengaktifan kembali", "Taxpayer Status Activation",
+    "Perubahan Status", "Portal Saya",
+    "Pengaktifan Kembali Wajib Pajak Nonaktif",
+    "alasan aktivasi kembali", "Surat Pengaktifan Kembali",
+    "Bukti Tanda Terima", "WP Non-Efektif"
+  ],
+  "client_questions": [
+    "Bagaimana cara aktifkan kembali NPWP yang sudah non-aktif?",
+    "Klien saya dulu WP Non-Efektif, sekarang ingin aktif kembali, bagaimana caranya?",
+    "Apa itu pengaktifan kembali WP Non-Aktif di Coretax?",
+    "Apakah langsung aktif setelah mengajukan pengaktifan kembali?",
+    "Dokumen apa yang diperlukan untuk reaktivasi WP?"
+  ],
+  "objective": "Memandu WP OP yang sebelumnya berstatus Non-Aktif (Non-Efektif/NE) untuk mengajukan Pengaktifan Kembali Status Wajib Pajak melalui menu Perubahan Status di Coretax, agar WP kembali aktif dan dapat memenuhi kewajiban perpajakan.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "WP saat ini berstatus Non-Aktif (Non-Efektif)",
+    "Mengetahui alasan pengaktifan kembali (contoh: kembali bekerja/berpenghasilan, pindah balik ke Indonesia, dll)"
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pengaktifan kembali dapat dilakukan oleh WP sendiri atau Kuasa WP."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Status",
+      "click": "Klik 'Portal Saya' → klik 'Perubahan Status'",
+      "input": "-",
+      "expected_screen": "Submenu Perubahan Status terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Portal Saya → Perubahan Status",
+      "menu": "Pengaktifan Kembali Wajib Pajak Nonaktif",
+      "click": "Klik 'Pengaktifan Kembali Wajib Pajak Nonaktif'",
+      "input": "-",
+      "expected_screen": "Halaman Pengaktifan Kembali Wajib Pajak Nonaktif terbuka. Bagian Manajemen Kasus terisi otomatis.",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Formulir Pengaktifan Kembali — Kuasa WP & Identitas WP",
+      "menu": "-",
+      "click": "Jika sebagai kuasa: centang dan cari data kuasa. Jika WP sendiri: data terisi otomatis.",
+      "input": "-",
+      "expected_screen": "Identitas WP terisi otomatis",
+      "note": "-"
+    },
+    {
+      "step": 5,
+      "page": "Formulir Pengaktifan Kembali — Detail",
+      "menu": "Alasan Aktivasi Kembali",
+      "click": "-",
+      "input": "Isi kolom 'Alasan Aktivasi Kembali' dengan mengetikkan alasan pengaktifan kembali secara jelas dan spesifik (contoh: 'WP kembali bekerja dan memiliki penghasilan melebihi PTKP sejak [tanggal]')",
+      "expected_screen": "Kolom alasan terisi",
+      "note": "Isi alasan dengan jelas dan spesifik. Alasan yang kuat mempercepat proses persetujuan."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Pengaktifan Kembali — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang kotak Pernyataan Wajib Pajak, lalu klik tombol 'Kirim'",
+      "input": "-",
+      "expected_screen": "Notifikasi permohonan berhasil terkirim. Tombol 'Unduh Bukti Tanda Terima' dan 'Unduh Surat Pengaktifan Kembali' tersedia.",
+      "note": "Berbeda dari penonaktifan, pengaktifan kembali dapat langsung disetujui sistem tanpa menunggu penelitian KPP dalam banyak kasus."
+    },
+    {
+      "step": 7,
+      "page": "Notifikasi Submit",
+      "menu": "Unduh Dokumen",
+      "click": "Klik 'Unduh Bukti Tanda Terima' dan 'Unduh Surat Pengaktifan Kembali'",
+      "input": "-",
+      "expected_screen": "Kedua dokumen berhasil diunduh. WP telah berhasil diaktifkan kembali.",
+      "note": "Surat Pengaktifan Kembali adalah bukti resmi bahwa status WP sudah aktif kembali. Simpan kedua dokumen ini."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Menu 'Pengaktifan Kembali Wajib Pajak Nonaktif' tidak tersedia",
+      "cause": "WP sudah berstatus aktif sehingga menu tidak ditampilkan",
+      "solution": "Cek status WP di Portal Saya → Profil Saya. Jika sudah aktif, tidak perlu mengajukan pengaktifan kembali."
+    },
+    {
+      "error": "Tombol 'Kirim' tidak aktif",
+      "cause": "Kolom 'Alasan Aktivasi Kembali' belum diisi",
+      "solution": "Pastikan kolom alasan sudah diisi sebelum menekan tombol Kirim."
+    }
+  ],
+  "success_result": "Status Wajib Pajak berhasil diaktifkan kembali. Surat Pengaktifan Kembali tersedia untuk diunduh. WP kembali aktif dan wajib memenuhi kewajiban perpajakan (lapor SPT, bayar pajak, dll) mulai dari saat pengaktifan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Perubahan Status Wajib Pajak, Bab Pengaktifan Kembali Status Wajib Pajak Nonaktif, Edisi 20241129, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Pengaktifan kembali merupakan kebalikan dari Penetapan Non-Aktif (PB025) — prosesnya jauh lebih cepat.",
+    "Setelah aktif kembali, WP kembali wajib memenuhi seluruh kewajiban perpajakan: lapor SPT, bayar angsuran, dll.",
+    "Surat Pengaktifan Kembali dapat langsung diunduh setelah submit — tidak perlu menunggu proses penelitian.",
+    "Jika ada kewajiban yang tertunggak selama periode non-aktif, konsultasikan dengan KPP terdaftar."
+  ]
+}

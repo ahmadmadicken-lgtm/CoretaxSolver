@@ -1,0 +1,101 @@
+{
+  "id": "PB032",
+  "master_index_id": null,
+  "priority": 32,
+  "type": "profil",
+  "title": "Cek Status Permohonan (Kasus Saya)",
+  "module": "Portal Saya — Kasus Saya & Kasus Berjalan Saya",
+  "subcategory": "Pemantauan Status Permohonan Layanan Perpajakan",
+  "aliases": [
+    "cek status permohonan", "Kasus Saya Coretax",
+    "pantau permohonan pajak", "tracking kasus DJP",
+    "lihat progress permohonan Coretax"
+  ],
+  "keywords": [
+    "Kasus Saya", "Kasus Berjalan Saya", "Portal Saya",
+    "status permohonan", "progress kasus", "tracking",
+    "Permohonan Dalam Proses", "Permohonan Telah Selesai",
+    "nomor kasus", "riwayat permohonan"
+  ],
+  "client_questions": [
+    "Bagaimana cara cek status permohonan saya di Coretax?",
+    "Saya sudah ajukan SKF minggu lalu, bagaimana cara cek sudah diproses belum?",
+    "Di mana bisa lihat semua permohonan yang pernah diajukan di Coretax?",
+    "Apa bedanya Kasus Saya dan Kasus Berjalan Saya?",
+    "Permohonan saya ditolak, di mana bisa lihat alasannya?"
+  ],
+  "objective": "Memandu WP OP untuk memantau status dan progress seluruh permohonan layanan perpajakan yang pernah diajukan melalui menu Kasus Saya dan Kasus Berjalan Saya di Coretax.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Sudah pernah mengajukan permohonan layanan apapun di Coretax"
+  ],
+  "estimated_time": "3–5 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "-"
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Kasus Berjalan Saya",
+      "click": "Klik 'Portal Saya' → klik 'Kasus Berjalan Saya'",
+      "input": "-",
+      "expected_screen": "Halaman Kasus Berjalan Saya terbuka, menampilkan daftar permohonan/kasus yang saat ini sedang dalam proses penelitian oleh DJP.",
+      "note": "Kasus Berjalan Saya = permohonan yang SEDANG diproses DJP (belum selesai). Kasus Saya = semua riwayat permohonan termasuk yang sudah selesai."
+    },
+    {
+      "step": 3,
+      "page": "Halaman Kasus Berjalan Saya",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Daftar permohonan aktif: menampilkan nomor kasus, jenis permohonan, tanggal pengajuan, dan status terkini",
+      "note": "Jika daftar kosong, berarti tidak ada permohonan yang sedang dalam proses — semua permohonan sudah selesai diproses."
+    },
+    {
+      "step": 4,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Kasus Saya",
+      "click": "Klik 'Portal Saya' → klik 'Kasus Saya'",
+      "input": "-",
+      "expected_screen": "Halaman Kasus Saya terbuka dengan riwayat lengkap semua permohonan: yang sedang berjalan, yang sudah selesai (disetujui/ditolak), dan yang belum disampaikan.",
+      "note": "Kasus Saya menampilkan riwayat lebih lengkap. Gunakan filter untuk mencari permohonan tertentu berdasarkan jenis, tanggal, atau status."
+    },
+    {
+      "step": 5,
+      "page": "Halaman Kasus Saya",
+      "menu": "Lihat Detail Kasus",
+      "click": "Klik baris permohonan tertentu atau ikon detail untuk melihat informasi lengkap dan alasan persetujuan/penolakan",
+      "input": "-",
+      "expected_screen": "Detail kasus terbuka: menampilkan riwayat proses, catatan petugas, dan dokumen terkait",
+      "note": "Jika permohonan ditolak, alasan penolakan biasanya tercantum di detail kasus ini."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan yang baru diajukan tidak muncul di Kasus Saya",
+      "cause": "Ada penundaan sistem dalam mencatat permohonan baru",
+      "solution": "Tunggu beberapa menit dan refresh halaman. Jika lebih dari 1 jam tidak muncul, hubungi KPP terdaftar dengan menyertakan Bukti Tanda Terima permohonan."
+    }
+  ],
+  "success_result": "Status permohonan berhasil dipantau. WP dapat mengetahui progress terkini setiap permohonan yang diajukan, termasuk apakah sudah disetujui, ditolak, atau masih dalam proses.",
+  "references": [
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Modul Portal Saya — Kasus Saya dan Kasus Berjalan Saya, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Kasus Berjalan Saya = permohonan aktif yang sedang diproses DJP.",
+    "Kasus Saya = riwayat lengkap semua permohonan (aktif + selesai + belum dikirim).",
+    "Halaman ini bersifat read-only — hanya untuk memantau, tidak bisa mengubah permohonan yang sudah dikirim.",
+    "Jika permohonan ditolak, lihat detail kasus untuk mengetahui alasan penolakan sebelum mengajukan ulang."
+  ]
+}

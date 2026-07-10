@@ -1,0 +1,162 @@
+{
+  "id": "PB022",
+  "master_index_id": null,
+  "priority": 22,
+  "type": "registrasi",
+  "title": "Pencabutan Pengukuhan PKP",
+  "module": "Portal Saya — Penghapusan & Pencabutan",
+  "subcategory": "Pencabutan Pengukuhan PKP (Pengusaha Kena Pajak)",
+  "aliases": [
+    "cabut PKP", "hapus status PKP", "keluar dari PKP",
+    "non PKP lagi", "pencabutan PKP Coretax",
+    "Taxable Person Revocation"
+  ],
+  "keywords": [
+    "pencabutan PKP", "Pencabutan Pengukuhan PKP",
+    "Portal Saya", "Penghapusan & Pencabutan",
+    "Jenis Pembatalan", "Taxable Person for VAT Purposes Revocation",
+    "peredaran bruto kurang dari 4,8 miliar",
+    "alasan pencabutan", "dokumen pendukung",
+    "Bukti Tanda Terima", "Surat Pencabutan PKP"
+  ],
+  "client_questions": [
+    "Bagaimana cara cabut status PKP di Coretax?",
+    "Omzet saya sudah di bawah 4,8 miliar, bisakah PKP saya dicabut?",
+    "Apa itu pencabutan PKP dan bagaimana caranya?",
+    "Setelah PKP dicabut, apakah masih wajib lapor SPT Masa PPN?",
+    "Berapa lama proses pencabutan PKP di Coretax?"
+  ],
+  "objective": "Memandu WP OP yang ingin mengajukan permohonan Pencabutan Pengukuhan PKP melalui menu Penghapusan & Pencabutan di Coretax, karena peredaran bruto di bawah Rp4,8 miliar atau alasan lain yang sah.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "WP saat ini berstatus PKP aktif",
+    "Memiliki alasan yang valid untuk pencabutan: peredaran bruto tidak melebihi Rp4.800.000.000 per tahun, atau alasan lain yang dapat dibuktikan",
+    "Seluruh kewajiban PPN sudah diselesaikan (SPT Masa PPN sudah dilaporkan sampai periode terakhir)",
+    "Menyiapkan dokumen pendukung alasan pencabutan"
+  ],
+  "estimated_time": "15–25 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pastikan login menggunakan akun WP PKP yang akan dicabut status PKP-nya."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Penghapusan & Pencabutan",
+      "click": "Klik submenu 'Penghapusan & Pencabutan'",
+      "input": "-",
+      "expected_screen": "Halaman Penghapusan Pendaftaran terbuka dengan bagian Manajemen Kasus",
+      "note": "Menu ini juga digunakan untuk Penghapusan NPWP — pastikan memilih opsi yang benar di langkah berikutnya."
+    },
+    {
+      "step": 4,
+      "page": "Halaman Penghapusan Pendaftaran — Manajemen Kasus",
+      "menu": "Jenis Pembatalan",
+      "click": "-",
+      "input": "Pilih Jenis Pembatalan: 'Pencabutan Pengukuhan PKP/SKT PBB' (bukan 'Penghapusan NPWP')",
+      "expected_screen": "Kolom Jenis Pajak untuk Pembatalan muncul",
+      "note": "Hati-hati — pilih 'Pencabutan Pengukuhan PKP/SKT PBB', bukan 'Penghapusan NPWP'. Keduanya ada di menu yang sama."
+    },
+    {
+      "step": 5,
+      "page": "Halaman Penghapusan Pendaftaran — Manajemen Kasus",
+      "menu": "Jenis Pajak untuk Pembatalan",
+      "click": "-",
+      "input": "Pilih Jenis Pajak untuk Pembatalan: 'Taxable Person for VAT Purposes Revocation' (Pencabutan Pengukuhan PKP)",
+      "expected_screen": "Pilihan terpilih, sistem melanjutkan ke bagian berikutnya",
+      "note": "Pilih 'Taxable Person for VAT Purposes Revocation', bukan 'Land & Building Tax Deregistration' yang untuk pencabutan PBB."
+    },
+    {
+      "step": 6,
+      "page": "Halaman Penghapusan Pendaftaran — Kuasa WP & Identitas WP",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Kuasa Wajib Pajak dan Identitas Wajib Pajak terisi otomatis dari data profil WP",
+      "note": "Data terisi otomatis — tidak perlu diubah."
+    },
+    {
+      "step": 7,
+      "page": "Halaman Penghapusan Pendaftaran — Alasan Pencabutan",
+      "menu": "Alasan Pencabutan Subjek Pajak untuk PPN",
+      "click": "-",
+      "input": "Pilih alasan pencabutan: (1) 'Peredaran bruto kurang dari Rp4,8 miliar sehingga memilih untuk tidak dikukuhkan lagi sebagai PKP', ATAU (2) 'Alasan Lain' — jika memilih ini, isi kolom alasan yang muncul dengan penjelasan lengkap.",
+      "expected_screen": "Alasan pencabutan terpilih",
+      "note": "Jika memilih 'Alasan Lain', isi kolom alasan dengan jelas dan spesifik. Alasan yang tidak jelas dapat menyebabkan penolakan."
+    },
+    {
+      "step": 8,
+      "page": "Halaman Penghapusan Pendaftaran — Dokumen Pendukung",
+      "menu": "-",
+      "click": "Unggah dokumen pendukung alasan pencabutan",
+      "input": "Dokumen pendukung: laporan keuangan yang menunjukkan peredaran bruto di bawah Rp4,8 miliar, atau dokumen lain sesuai alasan yang dipilih",
+      "expected_screen": "Dokumen berhasil diunggah",
+      "note": "Dokumen pendukung wajib diunggah untuk memperkuat alasan permohonan pencabutan."
+    },
+    {
+      "step": 9,
+      "page": "Halaman Penghapusan Pendaftaran — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang kotak Pernyataan Wajib Pajak, lalu klik tombol 'Kirim'",
+      "input": "-",
+      "expected_screen": "Notifikasi permohonan berhasil terkirim. Tombol 'Unduh Bukti Tanda Terima' tersedia.",
+      "note": "Setelah terkirim, permohonan akan diteliti oleh petugas KPP terdaftar."
+    },
+    {
+      "step": 10,
+      "page": "Notifikasi Submit",
+      "menu": "Unduh Bukti Tanda Terima",
+      "click": "Klik tombol 'Unduh Bukti Tanda Terima'",
+      "input": "-",
+      "expected_screen": "Bukti Penerimaan Surat berhasil diunduh",
+      "note": "Simpan Bukti Penerimaan Surat ini. Pantau hasil pencabutan di Portal Saya → Dokumen Saya dan Notifikasi Saya."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan pencabutan PKP ditolak",
+      "cause": "WP masih memiliki kewajiban PPN yang belum diselesaikan, atau alasan pencabutan tidak memenuhi syarat",
+      "solution": "Selesaikan seluruh kewajiban PPN (lapor SPT Masa PPN sampai periode terakhir dan bayar PPN yang terutang), kemudian ajukan ulang permohonan — proses harus diulang dari awal."
+    },
+    {
+      "error": "Salah memilih 'Penghapusan NPWP' padahal ingin cabut PKP saja",
+      "cause": "Kedua pilihan ada di menu yang sama sehingga rawan salah pilih",
+      "solution": "Hentikan proses sebelum submit. Kembali ke langkah 4 dan pastikan memilih 'Pencabutan Pengukuhan PKP/SKT PBB', bukan 'Penghapusan NPWP'. Penghapusan NPWP bersifat permanen dan berbeda dari pencabutan PKP."
+    },
+    {
+      "error": "Dokumen pendukung tidak diterima / ditolak petugas",
+      "cause": "Dokumen tidak relevan, tidak terbaca, atau tidak sesuai dengan alasan pencabutan",
+      "solution": "Siapkan dokumen yang lebih relevan dan jelas — laporan keuangan yang menunjukkan omzet di bawah Rp4,8 miliar adalah dokumen terkuat. Ajukan ulang setelah dokumen diperbaiki."
+    }
+  ],
+  "success_result": "Permohonan Pencabutan Pengukuhan PKP disetujui. Surat Pencabutan Pengukuhan PKP diterbitkan dan tersedia di Dokumen Saya. Status PKP WP menjadi tidak aktif. WP tidak lagi wajib memungut PPN dan melaporkan SPT Masa PPN.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pencabutan Pengukuhan PKP (Pengusaha Kena Pajak), Edisi 20241129, Seri Registrasi, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Pencabutan PKP BERBEDA dari Penghapusan NPWP — pastikan memilih opsi yang benar di langkah 4.",
+    "Setelah PKP dicabut: WP tidak lagi wajib memungut PPN, tidak perlu lapor SPT Masa PPN untuk periode setelah pencabutan.",
+    "Sebelum mengajukan, pastikan seluruh SPT Masa PPN sudah dilaporkan dan semua PPN terutang sudah dibayar.",
+    "Alasan pencabutan paling umum: omzet di bawah Rp4,8 miliar dan memilih untuk tidak lagi menjadi PKP.",
+    "Hasil persetujuan/penolakan dikirim ke email dan tersedia di Portal Saya → Dokumen Saya dan Notifikasi Saya."
+  ]
+}

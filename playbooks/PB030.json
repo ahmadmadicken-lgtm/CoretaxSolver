@@ -1,0 +1,108 @@
+{
+  "id": "PB030",
+  "master_index_id": null,
+  "priority": 30,
+  "type": "login",
+  "title": "Cara Impersonating (Kuasa WP di Coretax)",
+  "module": "Portal Saya — Manajemen Akses",
+  "subcategory": "Impersonating Wajib Pajak (Mode Kuasa)",
+  "aliases": [
+    "impersonating Coretax", "kuasa WP Coretax",
+    "login sebagai klien", "akses akun klien Coretax",
+    "mode perwakilan Coretax", "switch akun WP"
+  ],
+  "keywords": [
+    "impersonating", "kuasa wajib pajak", "perwakilan WP",
+    "switch akun", "bertindak sebagai", "nama WP",
+    "Taxpayers", "Main Account", "ikon orang",
+    "penunjukan kuasa", "akses akun klien"
+  ],
+  "client_questions": [
+    "Bagaimana cara mengakses akun klien saya di Coretax?",
+    "Apa itu impersonating di Coretax?",
+    "Sebagai konsultan pajak, bagaimana cara saya mengerjakan SPT klien di Coretax?",
+    "Bagaimana cara keluar dari mode impersonating?",
+    "Apakah saya perlu password klien untuk impersonating?"
+  ],
+  "objective": "Memandu konsultan pajak atau kuasa WP untuk mengakses dan mengerjakan kewajiban perpajakan atas nama klien (WP yang diwakili) melalui fitur impersonating di Coretax, tanpa memerlukan password klien.",
+  "prerequisites": [
+    "Sudah login ke Coretax dengan akun konsultan/kuasa (lihat PB001)",
+    "Sudah ditunjuk sebagai Kuasa/Wakil WP oleh klien melalui menu Penunjukan Wakil/Kuasa (Portal Saya → Perubahan Status → Penunjukan Wakil/Kuasa WP)",
+    "Nomor Penunjukan Kuasa sudah aktif dan berlaku"
+  ],
+  "estimated_time": "2–5 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP konsultan/kuasa sendiri (bukan akun klien), kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax — menampilkan akun utama konsultan/kuasa",
+      "note": "Login menggunakan akun SENDIRI sebagai konsultan/kuasa — tidak menggunakan password klien."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Pilih Nama WP (Dropdown Atas)",
+      "click": "Klik dropdown nama WP di bagian atas halaman (biasanya menampilkan nama akun utama dan daftar 'Taxpayers' yang dapat diwakili)",
+      "input": "-",
+      "expected_screen": "Dropdown menampilkan: Main Account (akun utama konsultan) dan daftar Taxpayers (WP klien yang dapat diwakili)",
+      "note": "Dropdown ini muncul di area navigasi atas Coretax, di sebelah ikon lonceng atau nama akun. Daftar Taxpayers berisi semua klien yang sudah menunjuk konsultan sebagai kuasa."
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax — Dropdown WP",
+      "menu": "Pilih Klien",
+      "click": "Klik nama klien yang ingin dikerjakan dari daftar Taxpayers",
+      "input": "-",
+      "expected_screen": "Dashboard Coretax berubah tampilan — sekarang menampilkan data dan kewajiban perpajakan KLIEN yang dipilih. Nama di atas berubah menjadi nama klien.",
+      "note": "Setelah impersonating berhasil, semua tindakan di Coretax (buat SPT, buat billing, ajukan permohonan) akan dilakukan atas nama klien tersebut."
+    },
+    {
+      "step": 4,
+      "page": "Dashboard Coretax (mode impersonating)",
+      "menu": "Kerjakan Kewajiban Klien",
+      "click": "-",
+      "input": "Kerjakan seluruh kewajiban perpajakan klien: lapor SPT, buat billing, ajukan permohonan layanan, dll — semua atas nama klien",
+      "expected_screen": "Semua menu dan data menampilkan informasi klien yang sedang diwakili",
+      "note": "Pastikan selalu cek nama WP yang aktif di bagian atas sebelum melakukan tindakan apapun — untuk memastikan sedang dalam mode klien yang benar."
+    },
+    {
+      "step": 5,
+      "page": "Dashboard Coretax (mode impersonating)",
+      "menu": "Kembali ke Akun Sendiri",
+      "click": "Klik dropdown nama WP di atas → pilih 'Main Account' untuk kembali ke akun konsultan sendiri",
+      "input": "-",
+      "expected_screen": "Dashboard kembali menampilkan akun utama konsultan",
+      "note": "Selalu kembali ke Main Account setelah selesai mengerjakan akun klien."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Nama klien tidak muncul di daftar Taxpayers",
+      "cause": "Klien belum menunjuk konsultan sebagai kuasa, atau penunjukan kuasa belum disetujui/sudah kadaluwarsa",
+      "solution": "Minta klien untuk menunjuk konsultan sebagai kuasa melalui Portal Saya → Perubahan Status → Penunjukan Wakil/Kuasa WP. Setelah disetujui, nama klien akan muncul di daftar Taxpayers."
+    },
+    {
+      "error": "Mode impersonating tidak bisa dilakukan untuk kewajiban tertentu",
+      "cause": "Hak akses kuasa yang diberikan klien terbatas — tidak semua menu diizinkan",
+      "solution": "Minta klien untuk memeriksa dan memperluas hak akses yang diberikan kepada kuasa melalui menu penunjukan kuasa di akun klien."
+    }
+  ],
+  "success_result": "Konsultan/kuasa berhasil masuk ke mode impersonating dan dapat mengerjakan seluruh kewajiban perpajakan klien atas nama klien di Coretax, sesuai hak akses yang diberikan.",
+  "references": [
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Modul Portal Saya — Main Account dan Taxpayers, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Permohonan Pengukuhan PKP, Bagian Impersonating Wajib Pajak, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Impersonating TIDAK memerlukan password klien — cukup login dengan akun konsultan sendiri.",
+    "Syarat impersonating: klien sudah menunjuk konsultan sebagai Wakil/Kuasa WP melalui Coretax.",
+    "Selalu cek nama WP aktif di atas halaman sebelum melakukan tindakan — untuk memastikan tidak salah akun.",
+    "Setelah selesai, kembali ke Main Account agar tidak ada tindakan yang tidak sengaja dilakukan atas nama klien."
+  ]
+}

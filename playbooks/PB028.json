@@ -1,0 +1,126 @@
+{
+  "id": "PB028",
+  "master_index_id": null,
+  "priority": 28,
+  "type": "perubahan-data",
+  "title": "Perubahan Data Kontak WP (Email & Nomor HP)",
+  "module": "Portal Saya — Perubahan Data",
+  "subcategory": "Taxpayer Identity — Detail Kontak",
+  "aliases": [
+    "ganti email pajak", "ubah nomor HP NPWP",
+    "update kontak wajib pajak Coretax",
+    "perubahan email terdaftar DJP",
+    "ganti nomor telepon NPWP"
+  ],
+  "keywords": [
+    "perubahan data kontak", "email", "nomor HP",
+    "Mobile Phone Number", "Taxpayer Identity",
+    "Perubahan Data", "Portal Saya", "OTP",
+    "verifikasi email", "verifikasi nomor telepon",
+    "Detail Kontak", "kontak utama"
+  ],
+  "client_questions": [
+    "Bagaimana cara ganti email yang terdaftar di DJP melalui Coretax?",
+    "Saya ganti nomor HP, bagaimana cara update di Coretax?",
+    "Email DJP saya sudah tidak aktif, bagaimana cara menggantinya?",
+    "Apakah perubahan email dan HP bisa dilakukan sendiri di Coretax?",
+    "Setelah ganti email di Coretax, apakah langsung berlaku?"
+  ],
+  "objective": "Memandu WP OP untuk mengubah data kontak utama (alamat email dan/atau nomor HP) yang terdaftar di sistem DJP melalui menu Perubahan Data — Taxpayer Identity di Coretax.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "Mengetahui alamat email baru dan/atau nomor HP baru yang aktif",
+    "Memiliki akses ke email baru dan nomor HP baru untuk menerima OTP verifikasi"
+  ],
+  "estimated_time": "10–20 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Perubahan data kontak dapat dilakukan oleh WP sendiri atau Kuasa WP."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Data → Taxpayer Identity",
+      "click": "Klik 'Portal Saya' → 'Perubahan Data' → 'Taxpayer Identity' (Identitas Wajib Pajak)",
+      "input": "-",
+      "expected_screen": "Formulir Identitas Wajib Pajak terbuka",
+      "note": "Menu Taxpayer Identity mencakup perubahan KLU, rekening bank, dan data kontak dalam satu formulir."
+    },
+    {
+      "step": 3,
+      "page": "Formulir Identitas WP — Identitas & KLU",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Identitas WP dan KLU Utama tampil — lewati jika tidak ada perubahan",
+      "note": "Jika tidak ada perubahan pada KLU atau data lain, lewati bagian ini dan scroll ke bagian Detail Kontak."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Identitas WP — Detail Kontak",
+      "menu": "Email & Nomor HP",
+      "click": "-",
+      "input": "Isi Email baru pada kolom 'Email'. Isi Nomor HP baru pada kolom 'Mobile Phone Number'. Isi kolom lain (nomor telepon, faksimile) jika perlu diubah.",
+      "expected_screen": "Kolom email dan/atau nomor HP terisi dengan data baru",
+      "note": "Sistem Coretax mendukung lebih dari satu kontak detail — WP dapat mencantumkan beberapa email dan nomor telepon."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Identitas WP — Verifikasi OTP",
+      "menu": "Verifikasi Email & HP",
+      "click": "Klik tombol 'Verify' (Verifikasi) di sebelah kolom email dan di sebelah kolom nomor HP",
+      "input": "Masukkan kode OTP yang dikirim ke email baru dan nomor HP baru. Klik 'Verify' setelah OTP dimasukkan.",
+      "expected_screen": "Tanda centang hijau muncul di sebelah kolom email dan nomor HP yang berhasil diverifikasi",
+      "note": "OTP dikirim ke email/HP baru yang diisi. Jika OTP tidak diterima, klik tombol 'Resend' (kirim ulang). Jika tetap tidak diterima, isi 000 sebagai pengganti OTP sementara, lalu isi ulang dengan email/HP yang benar."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Identitas WP",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta",
+      "expected_screen": "Perubahan data kontak berhasil tersimpan. Kontak utama WP diperbarui.",
+      "note": "Setelah submit berhasil, email dan nomor HP baru langsung aktif sebagai kontak utama WP di sistem DJP."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "OTP tidak diterima di email atau nomor HP baru",
+      "cause": "Email/HP baru yang diisi salah, atau ada penundaan pengiriman OTP",
+      "solution": "Pastikan email/HP baru diisi dengan benar. Klik tombol 'Resend' untuk kirim ulang OTP. Jika tetap tidak diterima, coba isi 000 sebagai OTP sementara dan pastikan email/HP diisi ulang dengan benar."
+    },
+    {
+      "error": "Tombol 'Submit' tidak aktif setelah mengisi email/HP baru",
+      "cause": "Verifikasi OTP belum dilakukan atau belum berhasil (tanda centang hijau belum muncul)",
+      "solution": "Pastikan verifikasi OTP untuk email DAN nomor HP sudah berhasil ditandai dengan centang hijau sebelum klik Submit."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — proses harus diulang dari awal."
+    }
+  ],
+  "success_result": "Data kontak WP (email dan/atau nomor HP) berhasil diperbarui di sistem DJP. Kontak baru langsung aktif dan akan digunakan untuk semua komunikasi perpajakan dari DJP, termasuk pengiriman OTP login, notifikasi SPT, dan dokumen perpajakan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Perubahan Data Wajib Pajak, Menu Taxpayer Identity — Detail Kontak, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Pendaftaran WP Orang Pribadi, Bagian Detail Kontak Wajib Pajak dan Verifikasi OTP, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Verifikasi OTP wajib dilakukan untuk email DAN nomor HP baru sebelum bisa submit.",
+    "Jika OTP tidak masuk: klik Resend, atau gunakan 000 sebagai OTP sementara lalu isi ulang email/HP yang benar.",
+    "Email dan nomor HP yang diperbarui akan langsung digunakan untuk semua komunikasi DJP termasuk pengiriman OTP login.",
+    "KODJP wajib aktif sebelum mengajukan — jika passphrase lupa, selesaikan PB002 terlebih dahulu.",
+    "Perubahan kontak ini dilakukan melalui menu yang sama dengan perubahan KLU (PB015) — Perubahan Data → Taxpayer Identity."
+  ]
+}

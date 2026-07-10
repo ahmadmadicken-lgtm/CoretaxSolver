@@ -1,0 +1,151 @@
+{
+  "id": "PB018",
+  "master_index_id": null,
+  "priority": 18,
+  "type": "layanan",
+  "title": "Pengajuan SKF (Surat Keterangan Fiskal)",
+  "module": "Layanan Wajib Pajak — Layanan Administrasi",
+  "subcategory": "AS.01-01 Surat Keterangan Fiskal (SKF)",
+  "aliases": [
+    "SKF", "Surat Keterangan Fiskal",
+    "AS.01-01", "surat keterangan pajak",
+    "keterangan fiskal Coretax",
+    "permohonan SKF online"
+  ],
+  "keywords": [
+    "SKF", "Surat Keterangan Fiskal", "AS.01-01",
+    "Layanan Wajib Pajak", "Layanan Administrasi",
+    "Buat Permohonan Layanan Administrasi",
+    "AS.01 Pemenuhan Kewajiban Perpajakan",
+    "KODJP", "Daftar Fasilitas Saya", "kepatuhan pajak"
+  ],
+  "client_questions": [
+    "Bagaimana cara mengajukan SKF di Coretax?",
+    "Apa itu Surat Keterangan Fiskal dan bagaimana cara mendapatkannya?",
+    "Saya butuh SKF untuk tender, bagaimana caranya?",
+    "Berapa lama proses penerbitan SKF di Coretax?",
+    "Di mana mengambil SKF setelah selesai diproses di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan permohonan Surat Keterangan Fiskal (SKF) melalui menu Layanan Administrasi di Coretax. SKF adalah surat yang menerangkan kondisi kepatuhan perpajakan WP pada saat tertentu, diperlukan untuk keperluan tender, kredit bank, dan keperluan lain yang mensyaratkan bukti kepatuhan pajak.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif untuk penandatanganan (lihat PB002)",
+    "Seluruh kewajiban perpajakan dalam kondisi patuh (SPT dilaporkan tepat waktu, tidak ada tunggakan pajak yang signifikan)",
+    "Mengetahui tujuan penggunaan SKF yang akan diajukan"
+  ],
+  "estimated_time": "10–20 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pastikan login menggunakan akun WP OP yang akan mengajukan SKF."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak",
+      "click": "Klik menu 'Layanan Wajib Pajak' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Layanan Wajib Pajak terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan Layanan Administrasi",
+      "click": "Arahkan kursor ke 'Layanan Administrasi' → klik 'Buat Permohonan Layanan Administrasi'",
+      "input": "-",
+      "expected_screen": "Halaman Buat Permohonan Layanan Administrasi terbuka",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "Pilih Kategori Layanan",
+      "click": "-",
+      "input": "Pilih kategori: 'AS.01 Pemenuhan Kewajiban Perpajakan', kemudian pilih subjenis: 'AS.01-01 Surat Keterangan Fiskal (SKF)'",
+      "expected_screen": "Formulir permohonan SKF terbuka dengan kolom-kolom isian yang relevan",
+      "note": "SKF termasuk dalam kategori AS.01 (Pemenuhan Kewajiban Perpajakan), subjenis AS.01-01. Dapat juga dicari dengan mengetik 'SKF' atau 'Fiskal' di kolom pencarian layanan."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Permohonan SKF",
+      "menu": "Identitas WP",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Data identitas WP (NPWP, Nama, Alamat) sudah terisi otomatis oleh sistem",
+      "note": "Data identitas terisi otomatis — tidak perlu diubah."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Permohonan SKF",
+      "menu": "Isian Permohonan",
+      "click": "-",
+      "input": "Isi kolom-kolom permohonan yang tersedia sesuai kebutuhan: tujuan penggunaan SKF, periode yang dimohonkan, dan informasi lain yang diminta sistem",
+      "expected_screen": "Formulir terisi lengkap",
+      "note": "Isi tujuan penggunaan SKF dengan jelas dan spesifik (contoh: 'Keperluan Tender Pengadaan Barang/Jasa', 'Pengajuan Kredit Bank', dll). Tujuan yang jelas mempercepat proses verifikasi oleh DJP."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Permohonan SKF",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta untuk penandatanganan digital",
+      "expected_screen": "Permohonan berhasil terkirim. Nomor permohonan muncul dan status masuk ke 'Permohonan Dalam Proses'.",
+      "note": "Penandatanganan menggunakan Passphrase KODJP diperlukan. Setelah terkirim, DJP akan memproses permohonan dan menerbitkan SKF jika WP memenuhi syarat."
+    },
+    {
+      "step": 8,
+      "page": "Layanan Wajib Pajak → Layanan Administrasi → Daftar Fasilitas Saya",
+      "menu": "Ambil SKF",
+      "click": "Klik menu 'Layanan Wajib Pajak' → 'Layanan Administrasi' → 'Daftar Fasilitas Saya'",
+      "input": "-",
+      "expected_screen": "Daftar Fasilitas Saya menampilkan SKF yang sudah diterbitkan dan siap diunduh",
+      "note": "SKF yang sudah diterbitkan tersimpan di Daftar Fasilitas Saya. Unduh file PDF SKF dari sini. Jika belum muncul, cek status di 'Permohonan Dalam Proses'."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan SKF ditolak",
+      "cause": "WP memiliki kewajiban perpajakan yang belum terpenuhi: SPT belum dilaporkan, ada tunggakan pajak, atau ada kewajiban lain yang belum diselesaikan",
+      "solution": "Selesaikan seluruh kewajiban perpajakan yang tertunggak terlebih dahulu (lapor SPT yang belum dilaporkan, bayar tunggakan pajak), kemudian ajukan ulang permohonan SKF — dan proses harus diulang dari awal."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "SKF tidak muncul di Daftar Fasilitas Saya setelah permohonan diajukan",
+      "cause": "Permohonan masih dalam proses penelitian oleh DJP atau belum disetujui",
+      "solution": "Cek status permohonan di menu 'Permohonan Dalam Proses'. SKF diterbitkan setelah DJP menyelesaikan penelitian administrasi — waktu proses bervariasi. Jika terlalu lama, hubungi KPP terdaftar."
+    },
+    {
+      "error": "Menu AS.01-01 SKF tidak ditemukan atau tidak tersedia",
+      "cause": "Navigasi menu yang salah atau sistem sedang dalam pemeliharaan",
+      "solution": "Coba cari dengan mengetik 'SKF' atau 'Fiskal' di kolom pencarian layanan. Pastikan navigasi: Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan Layanan Administrasi → pilih AS.01-01."
+    }
+  ],
+  "success_result": "Permohonan SKF berhasil terkirim dan diproses oleh DJP. SKF berhasil diterbitkan dan tersedia di menu Daftar Fasilitas Saya dalam format PDF yang dapat diunduh dan digunakan untuk keperluan yang dimohonkan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Layanan Wajib Pajak (Seri 19), AS.01-01 Surat Keterangan Fiskal, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Bab 10 Layanan Perpajakan — AS.01-01 SKF, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Instansi Pemerintah 2025, Bab 11 Layanan Perpajakan — AS.01-01 SKF, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "SKF (Surat Keterangan Fiskal) menerangkan kondisi kepatuhan perpajakan WP pada saat tertentu — bukan bukti tidak ada utang pajak.",
+    "SKF hanya diterbitkan jika WP memenuhi syarat kepatuhan: SPT sudah dilaporkan dan tidak ada tunggakan yang signifikan.",
+    "SKF yang diterbitkan memiliki masa berlaku tertentu — cek tanggal berlaku di dokumen SKF.",
+    "SKF tersedia dalam format PDF dan dapat diunduh di Daftar Fasilitas Saya.",
+    "KODJP wajib aktif sebelum mengajukan — jika passphrase lupa, selesaikan PB002 terlebih dahulu.",
+    "Jika permohonan ditolak karena ada kewajiban yang belum dipenuhi, selesaikan kewajiban tersebut dulu baru ajukan ulang."
+  ]
+}

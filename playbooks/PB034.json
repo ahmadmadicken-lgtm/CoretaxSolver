@@ -1,0 +1,138 @@
+{
+  "id": "PB034",
+  "master_index_id": null,
+  "priority": 34,
+  "type": "registrasi",
+  "title": "Pendaftaran NPWP WP OP Non-Penduduk (WNA)",
+  "module": "Pendaftaran WP — Halaman Login Coretax",
+  "subcategory": "Pendaftaran WP Orang Pribadi Tanpa NIK (WNA/Non-Penduduk)",
+  "aliases": [
+    "NPWP WNA", "NPWP orang asing", "daftar NPWP warga negara asing",
+    "NPWP non penduduk", "daftar pajak WNA Indonesia",
+    "Registration Only Coretax"
+  ],
+  "keywords": [
+    "WNA", "Warga Negara Asing", "non-penduduk", "tanpa NIK",
+    "NPWP 16 digit WNA", "Registration Only",
+    "Daftar disini", "paspor", "KITAS", "KITAP",
+    "orang pribadi asing", "pendaftaran WP tanpa NIK"
+  ],
+  "client_questions": [
+    "Bagaimana cara daftar NPWP untuk WNA di Coretax?",
+    "Klien saya orang asing bekerja di Indonesia, bagaimana cara buat NPWP-nya?",
+    "WNA tidak punya NIK, bagaimana cara daftar di Coretax?",
+    "Apa dokumen yang diperlukan untuk daftar NPWP WNA di Coretax?",
+    "NPWP WNA 16 digitnya seperti apa?"
+  ],
+  "objective": "Memandu WP Orang Pribadi Warga Negara Asing (WNA) atau non-penduduk yang tidak memiliki NIK untuk mendaftarkan NPWP melalui menu 'Daftar disini' di halaman login Coretax, menggunakan jalur 'Registration Only' tanpa aktivasi NIK.",
+  "prerequisites": [
+    "Belum memiliki NPWP di Indonesia",
+    "Memiliki dokumen identitas yang valid: Paspor aktif, KITAS (Kartu Izin Tinggal Terbatas), atau KITAP (Kartu Izin Tinggal Tetap)",
+    "Memiliki alamat email aktif untuk verifikasi",
+    "Memiliki nomor HP aktif untuk verifikasi OTP",
+    "Belum login ke Coretax (pendaftaran dilakukan sebelum login)"
+  ],
+  "estimated_time": "20–40 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Daftar disini",
+      "click": "Pada halaman login Coretax, klik tombol 'Daftar disini' (tanpa login)",
+      "input": "-",
+      "expected_screen": "Halaman persiapan registrasi Wajib Pajak terbuka dengan pilihan jenis pendaftaran",
+      "note": "Pendaftaran dilakukan SEBELUM login — klik 'Daftar disini' di halaman login, bukan setelah masuk ke dashboard."
+    },
+    {
+      "step": 2,
+      "page": "Halaman Persiapan Registrasi",
+      "menu": "Registration Only",
+      "click": "Pilih 'Registration Only' (hanya registrasi, tanpa aktivasi NIK)",
+      "input": "-",
+      "expected_screen": "Formulir pendaftaran WP Orang Pribadi tanpa NIK terbuka",
+      "note": "Pilih 'Registration Only' karena WNA tidak memiliki NIK Indonesia. Pilihan 'Registration with NIK Activation' hanya untuk WNI yang memiliki NIK."
+    },
+    {
+      "step": 3,
+      "page": "Formulir Pendaftaran — Identitas WP",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi data identitas WNA: Nama Lengkap (sesuai paspor), Jenis Kelamin, Tanggal Lahir, Negara Asal, Nomor Paspor/KITAS/KITAP, Tanggal Berlaku Dokumen Identitas, Agama, Tipe Pekerjaan, Nama Ibu Kandung, Status Anggota Keluarga.",
+      "expected_screen": "Data identitas terisi lengkap. Tombol Verify aktif.",
+      "note": "Untuk WNA yang menikah dengan WNI dan ingin ikut NPWP suami/istri, gunakan 'Registration Only' tanpa membuat NPWP baru."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Pendaftaran — Verifikasi Identitas",
+      "menu": "Verify",
+      "click": "Klik tombol 'Verify' untuk memverifikasi data identitas",
+      "input": "-",
+      "expected_screen": "Verifikasi berhasil, lanjut ke langkah berikutnya",
+      "note": "Untuk WNA, verifikasi dilakukan terhadap data yang dimasukkan (tidak ke Dukcapil karena tidak punya NIK)."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Pendaftaran — Sumber Penghasilan & KLU",
+      "menu": "-",
+      "click": "-",
+      "input": "Pilih Sumber Penghasilan (Employee/Karyawan, Professional, Business Activity, atau Others). Isi KLU dan detail sesuai pilihan sumber penghasilan.",
+      "expected_screen": "Sumber penghasilan dan KLU terisi",
+      "note": "Isian berbeda tergantung jenis sumber penghasilan. Untuk karyawan: isi KLU, tempat kerja, dan penghasilan per bulan."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Pendaftaran — Detail Kontak",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi: Email aktif, Nomor HP aktif. Klik Verify untuk masing-masing. Masukkan OTP yang dikirim ke email dan HP.",
+      "expected_screen": "Email dan HP terverifikasi (tanda centang hijau)",
+      "note": "Verifikasi OTP wajib dilakukan untuk email dan nomor HP."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Pendaftaran — Alamat",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi alamat domisili di Indonesia (minimal Domicile Address). Isi RT, RW, Kelurahan, Kecamatan, Kota, Provinsi, Kode Pos.",
+      "expected_screen": "Alamat terisi lengkap",
+      "note": "Untuk WNA, alamat yang diisi adalah alamat tempat tinggal di Indonesia selama bekerja/berdomisili."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Pendaftaran — Konfirmasi",
+      "menu": "-",
+      "click": "Centang Pernyataan kepatuhan, klik 'Ajukan Permohonan'",
+      "input": "-",
+      "expected_screen": "Permohonan pendaftaran berhasil diajukan. Notifikasi dikirim ke email.",
+      "note": "Cek email secara berkala untuk mendapatkan informasi NPWP yang baru diterbitkan."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Verifikasi identitas gagal",
+      "cause": "Data yang dimasukkan tidak konsisten atau dokumen identitas tidak valid",
+      "solution": "Pastikan semua data diisi sesuai dokumen identitas (paspor/KITAS/KITAP) yang berlaku. Nomor dokumen harus persis sama dengan yang tertera di dokumen fisik."
+    },
+    {
+      "error": "OTP verifikasi email/HP tidak diterima",
+      "cause": "Email/HP yang dimasukkan salah atau ada penundaan pengiriman",
+      "solution": "Klik Resend untuk kirim ulang OTP. Jika tetap tidak masuk, isi 000 sebagai OTP sementara dan periksa kembali email/HP yang diisi."
+    }
+  ],
+  "success_result": "Pendaftaran NPWP WNA berhasil diajukan. NPWP 16 digit diterbitkan oleh DJP dan informasi NPWP dikirim ke email WNA yang didaftarkan. WNA dapat mulai menggunakan NPWP untuk keperluan perpajakan di Indonesia.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pendaftaran WP Orang Pribadi, Pilihan Registration Only (Tanpa NIK), Direktorat Jenderal Pajak",
+    "Leaflet Pendaftaran WP OP pada Coretax, Seri Umum, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "WNA menggunakan jalur 'Registration Only' — bukan 'Registration with NIK Activation' yang khusus untuk WNI.",
+    "NPWP WNA berformat 16 digit (bukan NIK) — diterbitkan oleh sistem DJP.",
+    "Wanita WNI yang sudah menikah dan ingin bergabung dengan NPWP suami juga menggunakan jalur 'Registration Only' ini.",
+    "Setelah NPWP terbit, WNA perlu mengaktifkan akun Coretax melalui menu 'Aktivasi Akun Wajib Pajak' di halaman login untuk bisa login.",
+    "Jenis sumber penghasilan dan kolom yang muncul berbeda-beda tergantung pilihan Employee/Professional/Business/Others."
+  ]
+}

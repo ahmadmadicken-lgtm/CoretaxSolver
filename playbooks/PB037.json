@@ -1,0 +1,99 @@
+{
+  "id": "PB037",
+  "master_index_id": null,
+  "priority": 37,
+  "type": "pembayaran",
+  "title": "Kode Billing atas Tagihan Pajak (STP/SKPKB)",
+  "module": "Pembayaran — Pembuatan Kode Billing atas Tagihan Pajak",
+  "subcategory": "Pembuatan Kode Billing Tunggakan/Ketetapan Pajak",
+  "aliases": [
+    "billing STP", "billing SKPKB", "bayar tagihan pajak",
+    "billing tunggakan pajak", "kode billing ketetapan pajak Coretax"
+  ],
+  "keywords": [
+    "kode billing tagihan pajak", "STP", "SKPKB",
+    "Pembuatan Kode Billing atas Tagihan Pajak",
+    "tunggakan pajak", "daftar tunggakan", "centang",
+    "Amount You Want to pay", "Buat Kode Billing",
+    "Deposit Pajak", "ketetapan pajak"
+  ],
+  "client_questions": [
+    "Bagaimana cara bayar STP di Coretax?",
+    "Saya dapat SKPKB dari DJP, bagaimana cara membuat kode billingnya?",
+    "Di mana menu untuk bayar tunggakan pajak di Coretax?",
+    "Apa bedanya billing tagihan pajak dengan billing mandiri di Coretax?",
+    "Bisakah bayar lebih dari satu tagihan pajak dengan satu kode billing?"
+  ],
+  "objective": "Memandu WP OP untuk membuat Kode Billing atas Tagihan/Ketetapan Pajak (STP, SKPKB, dan sejenisnya) melalui menu khusus di Coretax. Berbeda dari billing mandiri (PB007/PB008), menu ini digunakan khusus untuk membayar utang pajak yang sudah ada tagihannya dari DJP.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Ada tagihan pajak aktif (STP, SKPKB, atau ketetapan lain) yang perlu dibayar",
+    "Mengetahui tagihan mana yang akan dibayar"
+  ],
+  "estimated_time": "5–10 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "-"
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran → Pembuatan Kode Billing atas Tagihan Pajak",
+      "click": "Klik 'Pembayaran' → klik 'Pembuatan Kode Billing atas Tagihan Pajak'",
+      "input": "-",
+      "expected_screen": "Daftar tunggakan/tagihan pajak aktif milik WP ditampilkan dalam format tabel, mencakup mata uang Rupiah dan Dollar AS",
+      "note": "Menu ini HANYA menampilkan tagihan yang sudah diterbitkan DJP (STP, SKPKB, dll). Jika tidak ada tagihan, daftar akan kosong."
+    },
+    {
+      "step": 3,
+      "page": "Daftar Tunggakan Pajak",
+      "menu": "Pilih Tagihan",
+      "click": "Beri tanda centang pada baris tagihan yang akan dibayar",
+      "input": "Isi kolom 'Jumlah yang harus dibayar' (Amount You Want to pay) dengan nominal pembayaran — tidak boleh melebihi nilai tunggakan",
+      "expected_screen": "Tagihan terpilih dan nominal pembayaran terisi",
+      "note": "Bisa memilih lebih dari satu tagihan sekaligus. Satu kode billing dapat mencakup pembayaran lebih dari satu tagihan/ketetapan pajak."
+    },
+    {
+      "step": 4,
+      "page": "Daftar Tunggakan Pajak",
+      "menu": "Pilih Metode Bayar",
+      "click": "Pilih 'Bayar dengan Pemindahbukuan Deposit Pajak' (jika ada saldo deposit) ATAU 'Buat Kode Billing' (jika tidak ada deposit)",
+      "input": "-",
+      "expected_screen": "Jika Deposit: tunggakan terbayar otomatis. Jika Kode Billing: PDF kode billing terunduh otomatis.",
+      "note": "Jika memilih Deposit: sistem otomatis memindahbukukan saldo deposit untuk melunasi tagihan. Jika memilih Kode Billing: PDF terunduh dan WP harus melakukan pembayaran melalui bank/kanal persepsi."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Daftar tunggakan kosong meskipun WP tahu ada tagihan",
+      "cause": "Tagihan belum masuk ke sistem Coretax atau sudah terbayar",
+      "solution": "Cek Buku Besar (PB016) untuk melihat status tagihan. Jika tagihan masih ada di Buku Besar tapi tidak muncul di menu ini, hubungi KPP terdaftar."
+    },
+    {
+      "error": "Nominal pembayaran melebihi nilai tagihan",
+      "cause": "WP mengisi nominal melebihi nilai tunggakan yang tertera",
+      "solution": "Nominal pembayaran tidak boleh melebihi nilai tagihan. Isi sesuai atau kurang dari nilai tagihan yang tertera."
+    }
+  ],
+  "success_result": "Kode Billing atas Tagihan Pajak berhasil dibuat dan diunduh (PDF), atau tagihan sudah langsung terlunasi melalui saldo Deposit Pajak. Tagihan akan terbayar setelah pembayaran kode billing dikonfirmasi.",
+  "references": [
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Menu Pembuatan Kode Billing atas Tagihan Pajak, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Modul Pembayaran — Pembuatan Kode Billing atas Tagihan Pajak, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Menu ini KHUSUS untuk tagihan/ketetapan yang sudah diterbitkan DJP (STP, SKPKB, dll) — berbeda dari billing mandiri (PB007/PB008).",
+    "Satu kode billing bisa mencakup lebih dari satu tagihan sekaligus.",
+    "Jika ada saldo Deposit Pajak, WP dapat langsung membayar tanpa perlu kode billing.",
+    "Kode billing yang dibuat berlaku selama 7 hari — lihat di Daftar Kode Billing Belum Dibayar (PB038)."
+  ]
+}

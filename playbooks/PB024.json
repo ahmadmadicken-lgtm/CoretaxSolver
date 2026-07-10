@@ -1,0 +1,176 @@
+{
+  "id": "PB024",
+  "master_index_id": null,
+  "priority": 24,
+  "type": "registrasi",
+  "title": "Aktivasi NIK sebagai NPWP di Coretax",
+  "module": "Portal Saya — Aktivasi NIK",
+  "subcategory": "Aktivasi NIK menjadi NPWP",
+  "aliases": [
+    "aktivasi NIK NPWP", "jadikan NIK sebagai NPWP",
+    "NIK jadi NPWP Coretax", "aktivasi NIK orang pribadi",
+    "daftar NPWP pakai NIK"
+  ],
+  "keywords": [
+    "aktivasi NIK", "NIK sebagai NPWP", "Portal Saya",
+    "Aktivasi NIK", "NIK 16 digit", "NPWP orang pribadi",
+    "verifikasi wajah", "Dukcapil", "foto wajah",
+    "Take a Photo", "Validasi Foto", "Bukti Tanda Terima"
+  ],
+  "client_questions": [
+    "Bagaimana cara aktivasi NIK menjadi NPWP di Coretax?",
+    "Saya punya NIK tapi belum punya NPWP, bagaimana cara daftarnya?",
+    "Apa itu Aktivasi NIK di Coretax?",
+    "Apakah NIK otomatis jadi NPWP atau perlu didaftarkan dulu?",
+    "Setelah aktivasi NIK, apakah langsung bisa digunakan sebagai NPWP?"
+  ],
+  "objective": "Memandu WP OP WNI yang belum memiliki NPWP untuk mengaktifkan NIK-nya menjadi NPWP melalui menu Aktivasi NIK di Coretax. Berbeda dengan PB004 (Pendaftaran NPWP Baru yang lengkap), Aktivasi NIK adalah proses yang lebih ringkas khusus untuk WNI yang sudah memiliki akun Coretax.",
+  "prerequisites": [
+    "Sudah memiliki akun Coretax yang aktif (sudah bisa login)",
+    "NIK sudah terdaftar di Dukcapil dan valid",
+    "Belum memiliki NPWP aktif (NIK belum diaktivasi sebagai NPWP)",
+    "Memiliki akses kamera di perangkat yang digunakan (untuk verifikasi foto wajah)",
+    "Email dan nomor HP yang terdaftar di DJP masih aktif"
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Jika belum bisa login, selesaikan PB001 terlebih dahulu."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Aktivasi NIK",
+      "click": "Klik submenu 'Aktivasi NIK'",
+      "input": "-",
+      "expected_screen": "Halaman Aktivasi NIK terbuka dengan formulir isian",
+      "note": "Menu Aktivasi NIK berfungsi khusus untuk mengaktifkan NIK menjadi NPWP. Berbeda dari menu Pendaftaran WP Orang Pribadi yang ada di halaman login (sebelum login)."
+    },
+    {
+      "step": 4,
+      "page": "Halaman Aktivasi NIK",
+      "menu": "Status Penanggung WP",
+      "click": "-",
+      "input": "Pilih status: centang 'Apakah Wajib Pajak sudah terdaftar?' jika sudah punya akun Coretax. Centang 'Sebagai Penanggung Jawab Wajib Pajak Perusahaan' jika sesuai. Centang 'Proksi Warisan tidak terbagi' jika sesuai. Jika tidak ada yang sesuai, abaikan centang dan lanjut.",
+      "expected_screen": "Status terpilih sesuai kondisi WP",
+      "note": "Untuk WP OP biasa yang hanya ingin aktivasi NIK sebagai NPWP pribadi, tidak perlu mencentang apapun di bagian ini."
+    },
+    {
+      "step": 5,
+      "page": "Halaman Aktivasi NIK",
+      "menu": "NIK/NPWP",
+      "click": "-",
+      "input": "Masukkan NIK (16 digit) pada kolom yang tersedia, lalu klik tombol 'Cari'",
+      "expected_screen": "Nama Wajib Pajak muncul sesuai data Dukcapil — pastikan nama yang muncul sesuai identitas WP",
+      "note": "Pastikan nama yang muncul sesuai dengan identitas WP. Jika nama tidak sesuai atau tidak muncul, data NIK mungkin belum terdaftar di Dukcapil dengan benar."
+    },
+    {
+      "step": 6,
+      "page": "Halaman Aktivasi NIK",
+      "menu": "Detail Kontak",
+      "click": "-",
+      "input": "Masukkan alamat email yang terdaftar di DJP dan nomor telepon yang terdaftar di DJP",
+      "expected_screen": "Kolom email dan nomor telepon terisi",
+      "note": "Gunakan email dan nomor HP yang sama dengan yang terdaftar di sistem DJP. Pastikan tombol centang hijau muncul sebagai tanda kontak terverifikasi."
+    },
+    {
+      "step": 7,
+      "page": "Halaman Aktivasi NIK",
+      "menu": "Verifikasi Wajah",
+      "click": "Klik tombol 'Take a Photo' untuk mengambil foto wajah menggunakan kamera",
+      "input": "-",
+      "expected_screen": "Kamera aktif dan siap mengambil foto wajah",
+      "note": "Pastikan: pencahayaan cukup, wajah terlihat jelas, tidak memakai kacamata hitam, masker, atau aksesori yang menutupi wajah. Foto akan dicocokkan dengan data Dukcapil."
+    },
+    {
+      "step": 8,
+      "page": "Halaman Aktivasi NIK",
+      "menu": "Validasi Foto",
+      "click": "Setelah foto diambil, klik tombol 'Validasi Foto'",
+      "input": "-",
+      "expected_screen": "Notifikasi verifikasi berhasil muncul — pastikan notifikasi menunjukkan proses verifikasi telah berhasil",
+      "note": "Jika validasi gagal, coba ambil foto ulang dengan kondisi pencahayaan yang lebih baik."
+    },
+    {
+      "step": 9,
+      "page": "Halaman Aktivasi NIK",
+      "menu": "Pernyataan WP",
+      "click": "Centang kotak Pernyataan Wajib Pajak",
+      "input": "-",
+      "expected_screen": "Kotak pernyataan tercentang",
+      "note": "-"
+    },
+    {
+      "step": 10,
+      "page": "Halaman Aktivasi NIK",
+      "menu": "Simpan",
+      "click": "Klik tombol 'Simpan'",
+      "input": "-",
+      "expected_screen": "Permohonan berhasil terkirim. Email dari DJP dikirim ke alamat email WP.",
+      "note": "Cek email untuk mendapatkan Bukti Tanda Terima dan Surat Penerbitan Akun Wajib Pajak dari DJP."
+    },
+    {
+      "step": 11,
+      "page": "Email",
+      "menu": "Unduh Bukti Tanda Terima",
+      "click": "Buka email dari DJP, unduh 'Bukti Tanda Terima' dan 'Surat Penerbitan Akun Wajib Pajak'",
+      "input": "-",
+      "expected_screen": "Dokumen berhasil diunduh",
+      "note": "Simpan kedua dokumen ini. NIK kini sudah aktif sebagai NPWP dan dapat digunakan untuk seluruh keperluan perpajakan."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Nama WP tidak muncul setelah memasukkan NIK dan klik Cari",
+      "cause": "NIK belum terdaftar di Dukcapil dengan benar, atau NIK yang dimasukkan salah",
+      "solution": "Pastikan NIK yang dimasukkan benar (16 digit). Jika NIK sudah benar tapi nama tidak muncul, periksa data di Dukcapil atau hubungi Disdukcapil setempat untuk memastikan data kependudukan sudah valid."
+    },
+    {
+      "error": "Validasi foto wajah gagal / tidak cocok dengan data Dukcapil",
+      "cause": "Foto tidak jelas, pencahayaan kurang, atau data foto tidak cocok dengan data Dukcapil",
+      "solution": "Coba ambil foto ulang dengan pencahayaan yang lebih baik, wajah menghadap kamera secara langsung, tidak tertutup aksesori. Jika tetap gagal, hubungi KPP terdaftar atau Kring Pajak 1500200."
+    },
+    {
+      "error": "Email verifikasi dari DJP tidak masuk setelah Simpan",
+      "cause": "Email yang dimasukkan salah atau ada penundaan pengiriman",
+      "solution": "Cek folder Spam/Junk di email. Pastikan email yang dimasukkan di langkah 6 benar. Jika tidak ada dalam 1 jam, coba ulangi proses dari langkah 3."
+    },
+    {
+      "error": "Menu 'Aktivasi NIK' tidak tersedia di Portal Saya",
+      "cause": "NIK sudah aktif sebagai NPWP sehingga menu tidak ditampilkan",
+      "solution": "Cek Profil Saya untuk melihat status NPWP. Jika NIK sudah aktif sebagai NPWP, tidak perlu melakukan aktivasi lagi."
+    }
+  ],
+  "success_result": "NIK berhasil diaktifkan sebagai NPWP. Email konfirmasi dari DJP diterima berisi Bukti Tanda Terima dan Surat Penerbitan Akun Wajib Pajak. NIK kini dapat digunakan sebagai NPWP 16 digit untuk seluruh keperluan perpajakan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pendaftaran WP Orang Pribadi, Pilihan Jenis Pendaftaran: Registration with NIK Activation, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Modul Portal Saya — Aktivasi NIK, Direktorat Jenderal Pajak",
+    "Leaflet Aktivasi Akun pada Coretax DJP, Seri Umum, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Aktivasi NIK adalah proses mengaktifkan NIK WNI sebagai NPWP 16 digit — setelah aktivasi, NIK berlaku sebagai NPWP.",
+    "Menu Aktivasi NIK ada di Portal Saya (setelah login) — berbeda dari Pendaftaran WP Orang Pribadi yang dilakukan sebelum login.",
+    "Verifikasi foto wajah dicocokkan dengan data Dukcapil — pastikan kualitas foto baik.",
+    "Ada dua jenis pendaftaran: (1) Registration with NIK Activation untuk yang ingin NIK jadi NPWP, (2) Registration Only untuk yang ingin akun Coretax tanpa NPWP (contoh: istri yang ikut NPWP suami tapi butuh akses Coretax).",
+    "Setelah NIK aktif sebagai NPWP, langkah berikutnya adalah membuat KODJP (lihat PB002) untuk bisa menandatangani dokumen perpajakan."
+  ]
+}

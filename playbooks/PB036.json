@@ -1,0 +1,117 @@
+{
+  "id": "PB036",
+  "master_index_id": null,
+  "priority": 36,
+  "type": "registrasi",
+  "title": "Pencabutan Wakil/Kuasa Wajib Pajak",
+  "module": "Portal Saya — Perubahan Status",
+  "subcategory": "Representative Revocation (Pencabutan Wakil/Kuasa WP)",
+  "aliases": [
+    "cabut kuasa pajak", "Representative Revocation",
+    "hapus akses konsultan", "pencabutan kuasa Coretax",
+    "batalkan penunjukan kuasa WP"
+  ],
+  "keywords": [
+    "pencabutan wakil kuasa", "Representative Revocation",
+    "Perubahan Status", "Portal Saya", "alasan pencabutan",
+    "License Status", "Revocation Reason",
+    "cabut impersonating", "hapus akses konsultan"
+  ],
+  "client_questions": [
+    "Bagaimana cara mencabut kuasa konsultan pajak di Coretax?",
+    "Saya ingin menghapus akses konsultan lama saya di Coretax, bagaimana caranya?",
+    "Apa itu pencabutan kuasa WP di Coretax?",
+    "Setelah dicabut, apakah konsultan masih bisa akses akun saya?",
+    "Bagaimana cara ganti konsultan pajak di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mencabut penunjukan Wakil/Kuasa Wajib Pajak yang sudah tidak berlaku atau tidak diinginkan lagi melalui menu Perubahan Status di Coretax.",
+  "prerequisites": [
+    "Sudah login ke Coretax sebagai WP pemberi kuasa (lihat PB001)",
+    "Sudah ada penunjukan kuasa yang aktif (sudah melakukan PB035 sebelumnya)",
+    "Mengetahui NIK/NPWP kuasa yang akan dicabut",
+    "Menyiapkan dokumen pendukung pencabutan kuasa dalam format PDF"
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login sebagai WP PEMBERI KUASA, masukkan NIK/NPWP, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax akun WP pemberi kuasa",
+      "note": "Login menggunakan akun WP yang mencabut kuasa — bukan akun konsultan."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Status → Pencabutan Wakil/Kuasa WP",
+      "click": "Klik 'Portal Saya' → 'Perubahan Status' → 'Pencabutan Wakil/Kuasa Wajib Pajak'",
+      "input": "-",
+      "expected_screen": "Halaman Pencabutan Perwakilan terbuka. Bagian Manajemen Kasus terisi otomatis.",
+      "note": "Nama menu bisa terlihat sebagai 'Representative Revocation'."
+    },
+    {
+      "step": 3,
+      "page": "Formulir Pencabutan — Identitas WP (Kuasa yang dicabut)",
+      "menu": "Cari Wakil/Kuasa",
+      "click": "Klik ikon 'Kaca Pembesar' untuk mencari WP yang akan dicabut statusnya sebagai kuasa",
+      "input": "Masukkan NIK/NPWP konsultan yang akan dicabut, klik Cari, pilih dari hasil",
+      "expected_screen": "Data konsultan yang dicabut tampil dan terpilih",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Formulir Pencabutan — Representative",
+      "menu": "-",
+      "click": "-",
+      "input": "Pilih 'Jenis Kuasa/Wakil' (Representative Type). Pilih 'Status Lisensi/Izin' (License Status). Isi 'Alasan Pencabutan' (Revocation Reason).",
+      "expected_screen": "Data pencabutan terisi lengkap",
+      "note": "Isi alasan pencabutan dengan jelas. Contoh: 'Pergantian konsultan pajak' atau 'Kontrak jasa konsultan telah berakhir'."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Pencabutan — Detail (Dokumen)",
+      "menu": "-",
+      "click": "Klik tombol 'Choose' untuk mengunggah dokumen pendukung pencabutan",
+      "input": "Unggah dokumen pendukung dalam format PDF",
+      "expected_screen": "Dokumen berhasil diunggah",
+      "note": "-"
+    },
+    {
+      "step": 6,
+      "page": "Formulir Pencabutan — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang Pernyataan Wajib Pajak, klik 'Kirim'",
+      "input": "-",
+      "expected_screen": "Permohonan pencabutan berhasil terkirim. Konsultan/kuasa mendapat notifikasi pencabutan di akun Coretax-nya.",
+      "note": "Setelah diproses, konsultan yang dicabut tidak lagi dapat mengakses akun WP melalui impersonating."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Kuasa yang ingin dicabut tidak muncul saat pencarian",
+      "cause": "Kuasa belum pernah ditunjuk secara resmi, atau NPWP yang dimasukkan salah",
+      "solution": "Pastikan NPWP konsultan benar. Cek di Profil Saya → Wakil/Kuasa Saya untuk melihat daftar kuasa aktif."
+    },
+    {
+      "error": "Setelah pencabutan, konsultan masih bisa akses akun",
+      "cause": "Proses pencabutan masih dalam penelitian KPP atau ada cache sesi yang aktif",
+      "solution": "Tunggu hingga permohonan disetujui KPP. Jika mendesak, hubungi KPP terdaftar untuk percepatan proses."
+    }
+  ],
+  "success_result": "Pencabutan Wakil/Kuasa WP berhasil diproses. Konsultan/kuasa tidak lagi memiliki akses impersonating ke akun WP. Nama WP tidak lagi muncul di daftar Taxpayers pada akun konsultan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Perubahan Status Wajib Pajak, Pencabutan Wakil/Kuasa WP (Representative Revocation), Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Pencabutan kuasa dilakukan dari akun WP PEMBERI KUASA — bukan dari akun konsultan.",
+    "Setelah dicabut, konsultan tidak dapat lagi impersonating ke akun WP tersebut.",
+    "Untuk menunjuk konsultan baru setelah mencabut yang lama, gunakan PB035.",
+    "Cek daftar kuasa aktif di Portal Saya → Profil Saya → Wakil/Kuasa Saya."
+  ]
+}

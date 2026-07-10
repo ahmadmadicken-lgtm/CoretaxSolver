@@ -1,0 +1,151 @@
+{
+  "id": "PB025",
+  "master_index_id": null,
+  "priority": 25,
+  "type": "registrasi",
+  "title": "Perubahan Status WP — Penetapan Non-Aktif",
+  "module": "Portal Saya — Perubahan Status",
+  "subcategory": "Penetapan Status Wajib Pajak Non-Aktif",
+  "aliases": [
+    "non aktif WP", "nonaktif NPWP sementara",
+    "penetapan WP non aktif Coretax",
+    "status non aktif wajib pajak",
+    "WP tidak aktif sementara"
+  ],
+  "keywords": [
+    "status non aktif", "Penetapan Wajib Pajak Nonaktif",
+    "Perubahan Status", "Portal Saya",
+    "Penonaktifan Status WP", "Manajemen Kasus",
+    "alasan penonaktifan", "dokumen pendukung",
+    "Bukti Tanda Terima", "WP Non Efektif"
+  ],
+  "client_questions": [
+    "Bagaimana cara non-aktifkan NPWP sementara di Coretax?",
+    "Klien saya sudah tidak berpenghasilan, bisakah NPWP-nya dinonaktifkan?",
+    "Apa itu WP Non-Aktif dan apa perbedaannya dengan penghapusan NPWP?",
+    "Apakah WP Non-Aktif masih harus lapor SPT?",
+    "Bagaimana cara mengajukan penetapan WP Non-Aktif di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan Penetapan Status Wajib Pajak Non-Aktif melalui menu Perubahan Status di Coretax. Status Non-Aktif (WP Non-Efektif/NE) berbeda dari penghapusan NPWP — NPWP tetap ada tapi kewajiban perpajakan aktif ditangguhkan sementara.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki alasan yang valid untuk penetapan non-aktif (tidak lagi berpenghasilan, tidak memenuhi syarat objektif, dll)",
+    "Menyiapkan dokumen pendukung alasan penonaktifan"
+  ],
+  "estimated_time": "15–20 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pastikan login menggunakan akun WP yang akan dinonaktifkan statusnya."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Status",
+      "click": "Klik submenu 'Perubahan Status'",
+      "input": "-",
+      "expected_screen": "Submenu Perubahan Status terbuka dengan berbagai pilihan perubahan status",
+      "note": "Menu Perubahan Status berisi banyak pilihan — pastikan memilih 'Penetapan Wajib Pajak Nonaktif' di langkah berikutnya."
+    },
+    {
+      "step": 4,
+      "page": "Portal Saya → Perubahan Status",
+      "menu": "Penetapan Wajib Pajak Nonaktif",
+      "click": "Klik 'Penetapan Wajib Pajak Nonaktif'",
+      "input": "-",
+      "expected_screen": "Halaman Penonaktifan Status Wajib Pajak terbuka dengan bagian Manajemen Kasus terisi otomatis",
+      "note": "-"
+    },
+    {
+      "step": 5,
+      "page": "Halaman Penonaktifan Status WP — Kuasa WP",
+      "menu": "-",
+      "click": "Jika mengajukan sebagai diri sendiri: data terisi otomatis. Jika sebagai Kuasa WP: centang kotak dan cari data kuasa menggunakan kaca pembesar.",
+      "input": "-",
+      "expected_screen": "Bagian Kuasa WP terisi",
+      "note": "-"
+    },
+    {
+      "step": 6,
+      "page": "Halaman Penonaktifan Status WP — Identitas WP",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Identitas Wajib Pajak terisi otomatis",
+      "note": "Data identitas terisi otomatis — tidak perlu diubah."
+    },
+    {
+      "step": 7,
+      "page": "Halaman Penonaktifan Status WP — Alasan",
+      "menu": "Alasan Penonaktifan",
+      "click": "-",
+      "input": "Pilih alasan penonaktifan yang sesuai dan isi kolom tambahan jika diperlukan. Unggah dokumen pendukung yang mendukung alasan penonaktifan.",
+      "expected_screen": "Alasan dan dokumen pendukung terisi",
+      "note": "Alasan yang umum untuk WP OP: sudah tidak berpenghasilan, penghasilan di bawah PTKP, atau sudah pindah ke luar negeri secara sementara. Sertakan dokumen pendukung yang relevan."
+    },
+    {
+      "step": 8,
+      "page": "Halaman Penonaktifan Status WP — Pernyataan",
+      "menu": "-",
+      "click": "Centang kotak Pernyataan Wajib Pajak, lalu klik tombol 'Kirim'",
+      "input": "-",
+      "expected_screen": "Notifikasi permohonan berhasil terkirim. Tombol 'Unduh Bukti Tanda Terima' tersedia.",
+      "note": "Permohonan akan diteliti oleh petugas KPP terdaftar."
+    },
+    {
+      "step": 9,
+      "page": "Notifikasi Submit",
+      "menu": "Unduh Bukti Tanda Terima",
+      "click": "Klik tombol 'Unduh Bukti Tanda Terima'",
+      "input": "-",
+      "expected_screen": "Bukti Penerimaan Surat berhasil diunduh",
+      "note": "Pantau hasil permohonan di Portal Saya → Dokumen Saya dan Notifikasi Saya."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan penetapan non-aktif ditolak",
+      "cause": "WP masih memiliki kewajiban perpajakan aktif yang belum diselesaikan, atau alasan tidak memenuhi syarat",
+      "solution": "Selesaikan seluruh kewajiban perpajakan yang tertunggak, kemudian ajukan ulang dengan alasan dan dokumen yang lebih kuat — proses harus diulang dari awal."
+    },
+    {
+      "error": "Menu 'Penetapan Wajib Pajak Nonaktif' tidak tersedia",
+      "cause": "WP sudah berstatus non-aktif atau ada kondisi tertentu yang menghalangi",
+      "solution": "Cek status WP di Profil Saya. Jika sudah non-aktif, tidak perlu mengajukan lagi. Jika tidak, hubungi KPP terdaftar."
+    },
+    {
+      "error": "Dokumen pendukung tidak memadai sehingga permohonan ditolak",
+      "cause": "Dokumen tidak relevan atau tidak cukup kuat untuk membuktikan alasan penonaktifan",
+      "solution": "Siapkan dokumen yang lebih relevan dan spesifik sesuai alasan penonaktifan, kemudian ajukan ulang."
+    }
+  ],
+  "success_result": "Status Wajib Pajak berhasil ditetapkan sebagai Non-Aktif (WP Non-Efektif). Surat Keputusan penetapan non-aktif tersedia di Portal Saya → Dokumen Saya. Selama berstatus non-aktif, WP tidak memiliki kewajiban perpajakan aktif, namun NPWP tetap ada dan dapat diaktifkan kembali jika kondisi berubah.",
+  "references": [
+    "Buku Manual Coretax 2024 — Perubahan Status Wajib Pajak, Bab Penetapan Wajib Pajak Nonaktif (WP Badan), Edisi 20241129, Seri Registrasi, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "WP Non-Aktif (Non-Efektif/NE) BERBEDA dari Penghapusan NPWP: Non-Aktif bersifat sementara dan dapat diaktifkan kembali, sedangkan penghapusan NPWP bersifat permanen.",
+    "Selama berstatus non-aktif, WP tidak wajib menyampaikan SPT dan tidak dikenai sanksi administrasi atas keterlambatan pelaporan.",
+    "Jika kondisi berubah (WP kembali berpenghasilan), status non-aktif dapat dicabut dan WP kembali aktif.",
+    "Menu Perubahan Status berisi banyak pilihan — pastikan memilih 'Penetapan Wajib Pajak Nonaktif', bukan menu lainnya.",
+    "Dokumentasi resmi DJP lebih banyak membahas penonaktifan WP Badan — untuk WP OP, prinsip dan alurnya sama melalui menu yang sama."
+  ]
+}

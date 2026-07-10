@@ -1,0 +1,117 @@
+{
+  "id": "PB035",
+  "master_index_id": null,
+  "priority": 35,
+  "type": "registrasi",
+  "title": "Penunjukan Wakil/Kuasa Wajib Pajak",
+  "module": "Portal Saya — Perubahan Status",
+  "subcategory": "Representative Appointment (Penunjukan Wakil/Kuasa WP)",
+  "aliases": [
+    "tunjuk kuasa pajak", "Representative Appointment",
+    "daftarkan konsultan pajak", "penunjukan kuasa Coretax",
+    "beri akses konsultan ke akun pajak"
+  ],
+  "keywords": [
+    "penunjukan wakil kuasa", "Representative Appointment",
+    "Perubahan Status", "Portal Saya", "Tipe Perwakilan",
+    "dokumen pendukung", "surat kuasa", "konsultan pajak",
+    "akses impersonating", "nomor penunjukan"
+  ],
+  "client_questions": [
+    "Bagaimana cara menunjuk konsultan pajak sebagai kuasa di Coretax?",
+    "Saya ingin memberikan akses ke konsultan saya, bagaimana caranya?",
+    "Apa itu penunjukan wakil/kuasa di Coretax?",
+    "Dokumen apa yang diperlukan untuk menunjuk kuasa WP?",
+    "Setelah menunjuk kuasa, apa yang bisa dilakukan konsultan?"
+  ],
+  "objective": "Memandu WP OP untuk menunjuk Wakil/Kuasa Wajib Pajak (konsultan pajak atau perwakilan lain) melalui menu Perubahan Status di Coretax, sehingga kuasa dapat mengakses dan mengerjakan kewajiban perpajakan WP melalui fitur impersonating.",
+  "prerequisites": [
+    "Sudah login ke Coretax sebagai WP yang akan menunjuk kuasa (lihat PB001)",
+    "Mengetahui NIK/NPWP konsultan/kuasa yang akan ditunjuk",
+    "Menyiapkan dokumen surat kuasa dalam format PDF"
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login sebagai WP PEMBERI KUASA (bukan konsultan), masukkan NIK/NPWP, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax akun WP pemberi kuasa",
+      "note": "Login menggunakan akun WP yang MEMBERIKAN kuasa — bukan akun konsultan."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Status → Penunjukan Wakil/Kuasa",
+      "click": "Klik 'Portal Saya' → 'Perubahan Status' → 'Penunjukan Wakil/Kuasa Wajib Pajak'",
+      "input": "-",
+      "expected_screen": "Halaman Penunjukan Wakil/Kuasa terbuka. Bagian Manajemen Kasus terisi otomatis.",
+      "note": "Nama menu bisa terlihat sebagai 'Representative Appointment'."
+    },
+    {
+      "step": 3,
+      "page": "Formulir Penunjukan — Identitas WP (Kuasa)",
+      "menu": "Cari Wakil/Kuasa",
+      "click": "Klik ikon 'Kaca Pembesar' pada bagian Identitas Wajib Pajak untuk mencari WP yang akan ditunjuk sebagai kuasa",
+      "input": "Masukkan NIK/NPWP konsultan/kuasa yang akan ditunjuk, klik Cari, pilih dari hasil pencarian",
+      "expected_screen": "Data konsultan/kuasa tampil dan terpilih",
+      "note": "Cari menggunakan NIK atau NPWP 16 digit konsultan. Konsultan harus sudah terdaftar di Coretax."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Penunjukan — Tipe Perwakilan",
+      "menu": "-",
+      "click": "-",
+      "input": "Pilih 'Tipe Perwakilan' yang sesuai dari dropdown (contoh: Kuasa, Wakil, dll). Kolom lain terisi otomatis.",
+      "expected_screen": "Tipe Perwakilan terpilih dan kolom lain terisi otomatis",
+      "note": "Pilih tipe perwakilan sesuai hubungan antara WP dan kuasa."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Penunjukan — Detail (Dokumen)",
+      "menu": "-",
+      "click": "Klik tombol 'Choose' untuk mengunggah dokumen surat kuasa",
+      "input": "Unggah file surat kuasa dalam format PDF",
+      "expected_screen": "Dokumen surat kuasa berhasil diunggah",
+      "note": "Surat kuasa harus ditandatangani WP dan bermaterai. Format file harus PDF."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Penunjukan — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang Pernyataan Wajib Pajak, klik 'Kirim'",
+      "input": "-",
+      "expected_screen": "Permohonan berhasil terkirim. Konsultan/kuasa mendapat notifikasi di akun Coretax-nya.",
+      "note": "Setelah disetujui KPP, konsultan dapat mengakses akun WP melalui fitur impersonating (PB030)."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Konsultan/kuasa tidak ditemukan saat pencarian dengan kaca pembesar",
+      "cause": "Konsultan belum terdaftar di Coretax atau NIK/NPWP yang dimasukkan salah",
+      "solution": "Pastikan NIK/NPWP konsultan benar dan konsultan sudah memiliki akun Coretax aktif. Minta konsultan untuk aktivasi akun Coretax terlebih dahulu."
+    },
+    {
+      "error": "Permohonan penunjukan ditolak",
+      "cause": "Dokumen surat kuasa tidak memenuhi syarat (tidak bermaterai, tidak ditandatangani, dll)",
+      "solution": "Siapkan surat kuasa yang benar (bermaterai, ditandatangani WP) dan ajukan ulang."
+    }
+  ],
+  "success_result": "Penunjukan Wakil/Kuasa WP berhasil. Konsultan/kuasa mendapat notifikasi dan nama WP muncul di daftar 'Taxpayers' pada akun Coretax konsultan. Konsultan dapat mulai mengakses akun WP melalui impersonating (PB030).",
+  "references": [
+    "Buku Manual Coretax 2024 — Perubahan Status Wajib Pajak, Penunjukan Wakil/Kuasa WP (Representative Appointment), Direktorat Jenderal Pajak",
+    "Panduan Ringkas Coretax DJP, Penunjukan Wakil/Kuasa, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Penunjukan kuasa dilakukan oleh WP PEMBERI KUASA dari akun WP sendiri — bukan dari akun konsultan.",
+    "Setelah ditunjuk, konsultan dapat impersonating ke akun WP (PB030) tanpa memerlukan password WP.",
+    "Surat kuasa harus bermaterai dan ditandatangani WP, diunggah dalam format PDF.",
+    "Untuk mencabut kuasa yang sudah diberikan, gunakan PB036 (Pencabutan Wakil/Kuasa WP)."
+  ]
+}

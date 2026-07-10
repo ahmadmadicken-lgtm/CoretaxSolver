@@ -1,0 +1,178 @@
+{
+  "id": "PB017",
+  "master_index_id": null,
+  "priority": 17,
+  "type": "pembayaran",
+  "title": "Pemindahbukuan (Pbk)",
+  "module": "Pembayaran — Permohonan Pemindahbukuan",
+  "subcategory": "Permohonan Pemindahbukuan",
+  "aliases": [
+    "Pbk", "pindahbuku", "pemindahbukuan pajak",
+    "transfer kredit pajak", "pindah kredit pajak",
+    "Permohonan Pemindahbukuan Coretax"
+  ],
+  "keywords": [
+    "pemindahbukuan", "Pbk", "kredit pajak", "deposit pajak",
+    "Permohonan Pemindahbukuan", "Buat Permohonan Pemindahbukuan Baru",
+    "kaca pembesar", "alasan pemindahbukuan", "tujuan pemindahbukuan",
+    "akun WP sendiri", "akun WP lain", "KAP-KJS", "unggah dokumen",
+    "tanda tangan", "KODJP", "kirim permohonan"
+  ],
+  "client_questions": [
+    "Bagaimana cara pemindahbukuan pajak di Coretax?",
+    "Saya salah setor pajak, bagaimana cara memindahkan ke jenis pajak yang benar?",
+    "Apa itu pemindahbukuan di Coretax?",
+    "Bisakah saya pindahkan kredit pajak ke WP lain di Coretax?",
+    "Bagaimana cara ajukan Pbk secara online di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan Permohonan Pemindahbukuan (Pbk) secara mandiri melalui menu Pembayaran di Coretax, untuk memindahkan kredit pajak yang dimiliki — baik antar jenis pajak maupun ke Wajib Pajak lain.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif untuk penandatanganan (lihat PB002)",
+    "Memiliki kredit pajak atau saldo deposit yang ingin dipindahbukukan",
+    "Mengetahui tujuan pemindahbukuan: KAP-KJS tujuan, masa pajak tujuan, dan NPWP tujuan (jika ke WP lain)",
+    "Menyiapkan dokumen pendukung alasan pemindahbukuan"
+  ],
+  "estimated_time": "15–30 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pemindahbukuan dapat diajukan oleh WP sendiri atau Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran",
+      "click": "Klik menu 'Pembayaran' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Pembayaran terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran → Permohonan Pemindahbukuan",
+      "click": "Klik submenu 'Permohonan Pemindahbukuan'",
+      "input": "-",
+      "expected_screen": "Halaman Permohonan Pemindahbukuan terbuka, menampilkan daftar permohonan yang pernah dibuat (jika ada) dan tombol 'Buat Permohonan Pemindahbukuan Baru'",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Halaman Permohonan Pemindahbukuan",
+      "menu": "Buat Permohonan Baru",
+      "click": "Klik tombol 'Buat Permohonan Pemindahbukuan Baru'",
+      "input": "-",
+      "expected_screen": "Formulir Permohonan Pemindahbukuan terbuka. Kolom Identitas 'Bertindak Sebagai' sudah terisi otomatis sesuai akun yang digunakan.",
+      "note": "Kolom identitas terisi otomatis — tidak perlu diubah."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Pemindahbukuan — Sumber",
+      "menu": "Pilih Data Pembayaran Sumber",
+      "click": "Klik tombol 'Kaca Pembesar' untuk mencari data pembayaran yang akan dipindahbukukan",
+      "input": "-",
+      "expected_screen": "Dialog pencarian kredit pajak terbuka, menampilkan daftar pembayaran/kredit yang dimiliki WP",
+      "note": "Pilih kredit pajak sumber yang ingin dipindahbukukan dari daftar yang muncul."
+    },
+    {
+      "step": 6,
+      "page": "Dialog Pencarian Kredit",
+      "menu": "-",
+      "click": "Klik tombol 'Pilih' pada baris pembayaran yang akan dipindahbukukan",
+      "input": "-",
+      "expected_screen": "Data pembayaran sumber terpilih dan tampil di formulir",
+      "note": "-"
+    },
+    {
+      "step": 7,
+      "page": "Formulir Pemindahbukuan — Jumlah & Alasan",
+      "menu": "-",
+      "click": "-",
+      "input": "Isi 'Jumlah yang akan dipindahbukukan' (maksimal sejumlah nominal pembayaran sumber). Pilih 'Alasan Pemindahbukuan' dari dropdown list.",
+      "expected_screen": "Jumlah dan alasan terisi",
+      "note": "Jika sumber pemindahbukuan adalah Akun Deposit Pajak, kolom alasan akan terisi otomatis oleh sistem."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Pemindahbukuan — Tujuan",
+      "menu": "Tujuan Pemindahbukuan",
+      "click": "-",
+      "input": "Pilih tujuan pemindahbukuan: (1) 'Akun Wajib Pajak Sendiri' jika untuk akun WP yang sama, ATAU (2) 'Akun Wajib Pajak Lain' jika ke WP berbeda (wajib isi NPWP WP tujuan). Kemudian isi: Jenis Kewajiban, Referensi, KAP-KJS tujuan, Masa Pajak tujuan, dan Nilai.",
+      "expected_screen": "Bagian tujuan pemindahbukuan terisi lengkap",
+      "note": "Pastikan KAP-KJS tujuan, masa pajak tujuan, dan nilai sudah benar sebelum melanjutkan — kesalahan di sini akan menyebabkan pemindahbukuan ke pos yang salah."
+    },
+    {
+      "step": 9,
+      "page": "Formulir Pemindahbukuan — Dokumen Pendukung",
+      "menu": "Unggah Dokumen",
+      "click": "Klik tombol 'Pilih File' lalu klik 'Unggah File' untuk mengunggah dokumen pendukung",
+      "input": "Unggah dokumen pendukung yang memperkuat alasan pemindahbukuan (contoh: bukti setor pajak, surat keterangan salah setor, dll)",
+      "expected_screen": "Dokumen berhasil diunggah",
+      "note": "Dokumen pendukung wajib diunggah. Tanpa dokumen, permohonan tidak dapat diajukan."
+    },
+    {
+      "step": 10,
+      "page": "Formulir Pemindahbukuan — Penandatanganan",
+      "menu": "Tanda Tangan & Kirim",
+      "click": "Pilih Penyedia Penandatangan, masukkan Passphrase KODJP, klik tombol 'Tanda Tangan'",
+      "input": "Passphrase KODJP",
+      "expected_screen": "Tanda tangan berhasil. Tombol 'Cek Isian Data', 'Simpan Konsep', dan 'Kirim Permohonan' menjadi aktif.",
+      "note": "Gunakan 'Cek Isian Data' untuk memvalidasi formulir sebelum mengirim. 'Simpan Konsep' untuk menyimpan draft tanpa mengirim."
+    },
+    {
+      "step": 11,
+      "page": "Formulir Pemindahbukuan",
+      "menu": "Kirim Permohonan",
+      "click": "Klik tombol 'Kirim Permohonan'",
+      "input": "-",
+      "expected_screen": "Permohonan Pemindahbukuan berhasil terkirim ke KPP secara elektronik. Nomor permohonan muncul dan status masuk ke 'Permohonan Dalam Proses'.",
+      "note": "Permohonan dikirim ke KPP terdaftar untuk diproses. Pemantauan status dapat dilakukan melalui Portal Saya → Kasus Saya."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Data pembayaran sumber tidak ditemukan saat pencarian dengan kaca pembesar",
+      "cause": "Pembayaran yang dicari belum tercatat di Buku Besar, atau sudah pernah dipindahbukukan sebelumnya",
+      "solution": "Cek Buku Besar (PB016) untuk memastikan kredit pajak yang ingin dipindahbukukan masih tersedia. Jika sudah dipindahbukukan sebelumnya, kredit tersebut tidak bisa dipindahbukukan ulang."
+    },
+    {
+      "error": "KAP-KJS atau masa pajak tujuan salah diisi",
+      "cause": "Kesalahan input pada bagian tujuan pemindahbukuan",
+      "solution": "Gunakan fitur 'Cek Isian Data' sebelum kirim untuk memvalidasi semua isian. Jika sudah terlanjur terkirim dengan data salah, ajukan permohonan Pbk baru untuk memindahkan kembali ke pos yang benar — dan proses harus diulang dari awal."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "Tombol 'Kirim Permohonan' tidak aktif",
+      "cause": "Formulir belum lengkap, dokumen pendukung belum diunggah, atau penandatanganan belum dilakukan",
+      "solution": "Pastikan semua kolom wajib terisi, dokumen sudah diunggah, dan penandatanganan dengan KODJP sudah berhasil dilakukan. Klik 'Cek Isian Data' untuk melihat bagian mana yang masih bermasalah."
+    }
+  ],
+  "success_result": "Permohonan Pemindahbukuan berhasil terkirim ke KPP secara elektronik. Nomor permohonan tersimpan dan dapat dipantau di Portal Saya → Kasus Saya. Setelah disetujui KPP, kredit pajak akan berpindah sesuai tujuan yang diajukan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Bab Pemindahbukuan, Direktorat Jenderal Pajak",
+    "Panduan Ringkas Coretax DJP, Pemindahbukuan, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Bab 8 Pemindahbukuan, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Pemindahbukuan dapat dilakukan: (1) antar jenis pajak dalam satu akun WP, atau (2) dari akun WP ke akun WP lain.",
+    "Jumlah yang dipindahbukukan tidak boleh melebihi nominal kredit sumber.",
+    "Dokumen pendukung wajib diunggah — tanpa dokumen, permohonan tidak bisa dikirim.",
+    "Kesalahan KAP-KJS atau masa pajak tujuan akan menyebabkan kredit berpindah ke pos yang salah — dan untuk memperbaiki harus ajukan Pbk baru.",
+    "KODJP wajib aktif sebelum mengajukan — jika passphrase lupa, selesaikan PB002 terlebih dahulu.",
+    "Status permohonan dapat dipantau di Portal Saya → Kasus Saya atau Kasus Berjalan Saya."
+  ]
+}

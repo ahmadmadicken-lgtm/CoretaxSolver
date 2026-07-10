@@ -1,0 +1,134 @@
+{
+  "id": "PB016",
+  "master_index_id": null,
+  "priority": 16,
+  "type": "profil",
+  "title": "Melihat Buku Besar & Riwayat Pembayaran",
+  "module": "Buku Besar (My General Ledger)",
+  "subcategory": "Buku Besar Wajib Pajak",
+  "aliases": [
+    "buku besar pajak",
+    "general ledger Coretax",
+    "riwayat pembayaran pajak",
+    "riwayat transaksi pajak",
+    "cek saldo pajak",
+    "Taxpayer Ledger",
+    "debit kredit pajak"
+  ],
+  "keywords": [
+    "buku besar", "general ledger", "riwayat transaksi",
+    "debit", "kredit", "saldo", "Debit Tersisa", "Kredit Tersisa",
+    "filter", "unduh transkrip", "deposit pajak",
+    "Deskripsi KAP", "Nilai Sisa", "Terapkan Filter"
+  ],
+  "client_questions": [
+    "Di mana saya bisa lihat riwayat pembayaran pajak di Coretax?",
+    "Bagaimana cara cek saldo pajak saya di Coretax?",
+    "Apa itu Buku Besar di Coretax?",
+    "Bagaimana cara tahu apakah pembayaran pajak saya sudah tercatat?",
+    "Bagaimana cara lihat saldo deposit pajak saya di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mengakses dan membaca Buku Besar Wajib Pajak (Taxpayer General Ledger) di Coretax, termasuk cara memfilter, membaca sisi debit dan kredit, mengecek saldo deposit, serta mengunduh transkrip riwayat transaksi perpajakan.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)"
+  ],
+  "estimated_time": "5–10 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Buku Besar dapat diakses oleh WP sendiri maupun Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Buku Besar",
+      "click": "Klik menu 'Buku Besar' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Halaman Buku Besar Wajib Pajak terbuka, menampilkan daftar seluruh transaksi perpajakan dalam bentuk tabel dengan kolom: Aksi, Tanggal Transaksi, Tanggal Posting, Deskripsi KAP, Jenis Transaksi, Debit, Kredit, Debit Tersisa, Kredit Tersisa.",
+      "note": "Menu Buku Besar berada di navigation bar utama, antara menu Pembayaran dan Layanan Wajib Pajak."
+    },
+    {
+      "step": 3,
+      "page": "Halaman Buku Besar WP",
+      "menu": "Membaca Sisi Debit dan Kredit",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Tabel menampilkan dua sisi transaksi: Debit dan Kredit",
+      "note": "Sisi DEBIT = kewajiban WP (contoh: SPT kurang bayar, STP, SKPKB). Sisi KREDIT = hak WP (contoh: pembayaran yang sudah dilakukan, SPT lebih bayar). Kolom 'Debit Tersisa' = sisa kewajiban yang belum diselesaikan. Kolom 'Kredit Tersisa' = sisa hak/deposit yang masih bisa digunakan."
+    },
+    {
+      "step": 4,
+      "page": "Halaman Buku Besar WP",
+      "menu": "Filter Transaksi",
+      "click": "Gunakan kolom filter yang tersedia untuk menyaring transaksi",
+      "input": "Filter berdasarkan: Tanggal Transaksi (rentang tanggal), Deskripsi KAP (jenis pajak), atau kolom lainnya sesuai kebutuhan. Klik tombol 'Terapkan Filter' setelah mengisi filter.",
+      "expected_screen": "Daftar transaksi tersaring sesuai filter yang dipilih",
+      "note": "Contoh filter berguna: isi kolom 'Deskripsi KAP' dengan 'Pendapatan Pajak Tidak Langsung Lainnya Deposit' untuk melihat saldo deposit pajak. Filter tanggal berguna untuk melihat transaksi dalam periode tertentu."
+    },
+    {
+      "step": 5,
+      "page": "Halaman Buku Besar WP",
+      "menu": "Cek Saldo Deposit Pajak",
+      "click": "Filter kolom 'Deskripsi KAP' dengan kata kunci 'Deposit', lalu klik 'Terapkan Filter'",
+      "input": "-",
+      "expected_screen": "Baris deposit tampil. Lihat kolom 'Nilai Sisa' untuk mengetahui saldo deposit yang masih tersedia.",
+      "note": "Meskipun saldo Buku Besar terlihat negatif (misal -Rp5 juta), WP mungkin masih memiliki saldo Deposit yang bisa digunakan — cek kolom 'Nilai Sisa' pada baris deposit secara spesifik."
+    },
+    {
+      "step": 6,
+      "page": "Halaman Buku Besar WP",
+      "menu": "Lihat Detail Transaksi",
+      "click": "Klik ikon 'Aksi' pada baris transaksi yang ingin dilihat detailnya",
+      "input": "-",
+      "expected_screen": "Detail transaksi terbuka: menampilkan informasi lengkap termasuk jenis transaksi, nominal, tanggal, dan dokumen terkait",
+      "note": "Fitur ini berguna untuk memverifikasi apakah pembayaran tertentu sudah tercatat dengan benar di sistem DJP."
+    },
+    {
+      "step": 7,
+      "page": "Halaman Buku Besar WP",
+      "menu": "Unduh Transkrip",
+      "click": "Klik tombol 'Unduh' atau 'Download' untuk mengunduh transkrip Buku Besar",
+      "input": "-",
+      "expected_screen": "File transkrip riwayat transaksi berhasil terunduh dalam format yang dapat disimpan",
+      "note": "Transkrip Buku Besar berguna sebagai bukti rekonsiliasi internal dan dapat digunakan untuk keperluan audit atau pemeriksaan pajak."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Buku Besar tidak menampilkan transaksi pembayaran yang baru saja dilakukan",
+      "cause": "Sistem membutuhkan waktu untuk memproses dan mencatat transaksi dari bank/kanal persepsi",
+      "solution": "Tunggu beberapa saat (bisa 1x24 jam) dan refresh halaman. Jika lebih dari 1 hari kerja masih belum muncul, hubungi bank tempat pembayaran atau KPP terdaftar dengan menyertakan bukti bayar."
+    },
+    {
+      "error": "Saldo Buku Besar menunjukkan nilai negatif (Debit lebih besar dari Kredit)",
+      "cause": "WP memiliki kewajiban/utang pajak yang belum diselesaikan",
+      "solution": "Ini bukan error — kondisi ini menunjukkan masih ada kewajiban pajak yang harus diselesaikan. Cek detail transaksi untuk mengetahui sumber kewajiban tersebut, lalu selesaikan melalui pembayaran."
+    },
+    {
+      "error": "Filter 'Terapkan Filter' tidak menghasilkan data yang diharapkan",
+      "cause": "Kata kunci filter tidak tepat atau periode tanggal yang dipilih tidak mencakup transaksi yang dicari",
+      "solution": "Coba hapus filter dan lihat semua transaksi terlebih dahulu. Gunakan kata kunci yang lebih umum atau perlebar rentang tanggal filter."
+    }
+  ],
+  "success_result": "Riwayat transaksi perpajakan WP berhasil ditampilkan dan dapat dibaca dengan benar. Saldo Debit Tersisa (kewajiban) dan Kredit Tersisa (hak/deposit) dapat diidentifikasi. Transkrip Buku Besar berhasil diunduh jika diperlukan.",
+  "references": [
+    "Buku Manual Coretax 2024 — Taxpayer Account Management (TAM), Buku Besar Wajib Pajak, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Instansi Pemerintah 2025, Bab 5 Buku Besar Wajib Pajak, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Buku Besar adalah rekam jejak seluruh transaksi hak dan kewajiban perpajakan WP — terintegrasi otomatis dari SPT, pembayaran, dan produk hukum DJP.",
+    "Debit = kewajiban WP. Kredit = hak WP (pembayaran/deposit). Debit Tersisa = utang pajak. Kredit Tersisa = saldo hak/deposit.",
+    "Saldo Buku Besar negatif bukan berarti error — bisa jadi WP masih punya deposit terpisah yang perlu dicek dengan filter khusus.",
+    "Transkrip Buku Besar dapat diunduh sebagai bukti rekonsiliasi internal.",
+    "Halaman ini bersifat read-only — tidak ada perubahan data yang dapat dilakukan dari sini."
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "PB029",
+  "master_index_id": null,
+  "priority": 29,
+  "type": "profil",
+  "title": "Melihat & Mengunduh Dokumen Saya",
+  "module": "Portal Saya — Dokumen Saya",
+  "subcategory": "Dokumen Masuk dan Keluar Wajib Pajak",
+  "aliases": [
+    "dokumen saya Coretax", "inbox pajak", "unduh dokumen DJP",
+    "lihat surat DJP", "download dokumen perpajakan"
+  ],
+  "keywords": [
+    "Dokumen Saya", "Portal Saya", "dokumen masuk", "dokumen keluar",
+    "unduh dokumen", "BPE", "Surat Keputusan", "notifikasi",
+    "SKP", "SKPPKP", "surat keterangan", "arsip perpajakan"
+  ],
+  "client_questions": [
+    "Di mana saya bisa lihat dokumen perpajakan saya di Coretax?",
+    "Bagaimana cara unduh BPE SPT dari Coretax?",
+    "Saya dapat notifikasi dari DJP, di mana bisa dibaca?",
+    "Bagaimana cara cari Surat Keputusan yang diterbitkan DJP untuk saya?",
+    "Di mana menyimpan arsip semua surat dari DJP di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mengakses, mencari, dan mengunduh dokumen perpajakan yang tersimpan di menu Dokumen Saya pada Coretax, termasuk BPE SPT, Surat Keputusan, dan seluruh dokumen yang diterbitkan DJP terkait akun WP.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)"
+  ],
+  "estimated_time": "3–10 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "-"
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Dokumen Saya",
+      "click": "Klik 'Portal Saya' → klik 'Dokumen Saya'",
+      "input": "-",
+      "expected_screen": "Halaman Dokumen Saya terbuka, menampilkan daftar seluruh dokumen perpajakan yang berkaitan dengan akun WP yang diterbitkan oleh DJP.",
+      "note": "Dokumen Saya berisi semua dokumen elektronik yang diterbitkan DJP terkait akun WP: BPE SPT, Surat Keputusan, Surat Keterangan, hasil permohonan layanan, dll."
+    },
+    {
+      "step": 3,
+      "page": "Halaman Dokumen Saya",
+      "menu": "Filter & Cari",
+      "click": "-",
+      "input": "Gunakan fitur filter atau pencarian untuk menemukan dokumen tertentu: filter berdasarkan jenis dokumen, tanggal, atau kata kunci.",
+      "expected_screen": "Daftar dokumen tersaring sesuai filter",
+      "note": "Jika dokumen yang dicari tidak ditemukan, perlebar rentang tanggal filter atau hapus semua filter untuk melihat semua dokumen."
+    },
+    {
+      "step": 4,
+      "page": "Halaman Dokumen Saya",
+      "menu": "Unduh Dokumen",
+      "click": "Klik tombol 'Unduh' atau ikon unduh pada baris dokumen yang ingin diunduh",
+      "input": "-",
+      "expected_screen": "File dokumen (PDF) berhasil terunduh",
+      "note": "Semua dokumen tersedia dalam format PDF. Simpan dokumen-dokumen penting (BPE SPT, SKF, SK lainnya) sebagai arsip."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Dokumen tertentu tidak ditemukan di Dokumen Saya",
+      "cause": "Dokumen belum diterbitkan, masih dalam proses, atau filter terlalu sempit",
+      "solution": "Hapus semua filter dan lihat seluruh dokumen. Jika dokumen memang belum ada, cek status permohonan di Kasus Saya (lihat PB032). Jika sudah lama tidak muncul, hubungi KPP terdaftar."
+    },
+    {
+      "error": "File tidak bisa diunduh / error saat unduh",
+      "cause": "Koneksi internet tidak stabil atau browser memblokir unduhan",
+      "solution": "Pastikan koneksi internet stabil. Izinkan unduhan dari coretaxdjp.pajak.go.id di browser. Coba lagi atau gunakan browser lain."
+    }
+  ],
+  "success_result": "Dokumen perpajakan yang dicari berhasil ditemukan dan diunduh dalam format PDF dari menu Dokumen Saya.",
+  "references": [
+    "Panduan Coretax bagi Wajib Pajak Badan Migas 2025, Modul Portal Saya — Dokumen Saya, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Dokumen Saya berisi seluruh dokumen elektronik dari DJP terkait akun WP: BPE SPT, SK, Surat Keterangan, hasil permohonan layanan, dll.",
+    "Ini adalah 'kotak masuk' resmi DJP untuk WP — selalu cek Dokumen Saya setelah mengajukan permohonan apapun.",
+    "Halaman ini bersifat read-only — hanya untuk melihat dan mengunduh dokumen.",
+    "Untuk melihat notifikasi sistem (bukan dokumen formal), gunakan Portal Saya → Notifikasi Saya atau ikon lonceng."
+  ]
+}

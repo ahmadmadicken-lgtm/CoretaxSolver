@@ -1,0 +1,177 @@
+{
+  "id": "PB015",
+  "master_index_id": null,
+  "priority": 15,
+  "type": "perubahan-data",
+  "title": "Perubahan KLU Utama WP OP",
+  "module": "Portal Saya — Perubahan Data",
+  "subcategory": "Taxpayer Identity (Identitas Wajib Pajak) — KLU Utama",
+  "aliases": [
+    "ganti KLU utama",
+    "ubah kode lapangan usaha",
+    "perubahan KLU Coretax",
+    "update KLU wajib pajak",
+    "Taxpayer Identity KLU",
+    "perbarui kode ekonomi utama"
+  ],
+  "keywords": [
+    "KLU utama", "kode ekonomi utama", "Main Economic Code",
+    "Taxpayer Identity", "Perubahan Data", "Portal Saya",
+    "Perbarui Kode Ekonomi Utama", "kaca pembesar", "Valid Dari",
+    "klasifikasi lapangan usaha", "Economic Code"
+  ],
+  "client_questions": [
+    "Bagaimana cara mengubah KLU utama di Coretax?",
+    "Saya ganti usaha, bagaimana cara update kode lapangan usaha di Coretax?",
+    "Di mana menu untuk ubah KLU di Coretax?",
+    "Apa itu KLU dan bagaimana cara menggantinya?",
+    "Apakah perubahan KLU bisa dilakukan online di Coretax?"
+  ],
+  "objective": "Memandu WP OP untuk mengubah KLU (Klasifikasi Lapangan Usaha) Utama melalui menu Perubahan Data — Taxpayer Identity di Coretax, tanpa harus datang ke KPP.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "Mengetahui kode KLU baru yang sesuai dengan jenis usaha/pekerjaan terkini"
+  ],
+  "estimated_time": "10–20 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Perubahan KLU dapat dilakukan sendiri oleh WP atau melalui Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya",
+      "click": "Klik menu 'Portal Saya' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Portal Saya terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Perubahan Data",
+      "click": "Klik submenu 'Perubahan Data'",
+      "input": "-",
+      "expected_screen": "Submenu Perubahan Data terbuka dengan 4 pilihan: Taxpayer Identity, Main Address Change, Land & Building Tax Object Update, PSME Data Update",
+      "note": "Untuk perubahan KLU, pilih 'Taxpayer Identity' — bukan 'Main Address Change'."
+    },
+    {
+      "step": 4,
+      "page": "Portal Saya → Perubahan Data",
+      "menu": "Taxpayer Identity (Identitas Wajib Pajak)",
+      "click": "Klik 'Taxpayer Identity' atau 'Identitas Wajib Pajak'",
+      "input": "-",
+      "expected_screen": "Formulir Identitas Wajib Pajak terbuka dengan beberapa bagian: Manajemen Kasus, Identitas Wajib Pajak, KLU Utama, Informasi Umum, dan bagian lainnya",
+      "note": "Menu Taxpayer Identity digunakan untuk perubahan KLU utama, rekening bank, dan data identitas lainnya."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Identitas WP — Identitas Wajib Pajak",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Identitas Wajib Pajak terisi otomatis — tidak perlu diubah",
+      "note": "Data identitas WP (NPWP, Nama, dll) terisi otomatis dari profil WP yang sudah terdaftar."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Identitas WP — KLU Utama",
+      "menu": "Perbarui Kode Ekonomi Utama",
+      "click": "Klik 'Kotak Centang' pada kolom 'Perbarui Kode Ekonomi Utama'",
+      "input": "-",
+      "expected_screen": "Kolom pencarian KLU dan kolom tanggal 'Valid Dari' menjadi aktif dan bisa diisi",
+      "note": "Kotak centang ini wajib dicentang terlebih dahulu agar kolom KLU baru bisa diisi. Jika tidak dicentang, kolom KLU tetap terkunci."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Identitas WP — KLU Utama",
+      "menu": "Pencarian KLU Baru",
+      "click": "Klik ikon 'Kaca Pembesar' untuk mencari KLU yang sesuai",
+      "input": "Ketik kode KLU atau kata kunci jenis usaha/pekerjaan di kolom pencarian. Pilih KLU yang sesuai dari daftar hasil pencarian.",
+      "expected_screen": "KLU baru terpilih dan tampil di kolom KLU Utama",
+      "note": "Hanya ada satu Main Economic Code (KLU Utama). Pilih KLU yang paling sesuai dengan kegiatan usaha atau pekerjaan utama WP saat ini."
+    },
+    {
+      "step": 8,
+      "page": "Formulir Identitas WP — KLU Utama",
+      "menu": "Valid Dari",
+      "click": "Klik ikon 'Kalender' pada kolom 'Valid Dari'",
+      "input": "Pilih tanggal mulai berlakunya KLU baru",
+      "expected_screen": "Tanggal Valid Dari terisi",
+      "note": "Tanggal 'Valid Dari' adalah tanggal mulai berlakunya KLU baru. Isi sesuai tanggal perubahan usaha yang sebenarnya."
+    },
+    {
+      "step": 9,
+      "page": "Formulir Identitas WP — Informasi Umum",
+      "menu": "-",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Bagian Informasi Umum tampil — lewati jika tidak ada perubahan nama atau data umum lainnya",
+      "note": "Jika tidak ada perubahan pada Informasi Umum (nama WP, dll), lewati bagian ini tanpa mengubah apapun."
+    },
+    {
+      "step": 10,
+      "page": "Formulir Identitas WP",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta untuk penandatanganan digital",
+      "expected_screen": "Permohonan berhasil terkirim. Nomor kasus muncul dan status masuk ke 'Permohonan Dalam Proses' atau langsung disetujui.",
+      "note": "Penandatanganan menggunakan Passphrase KODJP diperlukan. Setelah disetujui, KLU Utama WP di Coretax berubah sesuai yang diajukan."
+    },
+    {
+      "step": 11,
+      "page": "Portal Saya → Profil Saya → Ikhtisar Profil WP",
+      "menu": "Verifikasi perubahan",
+      "click": "Cek halaman Ikhtisar Profil WP (PB006) untuk memastikan KLU Utama sudah berubah",
+      "input": "-",
+      "expected_screen": "KLU Utama di halaman Ikhtisar Profil WP sudah menampilkan KLU baru",
+      "note": "Jika KLU belum berubah, cek status permohonan di Portal Saya → Kasus Saya atau Kasus Berjalan Saya."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Kolom KLU Utama tidak bisa diisi / terkunci",
+      "cause": "Kotak Centang 'Perbarui Kode Ekonomi Utama' belum dicentang",
+      "solution": "Pastikan kotak centang 'Perbarui Kode Ekonomi Utama' sudah dicentang terlebih dahulu sebelum mencoba mengisi kolom KLU. Tanpa mencentang kotak ini, kolom KLU tetap terkunci dan tidak bisa diubah."
+    },
+    {
+      "error": "KLU yang dicari tidak ditemukan di hasil pencarian",
+      "cause": "Kata kunci pencarian kurang tepat atau kode KLU yang digunakan tidak sesuai",
+      "solution": "Coba cari dengan kata kunci berbeda — gunakan nama jenis usaha secara umum (contoh: 'perdagangan', 'jasa', 'konsultan'). Jika tidak yakin kode KLU yang tepat, cek daftar KLU di situs resmi DJP atau konsultasikan dengan KPP terdaftar."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "Tombol Submit tidak aktif",
+      "cause": "Kolom KLU Utama baru atau tanggal 'Valid Dari' belum diisi",
+      "solution": "Pastikan KLU baru sudah dipilih melalui ikon kaca pembesar dan tanggal 'Valid Dari' sudah diisi. Kedua kolom ini wajib diisi sebelum tombol Submit aktif."
+    }
+  ],
+  "success_result": "KLU Utama WP berhasil diperbarui sesuai jenis usaha/pekerjaan terkini. Perubahan tampil di halaman Ikhtisar Profil WP pada panel KLU Utama.",
+  "references": [
+    "Buku Manual Coretax 2024 — Perubahan Data Wajib Pajak, Pengisian Formulir Identitas Wajib Pajak — KLU Utama, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Perubahan Data Wajib Pajak, Bab 02 Perubahan Data Wajib Pajak, Menu Taxpayer Identity, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Kotak Centang 'Perbarui Kode Ekonomi Utama' wajib dicentang dulu — tanpa ini kolom KLU tidak bisa diisi.",
+    "Hanya ada satu KLU Utama. Jika ingin menambah KLU tambahan (bukan utama), gunakan menu yang berbeda.",
+    "Tanggal 'Valid Dari' harus diisi sesuai tanggal perubahan usaha yang sebenarnya.",
+    "KODJP wajib aktif sebelum mengajukan — jika passphrase lupa, selesaikan PB002 terlebih dahulu.",
+    "Setelah disetujui, perubahan KLU dapat dicek di halaman Ikhtisar Profil WP (PB006).",
+    "PB005 (Perubahan KLU Utama & Rekening Bank) mencakup perubahan KLU sekaligus rekening bank dalam satu proses. PB015 ini khusus untuk perubahan KLU saja tanpa mengubah rekening bank."
+  ]
+}

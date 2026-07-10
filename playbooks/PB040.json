@@ -1,0 +1,153 @@
+{
+  "id": "PB040",
+  "master_index_id": null,
+  "priority": 40,
+  "type": "sertifikat",
+  "title": "Cara Reset Passphrase KODJP",
+  "module": "Portal Saya — Permohonan Kode Otorisasi/Sertifikat Digital",
+  "subcategory": "Reset/Pembuatan Ulang Passphrase Kode Otorisasi DJP",
+  "aliases": [
+    "lupa passphrase KODJP", "reset passphrase kode otorisasi DJP",
+    "ganti passphrase KODJP", "buat ulang KODJP",
+    "passphrase salah terus Coretax"
+  ],
+  "keywords": [
+    "reset passphrase", "passphrase KODJP", "Kode Otorisasi DJP",
+    "lupa passphrase", "Portal Saya", "Permohonan Kode Otorisasi",
+    "Sertifikat Digital", "passphrase baru", "verifikasi wajah",
+    "Dukcapil", "foto wajah", "KODJP baru"
+  ],
+  "client_questions": [
+    "Bagaimana cara reset passphrase KODJP yang lupa?",
+    "Passphrase KODJP saya salah terus, bagaimana cara menggantinya?",
+    "Apakah passphrase KODJP bisa dipulihkan jika lupa?",
+    "Bagaimana cara buat ulang KODJP di Coretax?",
+    "Saya sudah coba passphrase berkali-kali tapi salah, apa yang harus dilakukan?"
+  ],
+  "objective": "Memandu WP OP yang lupa atau ingin mengganti passphrase KODJP untuk membuat KODJP baru melalui menu Permohonan Kode Otorisasi/Sertifikat Digital di Coretax. Passphrase KODJP yang lupa TIDAK BISA dipulihkan — satu-satunya solusi adalah membuat KODJP baru dengan passphrase baru.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki akses kamera di perangkat yang digunakan untuk verifikasi foto wajah",
+    "NIK terdaftar di Dukcapil dan valid"
+  ],
+  "estimated_time": "10–15 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Passphrase KODJP yang lupa TIDAK BISA dipulihkan. Satu-satunya cara adalah membuat KODJP baru dengan passphrase baru."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Portal Saya → Permohonan Kode Otorisasi/Sertifikat Digital",
+      "click": "Klik 'Portal Saya' → klik 'Permohonan Kode Otorisasi/Sertifikat Digital'",
+      "input": "-",
+      "expected_screen": "Formulir Permohonan Sertifikat Digital terbuka. Sebagian kolom sudah terisi otomatis oleh sistem.",
+      "note": "Ini adalah menu yang sama dengan PB002 (membuat KODJP pertama kali). Prosesnya identik — membuat KODJP baru menggantikan yang lama."
+    },
+    {
+      "step": 3,
+      "page": "Formulir Permohonan Sertifikat Digital — Rincian Sertifikat",
+      "menu": "Certificate Details",
+      "click": "Pilih 'Kode Otorisasi DJP' pada kolom Certificate Details (Rincian Sertifikat)",
+      "input": "-",
+      "expected_screen": "Kolom Passphrase muncul di bawah pilihan Kode Otorisasi DJP",
+      "note": "Pilih 'Kode Otorisasi DJP', bukan sertifikat elektronik tersertifikasi lainnya."
+    },
+    {
+      "step": 4,
+      "page": "Formulir Permohonan Sertifikat Digital — Passphrase Baru",
+      "menu": "Passphrase",
+      "click": "-",
+      "input": "Buat dan masukkan Passphrase BARU pada kolom yang tersedia. Ulangi passphrase di kolom konfirmasi. Ketentuan: minimal 1 huruf besar, 1 huruf kecil, 1 angka, 1 karakter khusus. Hindari karakter: ' (apostrop), \\ (backslash), + (plus).",
+      "expected_screen": "Kolom passphrase baru dan konfirmasi passphrase terisi",
+      "note": "CATAT passphrase baru ini di tempat yang aman. Passphrase yang lupa tidak bisa dipulihkan — jika lupa lagi harus buat KODJP baru lagi."
+    },
+    {
+      "step": 5,
+      "page": "Formulir Permohonan Sertifikat Digital — Verifikasi Identitas",
+      "menu": "Identity Verification",
+      "click": "Klik tombol 'Take a photo' untuk mengambil foto wajah",
+      "input": "-",
+      "expected_screen": "Kamera aktif dan siap mengambil foto wajah",
+      "note": "Pastikan pencahayaan cukup, wajah terlihat jelas, tidak memakai kacamata hitam atau aksesori yang menutupi wajah. Foto dicocokkan dengan data Dukcapil."
+    },
+    {
+      "step": 6,
+      "page": "Formulir Permohonan Sertifikat Digital — Verifikasi Identitas",
+      "menu": "Validasi Foto",
+      "click": "Setelah foto diambil, pastikan notifikasi pengambilan foto berhasil muncul",
+      "input": "-",
+      "expected_screen": "Notifikasi verifikasi foto berhasil",
+      "note": "Jika foto gagal diverifikasi, coba ambil ulang dengan kondisi pencahayaan yang lebih baik."
+    },
+    {
+      "step": 7,
+      "page": "Formulir Permohonan Sertifikat Digital — Pernyataan WP",
+      "menu": "-",
+      "click": "Centang kotak Pernyataan Wajib Pajak",
+      "input": "-",
+      "expected_screen": "Kotak pernyataan tercentang",
+      "note": "-"
+    },
+    {
+      "step": 8,
+      "page": "Formulir Permohonan Sertifikat Digital",
+      "menu": "Simpan",
+      "click": "Klik tombol 'Simpan'",
+      "input": "-",
+      "expected_screen": "Permohonan KODJP baru berhasil terkirim. Notifikasi muncul di ikon lonceng atau Portal Saya → Notifikasi Saya.",
+      "note": "Cek notifikasi dan Portal Saya → Dokumen Saya untuk hasil persetujuan KODJP baru."
+    },
+    {
+      "step": 9,
+      "page": "Portal Saya → Profil Saya → Nomor Identifikasi Eksternal → Digital Certificate",
+      "menu": "Validasi KODJP Baru",
+      "click": "Klik Portal Saya → Profil Saya, gulir ke bagian Nomor Identifikasi Eksternal, klik tab Digital Certificate, klik 'Periksa Status' → klik 'Menghasilkan'",
+      "input": "-",
+      "expected_screen": "Notifikasi sukses. KODJP baru aktif dan siap digunakan.",
+      "note": "Langkah validasi ini penting untuk memastikan KODJP baru sudah aktif sebelum digunakan untuk menandatangani dokumen."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Verifikasi foto wajah gagal berulang kali",
+      "cause": "Pencahayaan kurang, wajah tidak terlihat jelas, atau data foto tidak cocok dengan data Dukcapil",
+      "solution": "Pastikan pencahayaan sangat baik, wajah menghadap kamera langsung, tidak memakai aksesori penutup wajah. Jika tetap gagal setelah beberapa kali mencoba, hubungi KPP terdaftar atau Kring Pajak 1500200."
+    },
+    {
+      "error": "Tombol 'Menghasilkan' tidak aktif setelah Periksa Status",
+      "cause": "KODJP baru masih dalam proses persetujuan sistem",
+      "solution": "Tunggu beberapa saat dan cek notifikasi di ikon lonceng. Jika lebih dari 1 jam tidak ada notifikasi, ulangi langkah 'Periksa Status' → 'Menghasilkan'."
+    },
+    {
+      "error": "KODJP baru dibuat tapi passphrase lama masih diminta di formulir",
+      "cause": "Halaman formulir masih menggunakan cache KODJP lama",
+      "solution": "Logout dari Coretax, login kembali, lalu coba lagi menandatangani dokumen dengan passphrase BARU yang baru dibuat."
+    }
+  ],
+  "success_result": "KODJP baru berhasil diterbitkan dengan passphrase baru. WP dapat menggunakan passphrase baru untuk menandatangani seluruh dokumen perpajakan di Coretax. KODJP lama otomatis tidak berlaku lagi.",
+  "references": [
+    "Kurasi Manual Coretax 2024 — Permintaan Sertifikat Digital (Kode Otorisasi DJP), Edisi 20240924, Direktorat Jenderal Pajak",
+    "Leaflet Panduan Memperoleh KODJP, Versi 202512, Direktorat Jenderal Pajak",
+    "Panduan Ringkas Coretax DJP, Pembuatan Kode Otorisasi/Sertifikat Elektronik, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Passphrase KODJP yang lupa TIDAK BISA dipulihkan — satu-satunya solusi adalah membuat KODJP baru.",
+    "Proses reset passphrase = proses membuat KODJP baru dari awal (sama persis dengan PB002).",
+    "KODJP baru menggantikan yang lama — hanya ada SATU KODJP aktif per WP.",
+    "Setelah KODJP baru aktif, semua penandatanganan menggunakan passphrase BARU.",
+    "CATAT passphrase baru di tempat yang aman segera setelah dibuat.",
+    "Hindari karakter: ' (apostrop), \\ (backslash), + (plus) pada passphrase.",
+    "Validasi KODJP baru (langkah 9) penting dilakukan sebelum mencoba menandatangani dokumen."
+  ]
+}

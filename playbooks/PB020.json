@@ -1,0 +1,161 @@
+{
+  "id": "PB020",
+  "master_index_id": null,
+  "priority": 20,
+  "type": "layanan",
+  "title": "Pengajuan Pengurangan Angsuran PPh Pasal 25",
+  "module": "Layanan Wajib Pajak — Layanan Administrasi",
+  "subcategory": "AS.18-01 Pengurangan Angsuran PPh Pasal 25",
+  "aliases": [
+    "kurangi angsuran PPh 25",
+    "pengurangan PPh Pasal 25",
+    "AS.18-01",
+    "turunkan angsuran pajak bulanan",
+    "permohonan pengurangan PPh 25 Coretax"
+  ],
+  "keywords": [
+    "pengurangan angsuran PPh Pasal 25", "AS.18-01",
+    "Layanan Administrasi", "Layanan Wajib Pajak",
+    "Buat Permohonan Layanan Administrasi",
+    "angsuran bulanan", "penghasilan menurun",
+    "KODJP", "SK Pengurangan Angsuran", "PPh Pasal 25 lebih kecil"
+  ],
+  "client_questions": [
+    "Bagaimana cara mengajukan pengurangan angsuran PPh Pasal 25 di Coretax?",
+    "Penghasilan saya turun tahun ini, bisakah angsuran PPh 25 dikurangi?",
+    "Apa itu pengurangan angsuran PPh Pasal 25 dan bagaimana caranya?",
+    "Berapa persen pengurangan angsuran PPh 25 yang bisa diminta?",
+    "Setelah pengajuan pengurangan angsuran disetujui, kapan berlakunya?"
+  ],
+  "objective": "Memandu WP OP untuk mengajukan permohonan Pengurangan Angsuran PPh Pasal 25 melalui menu Layanan Administrasi (AS.18-01) di Coretax, karena penghasilan yang diperkirakan lebih kecil dari tahun sebelumnya sehingga angsuran bulanan yang sudah ditetapkan terlalu besar.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Memiliki KODJP (Kode Otorisasi DJP) aktif (lihat PB002)",
+    "Sudah menghitung estimasi penghasilan dan PPh terutang tahun berjalan yang lebih kecil dari tahun lalu",
+    "Menyiapkan dokumen pendukung: laporan keuangan sementara, proyeksi penghasilan tahun berjalan, atau dokumen lain yang menunjukkan penurunan penghasilan"
+  ],
+  "estimated_time": "15–25 menit",
+  "difficulty": "menengah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "Pengajuan pengurangan angsuran dapat dilakukan oleh WP sendiri atau Kuasa WP dengan mode impersonating."
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak",
+      "click": "Klik menu 'Layanan Wajib Pajak' pada navigation bar atas",
+      "input": "-",
+      "expected_screen": "Dropdown submenu Layanan Wajib Pajak terbuka",
+      "note": "-"
+    },
+    {
+      "step": 3,
+      "page": "Dashboard Coretax",
+      "menu": "Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan Layanan Administrasi",
+      "click": "Arahkan kursor ke 'Layanan Administrasi' → klik 'Buat Permohonan Layanan Administrasi'",
+      "input": "-",
+      "expected_screen": "Halaman Buat Permohonan Layanan Administrasi terbuka",
+      "note": "-"
+    },
+    {
+      "step": 4,
+      "page": "Buat Permohonan Layanan Administrasi",
+      "menu": "Pilih Kategori AS.18-01",
+      "click": "-",
+      "input": "Pilih kategori: 'AS.18 Pengurangan Angsuran PPh Pasal 25', kemudian pilih subjenis: 'AS.18-01 Pengurangan Angsuran PPh Pasal 25'",
+      "expected_screen": "Formulir permohonan Pengurangan Angsuran PPh Pasal 25 terbuka",
+      "note": "Dapat juga dicari dengan mengetik 'pengurangan angsuran' atau 'AS.18' di kolom pencarian layanan. Perhatikan: AS.18-02 adalah untuk Tanggapan atas Pemberitahuan Dinamisasi — berbeda dengan AS.18-01."
+    },
+    {
+      "step": 5,
+      "page": "Formulir AS.18-01",
+      "menu": "Identitas WP",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "Data identitas WP sudah terisi otomatis",
+      "note": "Data identitas terisi otomatis — tidak perlu diubah."
+    },
+    {
+      "step": 6,
+      "page": "Formulir AS.18-01",
+      "menu": "Isian Permohonan",
+      "click": "-",
+      "input": "Isi kolom yang tersedia: besaran angsuran PPh Pasal 25 yang dimohonkan (nilai baru yang lebih kecil), alasan pengurangan, dasar penghitungan angsuran baru (estimasi PPh terutang tahun berjalan dibagi 12), dan informasi lain yang diminta sistem",
+      "expected_screen": "Formulir terisi lengkap",
+      "note": "Dasar penghitungan angsuran baru: (Estimasi PPh Terutang Tahun Berjalan - Kredit Pajak) / 12. Alasan yang umum: 'Penghasilan tahun berjalan diperkirakan lebih kecil dari tahun lalu akibat [sebutkan alasan spesifik]'."
+    },
+    {
+      "step": 7,
+      "page": "Formulir AS.18-01",
+      "menu": "Unggah Dokumen Pendukung",
+      "click": "Unggah dokumen pendukung yang tersedia",
+      "input": "Dokumen pendukung: laporan keuangan sementara, proyeksi penghasilan, atau dokumen lain yang menunjukkan estimasi penghasilan lebih kecil dari tahun lalu",
+      "expected_screen": "Dokumen berhasil diunggah",
+      "note": "Dokumen pendukung yang kuat mempercepat persetujuan. Semakin detail dan akurat proyeksi yang diberikan, semakin besar kemungkinan permohonan disetujui."
+    },
+    {
+      "step": 8,
+      "page": "Formulir AS.18-01",
+      "menu": "Submit / Kirim",
+      "click": "Klik tombol 'Submit' atau 'Kirim'",
+      "input": "Masukkan Passphrase KODJP saat diminta untuk penandatanganan digital",
+      "expected_screen": "Permohonan berhasil terkirim. Nomor permohonan muncul dan status masuk ke 'Permohonan Dalam Proses'.",
+      "note": "Permohonan dikirim ke KPP terdaftar untuk diproses. DJP akan menerbitkan Surat Keputusan (SK) Pengurangan Angsuran jika permohonan disetujui."
+    },
+    {
+      "step": 9,
+      "page": "Portal Saya → Dokumen Saya",
+      "menu": "Ambil SK Pengurangan Angsuran",
+      "click": "Cek Portal Saya → Dokumen Saya untuk mendapatkan SK Pengurangan Angsuran PPh Pasal 25",
+      "input": "-",
+      "expected_screen": "SK Pengurangan Angsuran PPh Pasal 25 tersedia dan dapat diunduh",
+      "note": "SK ini adalah dasar hukum berlakunya angsuran baru yang lebih kecil. Simpan SK ini dan gunakan sebagai acuan pembayaran angsuran bulan-bulan berikutnya. Angsuran baru berlaku sejak bulan ditetapkannya SK."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Permohonan pengurangan angsuran ditolak",
+      "cause": "Estimasi penghasilan yang diajukan tidak didukung oleh dokumen yang memadai, atau besaran pengurangan yang diminta tidak sesuai dengan kondisi keuangan WP",
+      "solution": "Lengkapi dokumen pendukung dengan laporan keuangan yang lebih rinci dan akurat, kemudian ajukan permohonan ulang — proses harus diulang dari awal."
+    },
+    {
+      "error": "Passphrase KODJP salah saat penandatanganan",
+      "cause": "Passphrase yang dimasukkan tidak sesuai dengan KODJP aktif",
+      "solution": "Masukkan passphrase yang benar. Jika lupa, ajukan KODJP baru (lihat PB002) — passphrase tidak bisa dipulihkan dan proses harus diulang dari awal."
+    },
+    {
+      "error": "SK Pengurangan Angsuran tidak muncul setelah permohonan diajukan",
+      "cause": "Permohonan masih dalam proses penelitian oleh KPP",
+      "solution": "Cek status di Portal Saya → Kasus Berjalan Saya. SK diterbitkan setelah KPP menyelesaikan penelitian administrasi — waktu proses bervariasi tergantung KPP. Jika terlalu lama, hubungi KPP terdaftar."
+    },
+    {
+      "error": "WP tetap membayar angsuran lama sebelum SK diterima",
+      "cause": "SK belum terbit saat jatuh tempo angsuran bulan berikutnya",
+      "solution": "Sebelum SK terbit, WP tetap wajib membayar angsuran sesuai besaran lama. Setelah SK terbit, angsuran baru berlaku sejak bulan yang tertera di SK."
+    }
+  ],
+  "success_result": "SK Pengurangan Angsuran PPh Pasal 25 diterbitkan oleh DJP dan tersedia di Portal Saya → Dokumen Saya. WP dapat membayar angsuran PPh Pasal 25 dengan besaran baru yang lebih kecil sesuai SK, mulai bulan yang tertera dalam SK.",
+  "references": [
+    "Buku Manual Coretax 2024 — Layanan Wajib Pajak (Seri 19), AS.18-01 Pengurangan Angsuran PPh Pasal 25, Direktorat Jenderal Pajak",
+    "Panduan Coretax bagi Instansi Pemerintah 2025, Bab 11 Layanan Perpajakan — AS.18 Pengurangan Angsuran PPh Pasal 25, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Pengurangan angsuran PPh Pasal 25 hanya bisa dimohonkan jika WP dapat membuktikan estimasi PPh terutang tahun berjalan lebih kecil dari tahun lalu.",
+    "Dasar penghitungan angsuran baru: (Estimasi PPh Terutang Tahun Berjalan - Kredit Pajak yang dapat dikreditkan) / 12.",
+    "Sebelum SK terbit, WP tetap wajib membayar angsuran dengan besaran lama.",
+    "Angsuran baru berlaku sejak bulan yang tertera dalam SK Pengurangan Angsuran.",
+    "Jika realisasi penghasilan akhir tahun ternyata lebih besar dari estimasi, WP harus membayar selisih PPh kurang bayar saat lapor SPT Tahunan.",
+    "KODJP wajib aktif sebelum mengajukan — jika passphrase lupa, selesaikan PB002 terlebih dahulu.",
+    "Permohonan ini berbeda dengan AS.18-02 (Tanggapan Dinamisasi Angsuran) yang merupakan tanggapan atas surat dari DJP."
+  ]
+}

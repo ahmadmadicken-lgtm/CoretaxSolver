@@ -1,0 +1,84 @@
+{
+  "id": "PB038",
+  "master_index_id": null,
+  "priority": 38,
+  "type": "pembayaran",
+  "title": "Cek Daftar Kode Billing Belum Dibayar",
+  "module": "Pembayaran — Daftar Kode Billing Belum Dibayar",
+  "subcategory": "Daftar Kode Billing Aktif yang Belum Dibayar",
+  "aliases": [
+    "cek kode billing aktif", "daftar billing belum bayar",
+    "Daftar Kode Billing Belum Dibayar Coretax",
+    "lihat billing yang masih aktif", "kode billing kedaluwarsa"
+  ],
+  "keywords": [
+    "Daftar Kode Billing Belum Dibayar", "kode billing aktif",
+    "billing belum dibayar", "masa aktif billing",
+    "7 hari", "kedaluwarsa", "unduh billing",
+    "kirim ke email", "Pembayaran"
+  ],
+  "client_questions": [
+    "Di mana saya bisa lihat kode billing yang sudah dibuat tapi belum dibayar?",
+    "Kode billing saya hilang, bisakah dicari lagi di Coretax?",
+    "Bagaimana cara cek apakah kode billing masih aktif atau sudah expired?",
+    "Bisa tidak kirim ulang kode billing ke email?",
+    "Saya lupa kode billing PPh 25 bulan ini, di mana carinya?"
+  ],
+  "objective": "Memandu WP OP untuk melihat, mengunduh ulang, atau mengirim ulang ke email semua kode billing yang sudah dibuat dan masih aktif (belum kedaluwarsa) namun belum dibayar, melalui menu Daftar Kode Billing Belum Dibayar di Coretax.",
+  "prerequisites": [
+    "Sudah login ke Coretax (lihat PB001)",
+    "Sudah pernah membuat kode billing sebelumnya yang belum dibayar"
+  ],
+  "estimated_time": "3–5 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Login",
+      "click": "-",
+      "input": "Login dengan NIK/NPWP 16 digit, kata sandi, captcha, klik Login",
+      "expected_screen": "Dashboard Coretax",
+      "note": "-"
+    },
+    {
+      "step": 2,
+      "page": "Dashboard Coretax",
+      "menu": "Pembayaran → Daftar Kode Billing Belum Dibayar",
+      "click": "Klik 'Pembayaran' → klik 'Daftar Kode Billing Belum Dibayar'",
+      "input": "-",
+      "expected_screen": "Daftar Kode Billing Aktif tampil — menampilkan semua kode billing yang sudah dibuat, masih aktif, dan belum dibayar",
+      "note": "Jika kode billing sudah kedaluwarsa (lebih dari 7 hari), tidak akan muncul di sini. Buat kode billing baru jika sudah expired."
+    },
+    {
+      "step": 3,
+      "page": "Daftar Kode Billing Belum Dibayar",
+      "menu": "Unduh atau Kirim ke Email",
+      "click": "Klik ikon 'Unduh' untuk mengunduh PDF kode billing, ATAU klik ikon 'Kirim ke Email' untuk mengirim kode billing ke email terdaftar WP",
+      "input": "-",
+      "expected_screen": "File PDF kode billing terunduh, ATAU notifikasi email terkirim",
+      "note": "Pembayaran kode billing aktif dapat dilakukan melalui internet/mobile banking, ATM, teller bank, atau penyedia jasa pembayaran digital."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "Kode billing yang dicari tidak ada di daftar",
+      "cause": "Kode billing sudah kedaluwarsa (lebih dari 7 hari) atau sudah terbayar",
+      "solution": "Jika kedaluwarsa: buat kode billing baru. Jika sudah terbayar: cek konfirmasi di Buku Besar (PB016)."
+    }
+  ],
+  "success_result": "Kode billing yang masih aktif berhasil ditemukan, diunduh ulang atau dikirim ke email, dan siap digunakan untuk pembayaran melalui kanal yang tersedia.",
+  "references": [
+    "Buku Manual Coretax 2024 — Seri Pembayaran, Menu Daftar Kode Billing Belum Dibayar, Direktorat Jenderal Pajak",
+    "Panduan Ringkas Coretax DJP, Daftar Kode Billing Aktif, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Kode billing aktif selama 7 hari sejak dibuat — setelah itu kedaluwarsa dan harus dibuat ulang.",
+    "Menu ini menampilkan SEMUA kode billing aktif dari berbagai sumber: billing mandiri, billing tagihan, billing SPT.",
+    "Bisa unduh PDF ulang atau kirim ke email jika dokumen billing hilang.",
+    "Setelah pembayaran berhasil, kode billing tidak lagi muncul di menu ini."
+  ]
+}
