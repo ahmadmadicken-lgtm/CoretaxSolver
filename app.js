@@ -329,10 +329,10 @@ renderList(PLAYBOOKS);
    ========================================================= */
 
 const TIER_HARGA = {
-  tier1: { harga: 'Rp200.000', label: 'Layanan Cek & Billing'         },
-  tier2: { harga: 'Rp250.000', label: 'Pendampingan Teknis'           },
-  tier3: { harga: 'Rp300.000', label: 'Pendampingan SPT'              },
-  tier4: { harga: 'Rp400.000', label: 'Pendampingan SPT Lebih Bayar'  },
+  tier1: { harga: 'Rp300.000', label: 'Layanan Cek & Billing'         },
+  tier2: { harga: 'Rp350.000', label: 'Pendampingan Teknis'           },
+  tier3: { harga: 'Rp400.000', label: 'Pendampingan SPT'              },
+  tier4: { harga: 'Rp500.000', label: 'Pendampingan SPT Lebih Bayar'  },
 };
 
 const HARGA_PB = {
