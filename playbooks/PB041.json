@@ -1,0 +1,127 @@
+{
+  "id": "PB041",
+  "master_index_id": null,
+  "priority": 41,
+  "type": "profil",
+  "title": "Cara Mengecek NPWP Sudah Terdaftar atau Belum",
+  "module": "Coretax DJP — Halaman Login & Portal Saya",
+  "subcategory": "Validasi Status Pendaftaran NPWP/NIK di Coretax",
+  "aliases": [
+    "cek NPWP terdaftar", "validasi NPWP",
+    "apakah NIK saya sudah jadi NPWP",
+    "cek status NPWP Coretax",
+    "NPWP saya aktif atau tidak"
+  ],
+  "keywords": [
+    "cek NPWP", "NPWP terdaftar", "NIK sebagai NPWP",
+    "validasi NPWP", "status pendaftaran", "16 digit",
+    "Coretax login", "NPWP sementara", "Temporary TIN",
+    "konfirmasi status", "AS.01-02", "KSWP",
+    "ereg.pajak.go.id", "cek NPWP online"
+  ],
+  "client_questions": [
+    "Bagaimana cara cek apakah NPWP saya sudah terdaftar?",
+    "NIK saya sudah jadi NPWP atau belum?",
+    "Bagaimana cara tahu apakah NIK saya sudah terdaftar di Coretax?",
+    "NPWP lama 15 digit saya masih berlaku tidak?",
+    "Cara cek NPWP orang lain terdaftar atau belum?"
+  ],
+  "objective": "Memandu WP OP dan konsultan pajak untuk mengecek apakah NIK/NPWP sudah terdaftar di sistem Coretax DJP melalui berbagai cara yang tersedia, baik melalui percobaan login, menu Konfirmasi Status WP (KSWP), maupun cara lain yang tersedia secara resmi.",
+  "prerequisites": [
+    "Mengetahui NIK (16 digit) atau NPWP (15 atau 16 digit) yang ingin dicek",
+    "Akses internet dan browser",
+    "Jika ingin cek melalui KSWP: sudah login ke Coretax terlebih dahulu (lihat PB001)"
+  ],
+  "estimated_time": "2–5 menit",
+  "difficulty": "mudah",
+  "navigation": [
+    {
+      "step": 1,
+      "page": "-",
+      "menu": "Pahami Konsep NPWP di Era Coretax",
+      "click": "-",
+      "input": "-",
+      "expected_screen": "-",
+      "note": "PENTING dipahami sebelum mengecek: Di era Coretax, NIK WNI yang sudah dipadankan OTOMATIS berfungsi sebagai NPWP 16 digit. Tidak perlu daftar ulang. NPWP lama 15 digit masih berlaku — sistem Coretax mengenali keduanya. WNI yang NIK-nya sudah dipadankan dengan NPWP = sudah terdaftar di Coretax sebagai WP."
+    },
+    {
+      "step": 2,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Cara 1 — Coba Login ke Coretax",
+      "click": "Buka https://coretaxdjp.pajak.go.id",
+      "input": "Masukkan NIK 16 digit di kolom ID Pengguna. Masukkan kata sandi (jika belum punya, isi sembarang). Isi captcha. Klik Login.",
+      "expected_screen": "Jika NIK TERDAFTAR: sistem menampilkan pesan error 'kata sandi salah' atau langsung masuk ke dashboard (jika kata sandi benar). Jika NIK BELUM TERDAFTAR: sistem menampilkan pesan 'pengguna tidak ditemukan' atau sejenisnya.",
+      "note": "Ini cara paling cepat untuk mengecek. Jika muncul pesan 'kata sandi salah/tidak sesuai' — berarti NIK SUDAH TERDAFTAR di Coretax. Jika muncul pesan 'pengguna tidak ditemukan/tidak dikenal' — berarti NIK BELUM TERDAFTAR."
+    },
+    {
+      "step": 3,
+      "page": "https://coretaxdjp.pajak.go.id",
+      "menu": "Cara 2 — Cek Melalui Lupa Kata Sandi",
+      "click": "Pada halaman login, klik 'Lupa Kata Sandi?'",
+      "input": "Masukkan NIK/NPWP 16 digit di kolom ID Pengguna. Pilih metode konfirmasi (email atau HP). Masukkan captcha. Centang pernyataan. Klik Kirim.",
+      "expected_screen": "Jika NIK/NPWP TERDAFTAR: sistem menampilkan notifikasi bahwa tautan reset dikirim ke email/HP. Jika BELUM TERDAFTAR: sistem menampilkan pesan error bahwa ID pengguna tidak ditemukan.",
+      "note": "Cara ini lebih definitif. Jika sistem bisa memproses permintaan reset password, berarti NIK/NPWP sudah terdaftar. Jika muncul error 'tidak ditemukan', berarti belum terdaftar."
+    },
+    {
+      "step": 4,
+      "page": "Coretax — Layanan Wajib Pajak → AS.01-02",
+      "menu": "Cara 3 — KSWP (Konfirmasi Status WP) untuk cek NPWP orang lain",
+      "click": "Login ke Coretax → Layanan Wajib Pajak → Layanan Administrasi → Buat Permohonan → AS.01-02 Konfirmasi Status Wajib Pajak",
+      "input": "Masukkan NIK/NPWP yang ingin dicek statusnya",
+      "expected_screen": "Hasil konfirmasi: menampilkan apakah WP terdaftar dan status kepatuhannya",
+      "note": "Cara ini digunakan untuk mengecek NPWP orang lain (mitra bisnis, klien, karyawan, dll). Lihat PB033 untuk panduan lengkap KSWP."
+    },
+    {
+      "step": 5,
+      "page": "https://ereg.pajak.go.id",
+      "menu": "Cara 4 — Ereg DJP (untuk NPWP 15 digit lama)",
+      "click": "Buka https://ereg.pajak.go.id — cek fitur validasi NPWP yang tersedia",
+      "input": "Masukkan NPWP 15 digit yang ingin dicek (jika fitur tersedia)",
+      "expected_screen": "Informasi status NPWP 15 digit lama",
+      "note": "Layanan ereg.pajak.go.id adalah platform registrasi lama DJP yang masih dapat diakses. Pengecekan NPWP 15 digit lama dapat dilakukan melalui platform ini. Namun untuk pengecekan terkini, Coretax adalah platform utama."
+    },
+    {
+      "step": 6,
+      "page": "-",
+      "menu": "Cara 5 — Hubungi Kring Pajak",
+      "click": "-",
+      "input": "Hubungi Kring Pajak 1500200 dengan menyebutkan NIK/NPWP yang ingin dicek",
+      "expected_screen": "-",
+      "note": "Jika semua cara di atas tidak memberikan hasil yang pasti, hubungi Kring Pajak 1500200 (Senin–Jumat, 08.00–16.00 WIB). Petugas dapat mengecek status pendaftaran NPWP secara langsung di sistem DJP."
+    }
+  ],
+  "possible_errors": [
+    {
+      "error": "NIK sudah dipadankan tapi tidak bisa login ke Coretax",
+      "cause": "NIK sudah terdaftar sebagai WP tetapi akun Coretax belum diaktivasi (password belum dibuat)",
+      "solution": "Ini bukan berarti belum terdaftar — NIK sudah menjadi NPWP. Yang perlu dilakukan adalah aktivasi akun Coretax melalui 'Lupa Kata Sandi?' untuk membuat password pertama kali (lihat PB001)."
+    },
+    {
+      "error": "NPWP 15 digit lama tidak dikenali di kolom login Coretax",
+      "cause": "Coretax menggunakan NPWP 16 digit — NPWP 15 digit lama perlu dikonversi",
+      "solution": "Konversi NPWP 15 digit ke 16 digit: tambahkan angka '0' di depan NPWP 15 digit. Contoh: NPWP lama 123456789012345 → NPWP 16 digit: 0123456789012345. Gunakan NPWP 16 digit tersebut untuk login."
+    },
+    {
+      "error": "NIK tidak ditemukan di Coretax padahal WP yakin sudah punya NPWP lama",
+      "cause": "NPWP lama (15 digit) belum dipadankan dengan NIK, atau pemadanan NIK-NPWP belum selesai diproses",
+      "solution": "Cek status pemadanan NIK-NPWP di https://pajak.go.id/id/validasi-npwp atau hubungi KPP terdaftar. Jika pemadanan belum dilakukan, WP perlu melakukan pemadanan NIK-NPWP terlebih dahulu."
+    }
+  ],
+  "success_result": "Status pendaftaran NPWP/NIK berhasil diketahui. Jika sudah terdaftar: WP dapat melanjutkan dengan aktivasi akun Coretax (PB001) jika belum pernah login. Jika belum terdaftar: WP perlu mendaftar NPWP melalui Coretax (PB004) atau melakukan pemadanan NIK-NPWP.",
+  "references": [
+    "Buku Manual Coretax 2024 — Pendaftaran WP Orang Pribadi, Konsep NPWP Baru 16 Digit dan NIK sebagai NPWP, Direktorat Jenderal Pajak",
+    "Buku Manual Coretax 2024 — Seri Bukti Potong PPh, Ketentuan Penggunaan NPWP dan NIK, Direktorat Jenderal Pajak",
+    "Leaflet Pendaftaran WP OP pada Coretax, Seri Umum, Direktorat Jenderal Pajak"
+  ],
+  "verified": true,
+  "revision": 1,
+  "last_review": "2025-06-27",
+  "notes": [
+    "Di era Coretax: NIK WNI yang sudah dipadankan dengan NPWP OTOMATIS berfungsi sebagai NPWP 16 digit — tidak perlu daftar ulang.",
+    "NPWP lama 15 digit masih berlaku — dikonversi ke 16 digit dengan menambahkan '0' di depan.",
+    "Cara tercepat cek terdaftar/tidak: coba 'Lupa Kata Sandi?' di halaman login Coretax — jika sistem bisa proses, berarti terdaftar.",
+    "Untuk cek NPWP orang lain: gunakan KSWP (AS.01-02) — lihat PB033.",
+    "Jika NIK belum terdaftar sama sekali: daftar NPWP baru melalui Coretax — lihat PB004.",
+    "Jika NIK sudah terdaftar tapi belum bisa login: aktivasi akun Coretax melalui jalur Lupa Kata Sandi — lihat PB001."
+  ]
+}
