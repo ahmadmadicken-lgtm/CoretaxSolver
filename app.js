@@ -44,7 +44,8 @@ const PLAYBOOKS = [
   { id: 'PB038', title: 'Cek Daftar Kode Billing Belum Dibayar',         file: 'playbooks/PB038.json' },
   { id: 'PB039', title: 'Permohonan S-KET PP55/2022 (Keterangan UMKM)',  file: 'playbooks/PB039.json' },
   { id: 'PB040', title: 'Cara Reset Passphrase KODJP',                   file: 'playbooks/PB040.json' },
-  // { id: 'PB041', title: '...', file: 'playbooks/PB041.json' },
+  { id: 'PB041', title: 'Cara Mengecek NPWP Sudah Terdaftar atau Belum', file: 'playbooks/PB041.json' },
+  // { id: 'PB042', title: '...', file: 'playbooks/PB042.json' },
 ];
 
 /* STATE */
@@ -377,7 +378,8 @@ const HARGA_PB = {
   'PB038': { tier: 'tier1', keterangan: 'Kode billing aktif berhasil ditemukan, diunduh ulang, atau dikirim ke email' },
   'PB039': { tier: 'tier2', keterangan: 'S-KET PP55 diterbitkan dan WP dapat membuktikan tarif PPh Final 0,5% kepada pemotong' },
   'PB040': { tier: 'tier2', keterangan: 'KODJP baru berhasil diterbitkan dengan passphrase baru yang dapat digunakan segera' },
-  // 'PB041': { tier: 'tier2', keterangan: '...' },
+  'PB041': { tier: 'tier1', keterangan: 'Status pendaftaran NPWP/NIK berhasil diketahui dan langkah selanjutnya dapat ditentukan' },
+  // 'PB042': { tier: 'tier1', keterangan: '...' },
 };
 
 function getHarga(id) {
